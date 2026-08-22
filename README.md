@@ -23,6 +23,8 @@ The canonical artwork is derived from Mark's Mary wallpaper. The original square
 # Omarchy (copy one package, then apply it)
 cp -r omarchy/themes/neon-mary-dark ~/.config/omarchy/themes/
 omarchy-theme-set neon-mary-dark
+# Optional shell preference: keep the top menubar transparent
+omarchy bar transparent true
 
 # Hermes Agent (active profile home; do not copy secrets)
 mkdir -p "${HERMES_HOME:-$HOME/.hermes}/skins"
