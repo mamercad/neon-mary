@@ -1,0 +1,49 @@
+name: neon-mary-light
+description: Neon Mary — Blade Runner cyan, magenta, and rain-black (light).
+colors:
+  background: '#f3f7f8'
+  status_bar_bg: '#f3f7f8'
+  ui_accent: '#007f99'
+  banner_accent: '#007f99'
+  prompt: '#007f99'
+  input_rule: '#b32645'
+  banner_title: '#006a7d'
+  ui_primary: '#006a7d'
+  session_label: '#006a7d'
+  response_border: '#007f99'
+  banner_text: '#101822'
+  ui_text: '#101822'
+  ui_label: '#293743'
+  banner_dim: '#71818c'
+  banner_border: '#007f99'
+  ui_border: '#007f99'
+  session_border: '#007f99'
+  ui_tool: '#087a55'
+  ui_thinking: '#a3178d'
+  ui_ok: '#087a55'
+  ui_warn: '#8a6200'
+  ui_error: '#b32645'
+  status_bar_text: '#293743'
+  status_bar_good: '#087a55'
+  status_bar_warn: '#8a6200'
+  status_bar_bad: '#8f1d3b'
+  status_bar_critical: '#b32645'
+  syntax_string: '#087a55'
+  syntax_number: '#8a6200'
+  syntax_keyword: '#006a7d'
+  syntax_comment: '#71818c'
+  completion_menu_bg: '#f3f7f8'
+  completion_menu_current_bg: '#007f99'
+  completion_menu_meta_bg: '#f3f7f8'
+branding:
+  agent_name: Hermes Agent
+  prompt_symbol: ❯
+  welcome: Wake up. Time to die.
+  goodbye: All those moments will be lost in time, like tears in rain.
+  help_header: ◤ Neon Mary — Commands
+spinner:
+  waiting_faces: ["(◉)", "(◎)", "(⊙)"]
+  thinking_faces: ["(⌁)", "(⊹)"]
+  thinking_verbs: [enhancing, dreaming, tracking]
+  wings: [["⟪◤", "◥⟫"], ["⟪△", "△⟫"]]
+tool_prefix: ┊

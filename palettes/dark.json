@@ -1,0 +1,25 @@
+{
+  "background": "#0a0c12",
+  "foreground": "#eafcff",
+  "accent": "#00e5ff",
+  "red": "#ff4d6d",
+  "colors": [
+    "#0a0c12",
+    "#ff4d6d",
+    "#3dffb0",
+    "#ffe066",
+    "#4d8bff",
+    "#ff2adb",
+    "#00e5ff",
+    "#c9d6e3",
+    "#4a5568",
+    "#ff7a90",
+    "#7dffd0",
+    "#fff0a0",
+    "#7fb0ff",
+    "#ff6fe0",
+    "#7ff2ff",
+    "#ffffff"
+  ],
+  "mode": "dark"
+}

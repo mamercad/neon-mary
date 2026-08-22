@@ -1,0 +1,13 @@
+{
+  "name": "Neon Mary dark",
+  "type": "dark",
+  "colors": {
+    "editor.background": "#0a0c12",
+    "editor.foreground": "#eafcff",
+    "terminal.ansiCyan": "#00e5ff",
+    "terminal.ansiMagenta": "#ff2adb",
+    "terminal.ansiRed": "#ff4d6d",
+    "terminal.ansiGreen": "#3dffb0"
+  },
+  "tokenColors": []
+}

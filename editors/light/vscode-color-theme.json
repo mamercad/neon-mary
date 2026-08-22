@@ -1,0 +1,13 @@
+{
+  "name": "Neon Mary light",
+  "type": "light",
+  "colors": {
+    "editor.background": "#f3f7f8",
+    "editor.foreground": "#101822",
+    "terminal.ansiCyan": "#007f99",
+    "terminal.ansiMagenta": "#a3178d",
+    "terminal.ansiRed": "#b32645",
+    "terminal.ansiGreen": "#087a55"
+  },
+  "tokenColors": []
+}

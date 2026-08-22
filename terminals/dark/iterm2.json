@@ -1,0 +1,13 @@
+{
+  "Name": "Neon Mary dark",
+  "Background Color": {
+    "Red Component": 0.0392156862745098,
+    "Green Component": 0.047058823529411764,
+    "Blue Component": 0.07058823529411765
+  },
+  "Foreground Color": {
+    "Red Component": 0.9176470588235294,
+    "Green Component": 0.9882352941176471,
+    "Blue Component": 1.0
+  }
+}

@@ -1,0 +1,46 @@
+# Neon Mary
+
+A portable **Neon Mary — Blade Runner** theme for terminals, editors, Omarchy, and Hermes Agent.
+
+The canonical artwork is derived from Mark's Mary wallpaper. The original square source is preserved as `wallpapers/original-mary-1254.png`; the dark 3840×2160 composition is the current Neon Mary artwork. Light variants use the same composition with a restrained readable grade rather than invented overlays.
+
+## Variants
+
+- `dark`: wet-asphalt black, cyan, magenta, violet, mint, and Blade Runner amber.
+- `light`: pale cyan-gray surface with the same neon accents darkened for readable contrast.
+
+## Included targets
+
+- Native Omarchy packages with `colors.toml`, `icons.theme`, and wallpaper variants.
+- Ghostty, iTerm2, Terminal.app, Kitty, Alacritty, WezTerm, Windows Terminal, fzf, tmux, Vim/Neovim, and VS Code resources.
+- Hermes Agent skins for CLI/TUI/desktop surfaces.
+- Wallpapers: 3840×2160, 2560×1440, 1920×1080, 2560×1600, 2160×1440, 2048×1536, 2048×2048, and 1440×2560 in both modes.
+- `generate.py` to reproduce wallpaper variants and generated resources from the palette/source inputs.
+
+## Install
+
+```sh
+# Omarchy (copy one package, then apply it)
+cp -r omarchy/themes/neon-mary-dark ~/.config/omarchy/themes/
+omarchy-theme-set neon-mary-dark
+
+# Hermes Agent (active profile home; do not copy secrets)
+mkdir -p "${HERMES_HOME:-$HOME/.hermes}/skins"
+cp hermes/skins/neon-mary-dark.yaml "${HERMES_HOME:-$HOME/.hermes}/skins/"
+hermes config set display.skin neon-mary-dark
+```
+
+Terminal files are portable exports; install them using each application's normal theme/import mechanism. iTerm2 and Terminal.app resources are intentionally kept as inspectable exports rather than modifying macOS preferences automatically.
+
+## Rebuild and validate
+
+```sh
+python3 generate.py
+python3 validate.py
+```
+
+The generator uses ImageMagick and reads the canonical current artwork from `~/Wallpapers/blade-runner-neon-mary-4k.png` plus the original from `~/Pictures/mary.png`. No source secrets or machine-local configuration are included.
+
+## License
+
+Theme code and configuration: MIT. Artwork provenance and redistribution rights remain with the original artwork owner; this repository preserves the supplied local source and should only be published where you have the right to share it.

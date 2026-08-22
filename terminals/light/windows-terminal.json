@@ -1,0 +1,22 @@
+{
+  "name": "Neon Mary",
+  "background": "#f3f7f8",
+  "foreground": "#101822",
+  "cursorColor": "#007f99",
+  "black": "#f3f7f8",
+  "red": "#b32645",
+  "green": "#087a55",
+  "yellow": "#8a6200",
+  "blue": "#2458a8",
+  "purple": "#a3178d",
+  "cyan": "#007f99",
+  "white": "#293743",
+  "brightBlack": "#71818c",
+  "brightRed": "#8f1d3b",
+  "brightGreen": "#087a55",
+  "brightYellow": "#725d00",
+  "brightBlue": "#2458a8",
+  "brightPurple": "#86106f",
+  "brightCyan": "#006a7d",
+  "brightWhite": "#101822"
+}
