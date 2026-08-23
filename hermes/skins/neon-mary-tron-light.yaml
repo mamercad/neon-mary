@@ -1,0 +1,49 @@
+name: neon-mary-tron-light
+description: "Neon Mary: Tron (1982) — electric cyan, phosphor blue, amber, and grid black (light)."
+colors:
+  background: '#e5f1f3'
+  status_bar_bg: '#e5f1f3'
+  ui_accent: '#007b9c'
+  banner_accent: '#007b9c'
+  prompt: '#007b9c'
+  input_rule: '#b32e2a'
+  banner_title: '#198aa4'
+  ui_primary: '#198aa4'
+  session_label: '#198aa4'
+  response_border: '#007b9c'
+  banner_text: '#10252d'
+  ui_text: '#10252d'
+  ui_label: '#10252d'
+  banner_dim: '#9dbbc2'
+  banner_border: '#007b9c'
+  ui_border: '#007b9c'
+  session_border: '#007b9c'
+  ui_tool: '#26703a'
+  ui_thinking: '#5e4388'
+  ui_ok: '#26703a'
+  ui_warn: '#856900'
+  ui_error: '#b32e2a'
+  status_bar_text: '#10252d'
+  status_bar_good: '#26703a'
+  status_bar_warn: '#856900'
+  status_bar_bad: '#cf493c'
+  status_bar_critical: '#b32e2a'
+  syntax_string: '#26703a'
+  syntax_number: '#856900'
+  syntax_keyword: '#198aa4'
+  syntax_comment: '#9dbbc2'
+  completion_menu_bg: '#e5f1f3'
+  completion_menu_current_bg: '#007b9c'
+  completion_menu_meta_bg: '#e5f1f3'
+branding:
+  agent_name: Hermes Agent
+  prompt_symbol: ❯
+  welcome: The grid is open.
+  goodbye: End of line.
+  help_header: "◤ Neon Mary: Tron — Commands"
+spinner:
+  waiting_faces: ["(◉)", "(◎)", "(⊙)"]
+  thinking_faces: ["(⌁)", "(⊹)"]
+  thinking_verbs: [compiling, derezzing, traversing]
+  wings: [["⟪◤", "◥⟫"], ["⟪△", "△⟫"]]
+tool_prefix: ┊

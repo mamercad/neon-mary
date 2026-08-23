@@ -1,0 +1,13 @@
+{
+  "name": "Neon Mary: Tron (1982) light",
+  "type": "light",
+  "colors": {
+    "editor.background": "#e5f1f3",
+    "editor.foreground": "#10252d",
+    "terminal.ansiCyan": "#007b9c",
+    "terminal.ansiMagenta": "#5e4388",
+    "terminal.ansiRed": "#b32e2a",
+    "terminal.ansiGreen": "#26703a"
+  },
+  "tokenColors": []
+}

@@ -1,0 +1,22 @@
+{
+  "name": "Neon Mary: Tron (1982)",
+  "background": "#050b12",
+  "foreground": "#d9f7ff",
+  "cursorColor": "#00c8ff",
+  "black": "#050b12",
+  "red": "#ff4b36",
+  "green": "#61d36e",
+  "yellow": "#e7c34f",
+  "blue": "#147aa0",
+  "purple": "#8b6cff",
+  "cyan": "#00c8ff",
+  "white": "#d9f7ff",
+  "brightBlack": "#18303e",
+  "brightRed": "#ff735f",
+  "brightGreen": "#8bec91",
+  "brightYellow": "#ffe477",
+  "brightBlue": "#42b7dc",
+  "brightPurple": "#b19dff",
+  "brightCyan": "#62e4ff",
+  "brightWhite": "#f3fdff"
+}

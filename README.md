@@ -1,8 +1,8 @@
 # Neon Mary Theme Family
 
-**Neon Mary** is a family of themes built around the `mary.png` artwork. This repository contains three variants: **Blade Runner**, **The Crow (1994)**, and **Amélie (2001)**. Each variant has dark and light palette modes for terminals, editors, Omarchy, and Hermes Agent.
+**Neon Mary** is a family of themes built around the `mary.png` artwork. This repository contains four variants: **Blade Runner**, **The Crow (1994)**, **Amélie (2001)**, and **Tron (1982)**. Each variant has dark and light palette modes for terminals, editors, Omarchy, and Hermes Agent.
 
-The canonical artwork is derived from the Mary source. The original square source is preserved as `wallpapers/original-mary-1254.png`; the dark 3840×2160 composition is the Blade Runner variant's current artwork. Light variants use the same composition with a restrained readable grade rather than invented overlays.
+The canonical artwork is derived from the Mary source. The original square source is preserved as `wallpapers/original-mary-1254.png`; each variant keeps the Mary composition while applying its own visual treatment. Light variants use the same composition with a restrained readable grade rather than invented overlays.
 
 ## Screenshots gallery
 
@@ -46,6 +46,18 @@ The Amélie variant trades neon for a warm Parisian interior: deep café brown, 
 
 Example 3840×2160 Omarchy desktop presentation for the **Neon Mary: Amélie (2001)** variant in dark mode, showing its ochre, butter, olive, teal, and poppy palette with terminal workspace, theme inspector, and transparent bar treatment.
 
+### Tron (1982) variant
+
+The Tron variant uses phosphor cyan, electric blue, grid black, amber, and green to evoke the original film's computer-world interface.
+
+| Dark palette | Light palette |
+| --- | --- |
+| ![Neon Mary Tron dark wallpaper](wallpapers/tron/dark/4k.png) | ![Neon Mary Tron light wallpaper](wallpapers/tron/light/4k.png) |
+
+![Neon Mary Tron dark Omarchy example](screenshots/desktop-tron-dark-example.png)
+
+Example 3840×2160 Omarchy desktop presentation for the **Neon Mary: Tron (1982)** variant in dark mode, showing its cyan, violet, green, amber, and red palette with terminal workspace, theme inspector, and transparent bar treatment.
+
 ## Variants
 
 ### Blade Runner
@@ -67,6 +79,7 @@ Example 3840×2160 Omarchy desktop presentation for the **Neon Mary: Amélie (20
 
 - Native Omarchy packages with `colors.toml`, `icons.theme`, and wallpaper variants.
 - Neon Mary: The Crow (1994) and Amélie (2001) Omarchy packages and Hermes skins in dark/light modes.
+- Neon Mary: Tron (1982) Omarchy packages and Hermes skins in dark/light modes.
 - Ghostty, iTerm2, Terminal.app, Kitty, Alacritty, WezTerm, Windows Terminal, fzf, tmux, Vim/Neovim, and VS Code resources.
 - Hermes Agent skins for CLI/TUI/desktop surfaces.
 - Wallpapers: 3840×2160, 2560×1440, 1920×1080, 2560×1600, 2160×1440, 2048×1536, 2048×2048, and 1440×2560 in both modes.
@@ -86,6 +99,9 @@ omarchy bar transparent true
 
 # Amélie (2001) variant — applies the dark version and transparent bar
 ./omarchy/apply-amelie.sh dark
+
+# Tron (1982) variant — applies the dark version and transparent bar
+./omarchy/apply-tron.sh dark
 
 # Hermes Agent (active profile home; do not copy secrets)
 mkdir -p "${HERMES_HOME:-$HOME/.hermes}/skins"
@@ -108,7 +124,7 @@ python3 validate_contrast.py
 python3 render_screenshots.py
 ```
 
-The Blade Runner generator uses the canonical current artwork from `~/Wallpapers/blade-runner-neon-mary-4k.png`; `generate_crow.py` derives the Crow (1994) variant and `generate_amelie.py` the Amélie (2001) variant from `~/Pictures/mary.png`. No source secrets or machine-local configuration are included.
+The Blade Runner generator uses the canonical current artwork from `~/Wallpapers/blade-runner-neon-mary-4k.png`; `generate_crow.py`, `generate_amelie.py`, and `generate_tron.py` derive their respective variants from `~/Pictures/mary.png`. No source secrets or machine-local configuration are included.
 
 ## License
 
