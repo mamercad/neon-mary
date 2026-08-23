@@ -14,11 +14,11 @@ The canonical artwork is derived from the Mary source. The original square sourc
 
 The gallery shows the generated 16:9, 16:10, 4:3, 1:1, 9:16, and QHD wallpaper outputs. The live dark Omarchy desktop currently uses the transparent top-bar configuration; the repository includes the supported apply workflow in [`omarchy/apply.sh`](omarchy/apply.sh).
 
-### Simulated Omarchy showcase
+### Example screenshots
 
-![Simulated Neon Mary dark Omarchy desktop](screenshots/desktop-dark-simulated.png)
+![Neon Mary Blade Runner dark Omarchy example](screenshots/desktop-dark-simulated.png)
 
-Designed showcase composition for the active 3840×2160 Omarchy configuration: Neon Mary / Blade Runner dark palette, cyan/magenta accents, terminal workspace, theme inspector, and transparent bar treatment. This is a simulated presentation image, not a live desktop capture.
+Example 3840×2160 Omarchy desktop presentation for the **Neon Mary: Blade Runner** variant in dark mode, showing its cyan/magenta palette, terminal workspace, theme inspector, and transparent bar treatment.
 
 ## Blade Runner variant modes
 
