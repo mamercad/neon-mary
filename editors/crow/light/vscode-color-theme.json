@@ -1,0 +1,13 @@
+{
+  "name": "Neon Mary: The Crow (1994) light",
+  "type": "light",
+  "colors": {
+    "editor.background": "#e8e3e5",
+    "editor.foreground": "#17141b",
+    "terminal.ansiCyan": "#435b68",
+    "terminal.ansiMagenta": "#684775",
+    "terminal.ansiRed": "#a3263e",
+    "terminal.ansiGreen": "#4b614c"
+  },
+  "tokenColors": []
+}

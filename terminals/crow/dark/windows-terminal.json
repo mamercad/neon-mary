@@ -1,0 +1,22 @@
+{
+  "name": "Neon Mary: The Crow (1994)",
+  "background": "#08080d",
+  "foreground": "#e8e3e7",
+  "cursorColor": "#b7a6c9",
+  "black": "#08080d",
+  "red": "#d43d55",
+  "green": "#75866f",
+  "yellow": "#b5a17b",
+  "blue": "#586277",
+  "purple": "#9b79a7",
+  "cyan": "#9eabb7",
+  "white": "#d2ccd2",
+  "brightBlack": "#282832",
+  "brightRed": "#f05b6d",
+  "brightGreen": "#a2b58d",
+  "brightYellow": "#d2bd94",
+  "brightBlue": "#78839b",
+  "brightPurple": "#bd98c9",
+  "brightCyan": "#c9d4dc",
+  "brightWhite": "#f7f2f5"
+}
