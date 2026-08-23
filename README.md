@@ -1,6 +1,6 @@
 # Neon Mary Theme Family
 
-**Neon Mary** is a family of themes built around the `mary.png` artwork. This repository contains four variants: **Blade Runner**, **The Crow (1994)**, **Amélie (2001)**, and **Tron (1982)**. Each variant has dark and light palette modes for terminals, editors, Omarchy, and Hermes Agent.
+**Neon Mary** is a family of themes built around the `mary.png` artwork. This repository contains six variants: **Blade Runner**, **The Crow (1994)**, **Amélie (2001)**, **Tron (1982)**, **Dark City (1998)**, and **The Fifth Element (1997)**. Each variant has dark and light palette modes for terminals, editors, Omarchy, and Hermes Agent.
 
 The canonical artwork is derived from the Mary source. The original square source is preserved as `wallpapers/original-mary-1254.png`; each variant keeps the Mary composition while applying its own visual treatment. Light variants use the same composition with a restrained readable grade rather than invented overlays.
 
@@ -58,6 +58,30 @@ The Tron variant uses phosphor cyan, electric blue, grid black, amber, and green
 
 Example 3840×2160 Omarchy desktop presentation for the **Neon Mary: Tron (1982)** variant in dark mode, showing its cyan, violet, green, amber, and red palette with terminal workspace, theme inspector, and transparent bar treatment.
 
+### Dark City (1998) variant
+
+The Dark City variant uses perpetual-night black, steel blue, clockwork violet, sodium amber, and muted crimson for a neo-noir palette.
+
+| Dark palette | Light palette |
+| --- | --- |
+| ![Neon Mary Dark City dark wallpaper](wallpapers/dark-city/dark/4k.png) | ![Neon Mary Dark City light wallpaper](wallpapers/dark-city/light/4k.png) |
+
+![Neon Mary Dark City dark Omarchy example](screenshots/desktop-dark-city-dark-example.png)
+
+Example 3840×2160 Omarchy desktop presentation for the **Neon Mary: Dark City (1998)** variant in dark mode, showing its steel blue, violet, green, sodium amber, and crimson palette with terminal workspace, theme inspector, and transparent bar treatment.
+
+### The Fifth Element (1997) variant
+
+The Fifth Element variant uses bright electric cyan, ultraviolet, solar amber, vivid green, and coral red for a colorful futuristic palette.
+
+| Dark palette | Light palette |
+| --- | --- |
+| ![Neon Mary The Fifth Element dark wallpaper](wallpapers/fifth-element/dark/4k.png) | ![Neon Mary The Fifth Element light wallpaper](wallpapers/fifth-element/light/4k.png) |
+
+![Neon Mary The Fifth Element dark Omarchy example](screenshots/desktop-fifth-element-dark-example.png)
+
+Example 3840×2160 Omarchy desktop presentation for the **Neon Mary: The Fifth Element (1997)** variant in dark mode, showing its cyan, violet, green, amber, and coral palette with terminal workspace, theme inspector, and transparent bar treatment.
+
 ## Variants
 
 ### Blade Runner
@@ -75,11 +99,27 @@ Example 3840×2160 Omarchy desktop presentation for the **Neon Mary: Tron (1982)
 - `dark`: deep café brown with ochre, butter yellow, olive, teal, and poppy red.
 - `light`: warm cream surface with the same ochre/poppy/teal accents darkened for readable contrast.
 
+### Tron (1982)
+
+- `dark`: grid black with phosphor cyan, electric blue, violet, amber, and green.
+- `light`: pale cyan-gray with the same cybernetic accents darkened for readable contrast.
+
+### Dark City (1998)
+
+- `dark`: perpetual-night black with steel blue, clockwork violet, sodium amber, and muted crimson.
+- `light`: pale steel-gray with blue, violet, amber, and crimson accents.
+
+### The Fifth Element (1997)
+
+- `dark`: deep violet-black with electric cyan, ultraviolet, solar amber, green, and coral red.
+- `light`: warm cream with the same colorful accents darkened for readable contrast.
+
 ## Included targets
 
 - Native Omarchy packages with `colors.toml`, `icons.theme`, and wallpaper variants.
 - Neon Mary: The Crow (1994) and Amélie (2001) Omarchy packages and Hermes skins in dark/light modes.
 - Neon Mary: Tron (1982) Omarchy packages and Hermes skins in dark/light modes.
+- Neon Mary: Dark City (1998) and The Fifth Element (1997) Omarchy packages and Hermes skins in dark/light modes.
 - Ghostty, iTerm2, Terminal.app, Kitty, Alacritty, WezTerm, Windows Terminal, fzf, tmux, Vim/Neovim, and VS Code resources.
 - Hermes Agent skins for CLI/TUI/desktop surfaces.
 - Wallpapers: 3840×2160, 2560×1440, 1920×1080, 2560×1600, 2160×1440, 2048×1536, 2048×2048, and 1440×2560 in both modes.
@@ -103,6 +143,10 @@ omarchy bar transparent true
 # Tron (1982) variant — applies the dark version and transparent bar
 ./omarchy/apply-tron.sh dark
 
+# Dark City / The Fifth Element — applies a dark variant and transparent bar
+./omarchy/apply-cinematic.sh dark-city dark
+./omarchy/apply-cinematic.sh fifth-element dark
+
 # Hermes Agent (active profile home; do not copy secrets)
 mkdir -p "${HERMES_HOME:-$HOME/.hermes}/skins"
 cp hermes/skins/neon-mary-dark.yaml "${HERMES_HOME:-$HOME/.hermes}/skins/"
@@ -124,7 +168,7 @@ python3 validate_contrast.py
 python3 render_screenshots.py
 ```
 
-The Blade Runner generator uses the canonical current artwork from `~/Wallpapers/blade-runner-neon-mary-4k.png`; `generate_crow.py`, `generate_amelie.py`, and `generate_tron.py` derive their respective variants from `~/Pictures/mary.png`. No source secrets or machine-local configuration are included.
+The Blade Runner generator uses the canonical current artwork from `~/Wallpapers/blade-runner-neon-mary-4k.png`; the variant generators derive their respective treatments from `~/Pictures/mary.png`. No source secrets or machine-local configuration are included.
 
 ## License
 

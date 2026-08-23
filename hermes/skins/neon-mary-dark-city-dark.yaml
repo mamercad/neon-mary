@@ -1,0 +1,49 @@
+name: neon-mary-dark-city-dark
+description: "Neon Mary: Dark City (1998) — cinematic palette (dark)."
+colors:
+  background: '#08090d'
+  status_bar_bg: '#08090d'
+  ui_accent: '#7897bd'
+  banner_accent: '#7897bd'
+  prompt: '#7897bd'
+  input_rule: '#a64b4b'
+  banner_title: '#9fb8d0'
+  ui_primary: '#9fb8d0'
+  session_label: '#9fb8d0'
+  response_border: '#7897bd'
+  banner_text: '#e7edf2'
+  ui_text: '#e7edf2'
+  ui_label: '#d0d8de'
+  banner_dim: '#262a32'
+  banner_border: '#7897bd'
+  ui_border: '#7897bd'
+  session_border: '#7897bd'
+  ui_tool: '#697b70'
+  ui_thinking: '#6d6a8f'
+  ui_ok: '#697b70'
+  ui_warn: '#b18b5c'
+  ui_error: '#a64b4b'
+  status_bar_text: '#d0d8de'
+  status_bar_good: '#697b70'
+  status_bar_warn: '#b18b5c'
+  status_bar_bad: '#d36969'
+  status_bar_critical: '#a64b4b'
+  syntax_string: '#697b70'
+  syntax_number: '#b18b5c'
+  syntax_keyword: '#9fb8d0'
+  syntax_comment: '#262a32'
+  completion_menu_bg: '#08090d'
+  completion_menu_current_bg: '#7897bd'
+  completion_menu_meta_bg: '#08090d'
+branding:
+  agent_name: Hermes Agent
+  prompt_symbol: ❯
+  welcome: The city is dreaming.
+  goodbye: They built the city to see what makes us tick.
+  help_header: "◤ Neon Mary: Dark City (1998) — Commands"
+spinner:
+  waiting_faces: ["(◉)", "(◎)", "(⊙)"]
+  thinking_faces: ["(⌁)", "(⊹)"]
+  thinking_verbs: [observing, tuning, traversing]
+  wings: [["⟪◤", "◥⟫"], ["⟪△", "△⟫"]]
+tool_prefix: ┊

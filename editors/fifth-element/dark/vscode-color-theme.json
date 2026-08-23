@@ -1,0 +1,13 @@
+{
+  "name": "Neon Mary: The Fifth Element (1997) dark",
+  "type": "dark",
+  "colors": {
+    "editor.background": "#100b16",
+    "editor.foreground": "#fff0de",
+    "terminal.ansiCyan": "#00cce8",
+    "terminal.ansiMagenta": "#d04fc1",
+    "terminal.ansiRed": "#ff643e",
+    "terminal.ansiGreen": "#62d88a"
+  },
+  "tokenColors": []
+}

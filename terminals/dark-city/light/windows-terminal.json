@@ -1,0 +1,22 @@
+{
+  "name": "Neon Mary: Dark City (1998)",
+  "background": "#e8edf0",
+  "foreground": "#1b222a",
+  "cursorColor": "#466581",
+  "black": "#e8edf0",
+  "red": "#8c3035",
+  "green": "#3e5f4b",
+  "yellow": "#80602d",
+  "blue": "#324c6a",
+  "purple": "#5b4e77",
+  "cyan": "#466581",
+  "white": "#1b222a",
+  "brightBlack": "#a6b3ba",
+  "brightRed": "#a94347",
+  "brightGreen": "#5d805f",
+  "brightYellow": "#a17e42",
+  "brightBlue": "#587696",
+  "brightPurple": "#786a99",
+  "brightCyan": "#52738d",
+  "brightWhite": "#1b222a"
+}

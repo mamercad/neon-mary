@@ -1,0 +1,13 @@
+{
+  "name": "Neon Mary: Dark City (1998) light",
+  "type": "light",
+  "colors": {
+    "editor.background": "#e8edf0",
+    "editor.foreground": "#1b222a",
+    "terminal.ansiCyan": "#466581",
+    "terminal.ansiMagenta": "#5b4e77",
+    "terminal.ansiRed": "#8c3035",
+    "terminal.ansiGreen": "#3e5f4b"
+  },
+  "tokenColors": []
+}

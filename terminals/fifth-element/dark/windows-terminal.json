@@ -1,0 +1,22 @@
+{
+  "name": "Neon Mary: The Fifth Element (1997)",
+  "background": "#100b16",
+  "foreground": "#fff0de",
+  "cursorColor": "#00cce8",
+  "black": "#100b16",
+  "red": "#ff643e",
+  "green": "#62d88a",
+  "yellow": "#f5c842",
+  "blue": "#2874b8",
+  "purple": "#d04fc1",
+  "cyan": "#00cce8",
+  "white": "#fff0de",
+  "brightBlack": "#38253e",
+  "brightRed": "#ff9478",
+  "brightGreen": "#98f0ae",
+  "brightYellow": "#ffe27b",
+  "brightBlue": "#62a5e8",
+  "brightPurple": "#ee86df",
+  "brightCyan": "#75f3ff",
+  "brightWhite": "#fff8ed"
+}

@@ -1,0 +1,49 @@
+name: neon-mary-fifth-element-dark
+description: "Neon Mary: The Fifth Element (1997) — cinematic palette (dark)."
+colors:
+  background: '#100b16'
+  status_bar_bg: '#100b16'
+  ui_accent: '#00cce8'
+  banner_accent: '#00cce8'
+  prompt: '#00cce8'
+  input_rule: '#ff643e'
+  banner_title: '#75f3ff'
+  ui_primary: '#75f3ff'
+  session_label: '#75f3ff'
+  response_border: '#00cce8'
+  banner_text: '#fff0de'
+  ui_text: '#fff0de'
+  ui_label: '#fff0de'
+  banner_dim: '#38253e'
+  banner_border: '#00cce8'
+  ui_border: '#00cce8'
+  session_border: '#00cce8'
+  ui_tool: '#62d88a'
+  ui_thinking: '#d04fc1'
+  ui_ok: '#62d88a'
+  ui_warn: '#f5c842'
+  ui_error: '#ff643e'
+  status_bar_text: '#fff0de'
+  status_bar_good: '#62d88a'
+  status_bar_warn: '#f5c842'
+  status_bar_bad: '#ff9478'
+  status_bar_critical: '#ff643e'
+  syntax_string: '#62d88a'
+  syntax_number: '#f5c842'
+  syntax_keyword: '#75f3ff'
+  syntax_comment: '#38253e'
+  completion_menu_bg: '#100b16'
+  completion_menu_current_bg: '#00cce8'
+  completion_menu_meta_bg: '#100b16'
+branding:
+  agent_name: Hermes Agent
+  prompt_symbol: ❯
+  welcome: Leeloo multipass.
+  goodbye: Time not important. Only life important.
+  help_header: "◤ Neon Mary: The Fifth Element (1997) — Commands"
+spinner:
+  waiting_faces: ["(◉)", "(◎)", "(⊙)"]
+  thinking_faces: ["(⌁)", "(⊹)"]
+  thinking_verbs: [observing, tuning, traversing]
+  wings: [["⟪◤", "◥⟫"], ["⟪△", "△⟫"]]
+tool_prefix: ┊
