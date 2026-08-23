@@ -23,6 +23,40 @@ def write(path, text):
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(text)
 
+
+def _lin(c):
+    c = c / 255.0
+    return c / 12.92 if c <= 0.03928 else ((c + 0.055) / 1.055) ** 2.4
+
+
+def _lum(hx):
+    hx = hx.lstrip('#')
+    r, g, b = (int(hx[i:i + 2], 16) for i in (0, 2, 4))
+    return 0.2126 * _lin(r) + 0.7152 * _lin(g) + 0.0722 * _lin(b)
+
+
+def _ratio(a, b):
+    la, lb = _lum(a), _lum(b)
+    return (max(la, lb) + 0.05) / (min(la, lb) + 0.05)
+
+
+def muted(dim, bg, fg, target=3.0):
+    """ANSI color 8 is too dark/light to read as comment text on most of these
+    palettes. Blend it toward the foreground until it clears `target` contrast
+    against the background, preserving the palette's own hue."""
+    if _ratio(dim, bg) >= target:
+        return dim
+    d = [int(dim.lstrip('#')[i:i + 2], 16) for i in (0, 2, 4)]
+    f = [int(fg.lstrip('#')[i:i + 2], 16) for i in (0, 2, 4)]
+    best = dim
+    for step in range(1, 101):
+        t = step / 100.0
+        cand = '#%02x%02x%02x' % tuple(int(round(d[i] + (f[i] - d[i]) * t)) for i in range(3))
+        best = cand
+        if _ratio(cand, bg) >= target:
+            break
+    return best
+
 def rgb(hex_color):
     return tuple(int(hex_color[i:i+2], 16) / 255 for i in (1, 3, 5))
 
@@ -52,8 +86,9 @@ def windows_terminal(p):
 
 def hermes_skin(p, mode):
     c = p["colors"]
+    dim = muted(c[8], p["background"], p["foreground"])
     return f'''name: neon-mary-crow-{mode}
-description: Neon Mary: The Crow (1994) — gothic charcoal, ash, mauve, and blood red ({mode}).
+description: "Neon Mary: The Crow (1994) — gothic charcoal, ash, mauve, and blood red ({mode})."
 colors:
   background: '{p["background"]}'
   status_bar_bg: '{p["background"]}'
@@ -68,7 +103,7 @@ colors:
   banner_text: '{p["foreground"]}'
   ui_text: '{p["foreground"]}'
   ui_label: '{c[7]}'
-  banner_dim: '{c[8]}'
+  banner_dim: '{dim}'
   banner_border: '{c[6]}'
   ui_border: '{c[6]}'
   session_border: '{c[6]}'
@@ -85,7 +120,7 @@ colors:
   syntax_string: '{c[2]}'
   syntax_number: '{c[3]}'
   syntax_keyword: '{c[14]}'
-  syntax_comment: '{c[8]}'
+  syntax_comment: '{dim}'
   completion_menu_bg: '{p["background"]}'
   completion_menu_current_bg: '{c[6]}'
   completion_menu_meta_bg: '{p["background"]}'
@@ -94,7 +129,7 @@ branding:
   prompt_symbol: ❯
   welcome: It can't rain all the time.
   goodbye: Nothing is trivial.
-  help_header: ◤ Neon Mary: The Crow — Commands
+  help_header: "◤ Neon Mary: The Crow — Commands"
 spinner:
   waiting_faces: ["(◉)", "(◎)", "(⊙)"]
   thinking_faces: ["(⌁)", "(⊹)"]

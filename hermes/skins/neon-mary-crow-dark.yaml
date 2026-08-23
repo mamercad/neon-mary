@@ -1,5 +1,5 @@
 name: neon-mary-crow-dark
-description: Neon Mary: The Crow (1994) — gothic charcoal, ash, mauve, and blood red (dark).
+description: "Neon Mary: The Crow (1994) — gothic charcoal, ash, mauve, and blood red (dark)."
 colors:
   background: '#08080d'
   status_bar_bg: '#08080d'
@@ -14,7 +14,7 @@ colors:
   banner_text: '#e8e3e7'
   ui_text: '#e8e3e7'
   ui_label: '#d2ccd2'
-  banner_dim: '#282832'
+  banner_dim: '#5e5c65'
   banner_border: '#9eabb7'
   ui_border: '#9eabb7'
   session_border: '#9eabb7'
@@ -31,7 +31,7 @@ colors:
   syntax_string: '#75866f'
   syntax_number: '#b5a17b'
   syntax_keyword: '#c9d4dc'
-  syntax_comment: '#282832'
+  syntax_comment: '#5e5c65'
   completion_menu_bg: '#08080d'
   completion_menu_current_bg: '#9eabb7'
   completion_menu_meta_bg: '#08080d'
@@ -40,7 +40,7 @@ branding:
   prompt_symbol: ❯
   welcome: It can't rain all the time.
   goodbye: Nothing is trivial.
-  help_header: ◤ Neon Mary: The Crow — Commands
+  help_header: "◤ Neon Mary: The Crow — Commands"
 spinner:
   waiting_faces: ["(◉)", "(◎)", "(⊙)"]
   thinking_faces: ["(⌁)", "(⊹)"]

@@ -28,6 +28,32 @@ def kitty(p):
     names=['black','red','green','yellow','blue','magenta','cyan','white','bright_black','bright_red','bright_green','bright_yellow','bright_blue','bright_magenta','bright_cyan','bright_white']
     return "\n".join([f"foreground {p['foreground']}",f"background {p['background']}",f"cursor {p['accent']}",f"selection_foreground {p['background']}",f"selection_background {p['accent']}",*[(f"color{i} {v}") for i,v in enumerate(p['colors'])]])+"\n"
 
+def _lin(c):
+    c = c/255.0
+    return c/12.92 if c <= 0.03928 else ((c+0.055)/1.055)**2.4
+def _lum(hx):
+    hx = hx.lstrip('#'); r,g,b = (int(hx[i:i+2],16) for i in (0,2,4))
+    return 0.2126*_lin(r) + 0.7152*_lin(g) + 0.0722*_lin(b)
+def _ratio(a, b):
+    la, lb = _lum(a), _lum(b)
+    return (max(la,lb)+0.05)/(min(la,lb)+0.05)
+def muted(dim, bg, fg, target=3.0):
+    """ANSI color 8 is too dark/light to read as comment text on most of these
+    palettes. Blend it toward the foreground until it clears `target` contrast
+    against the background, preserving the palette's own hue."""
+    if _ratio(dim, bg) >= target:
+        return dim
+    d = [int(dim.lstrip('#')[i:i+2],16) for i in (0,2,4)]
+    f = [int(fg.lstrip('#')[i:i+2],16) for i in (0,2,4)]
+    best = dim
+    for step in range(1, 101):
+        t = step/100.0
+        cand = '#%02x%02x%02x' % tuple(int(round(d[i]+(f[i]-d[i])*t)) for i in range(3))
+        best = cand
+        if _ratio(cand, bg) >= target:
+            break
+    return best
+
 def wezterm(p):
     c=p['colors']; return "return {\n  foreground = '"+p['foreground']+"',\n  background = '"+p['background']+"',\n  cursor_bg = '"+p['accent']+"',\n  cursor_fg = '"+p['background']+"',\n  ansi = {"+", ".join(repr(x) for x in c[:8])+"},\n  brights = {"+", ".join(repr(x) for x in c[8:])+"},\n}\n"
 
@@ -41,7 +67,7 @@ def fzf(p):
     return f"--color=bg:{p['background']},fg:{p['foreground']},hl:{p['accent']},fg+: {p['foreground']},bg+: {p['background']},hl+: {p['accent']},border:{p['accent']},prompt:{p['accent']},pointer:{p['red']},info:{p['accent']}\n"
 
 def hermes(p, mode):
-    accent=p['accent']; bg=p['background']; fg=p['foreground']; return f'''name: neon-mary-{mode}\ndescription: Neon Mary: Blade Runner — cyan, magenta, and rain-black ({mode}).\ncolors:\n  background: '{bg}'\n  status_bar_bg: '{bg}'\n  ui_accent: '{accent}'\n  banner_accent: '{accent}'\n  prompt: '{accent}'\n  input_rule: '{p['red']}'\n  banner_title: '{p['colors'][14]}'\n  ui_primary: '{p['colors'][14]}'\n  session_label: '{p['colors'][14]}'\n  response_border: '{p['colors'][6]}'\n  banner_text: '{fg}'\n  ui_text: '{fg}'\n  ui_label: '{p['colors'][7]}'\n  banner_dim: '{p['colors'][8]}'\n  banner_border: '{p['colors'][6]}'\n  ui_border: '{p['colors'][6]}'\n  session_border: '{p['colors'][6]}'\n  ui_tool: '{p['colors'][2]}'\n  ui_thinking: '{p['colors'][5]}'\n  ui_ok: '{p['colors'][2]}'\n  ui_warn: '{p['colors'][3]}'\n  ui_error: '{p['red']}'\n  status_bar_text: '{p['colors'][7]}'\n  status_bar_good: '{p['colors'][2]}'\n  status_bar_warn: '{p['colors'][3]}'\n  status_bar_bad: '{p['colors'][9]}'\n  status_bar_critical: '{p['red']}'\n  syntax_string: '{p['colors'][2]}'\n  syntax_number: '{p['colors'][3]}'\n  syntax_keyword: '{p['colors'][14]}'\n  syntax_comment: '{p['colors'][8]}'\n  completion_menu_bg: '{bg}'\n  completion_menu_current_bg: '{p['colors'][6]}'\n  completion_menu_meta_bg: '{bg}'\nbranding:\n  agent_name: Hermes Agent\n  prompt_symbol: ❯\n  welcome: Wake up. Time to die.\n  goodbye: All those moments will be lost in time, like tears in rain.\n  help_header: ◤ Neon Mary: Blade Runner — Commands\nspinner:\n  waiting_faces: ["(◉)", "(◎)", "(⊙)"]\n  thinking_faces: ["(⌁)", "(⊹)"]\n  thinking_verbs: [enhancing, dreaming, tracking]\n  wings: [["⟪◤", "◥⟫"], ["⟪△", "△⟫"]]\ntool_prefix: ┊\n'''
+    accent=p['accent']; bg=p['background']; fg=p['foreground']; dim=muted(p['colors'][8], bg, fg); return f'''name: neon-mary-{mode}\ndescription: "Neon Mary: Blade Runner — cyan, magenta, and rain-black ({mode})."\ncolors:\n  background: '{bg}'\n  status_bar_bg: '{bg}'\n  ui_accent: '{accent}'\n  banner_accent: '{accent}'\n  prompt: '{accent}'\n  input_rule: '{p['red']}'\n  banner_title: '{p['colors'][14]}'\n  ui_primary: '{p['colors'][14]}'\n  session_label: '{p['colors'][14]}'\n  response_border: '{p['colors'][6]}'\n  banner_text: '{fg}'\n  ui_text: '{fg}'\n  ui_label: '{p['colors'][7]}'\n  banner_dim: '{dim}'\n  banner_border: '{p['colors'][6]}'\n  ui_border: '{p['colors'][6]}'\n  session_border: '{p['colors'][6]}'\n  ui_tool: '{p['colors'][2]}'\n  ui_thinking: '{p['colors'][5]}'\n  ui_ok: '{p['colors'][2]}'\n  ui_warn: '{p['colors'][3]}'\n  ui_error: '{p['red']}'\n  status_bar_text: '{p['colors'][7]}'\n  status_bar_good: '{p['colors'][2]}'\n  status_bar_warn: '{p['colors'][3]}'\n  status_bar_bad: '{p['colors'][9]}'\n  status_bar_critical: '{p['red']}'\n  syntax_string: '{p['colors'][2]}'\n  syntax_number: '{p['colors'][3]}'\n  syntax_keyword: '{p['colors'][14]}'\n  syntax_comment: '{dim}'\n  completion_menu_bg: '{bg}'\n  completion_menu_current_bg: '{p['colors'][6]}'\n  completion_menu_meta_bg: '{bg}'\nbranding:\n  agent_name: Hermes Agent\n  prompt_symbol: ❯\n  welcome: Wake up. Time to die.\n  goodbye: All those moments will be lost in time, like tears in rain.\n  help_header: "◤ Neon Mary: Blade Runner — Commands"\nspinner:\n  waiting_faces: ["(◉)", "(◎)", "(⊙)"]\n  thinking_faces: ["(⌁)", "(⊹)"]\n  thinking_verbs: [enhancing, dreaming, tracking]\n  wings: [["⟪◤", "◥⟫"], ["⟪△", "△⟫"]]\ntool_prefix: ┊\n'''
 
 def main():
     if not SRC.exists() or not ORIGINAL.exists(): raise SystemExit(f"Missing source: {SRC if not SRC.exists() else ORIGINAL}")

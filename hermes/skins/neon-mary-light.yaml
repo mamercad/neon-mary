@@ -1,5 +1,5 @@
 name: neon-mary-light
-description: Neon Mary: Blade Runner — cyan, magenta, and rain-black (light).
+description: "Neon Mary: Blade Runner — cyan, magenta, and rain-black (light)."
 colors:
   background: '#f3f7f8'
   status_bar_bg: '#f3f7f8'
@@ -40,7 +40,7 @@ branding:
   prompt_symbol: ❯
   welcome: Wake up. Time to die.
   goodbye: All those moments will be lost in time, like tears in rain.
-  help_header: ◤ Neon Mary: Blade Runner — Commands
+  help_header: "◤ Neon Mary: Blade Runner — Commands"
 spinner:
   waiting_faces: ["(◉)", "(◎)", "(⊙)"]
   thinking_faces: ["(⌁)", "(⊹)"]

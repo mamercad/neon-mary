@@ -1,5 +1,5 @@
 name: neon-mary-dark
-description: Neon Mary: Blade Runner — cyan, magenta, and rain-black (dark).
+description: "Neon Mary: Blade Runner — cyan, magenta, and rain-black (dark)."
 colors:
   background: '#0a0c12'
   status_bar_bg: '#0a0c12'
@@ -14,7 +14,7 @@ colors:
   banner_text: '#eafcff'
   ui_text: '#eafcff'
   ui_label: '#c9d6e3'
-  banner_dim: '#4a5568'
+  banner_dim: '#545f71'
   banner_border: '#00e5ff'
   ui_border: '#00e5ff'
   session_border: '#00e5ff'
@@ -31,7 +31,7 @@ colors:
   syntax_string: '#3dffb0'
   syntax_number: '#ffe066'
   syntax_keyword: '#7ff2ff'
-  syntax_comment: '#4a5568'
+  syntax_comment: '#545f71'
   completion_menu_bg: '#0a0c12'
   completion_menu_current_bg: '#00e5ff'
   completion_menu_meta_bg: '#0a0c12'
@@ -40,7 +40,7 @@ branding:
   prompt_symbol: ❯
   welcome: Wake up. Time to die.
   goodbye: All those moments will be lost in time, like tears in rain.
-  help_header: ◤ Neon Mary: Blade Runner — Commands
+  help_header: "◤ Neon Mary: Blade Runner — Commands"
 spinner:
   waiting_faces: ["(◉)", "(◎)", "(⊙)"]
   thinking_faces: ["(⌁)", "(⊹)"]
