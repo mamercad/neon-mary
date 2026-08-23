@@ -1,6 +1,6 @@
 # Neon Mary Theme Family
 
-**Neon Mary** is a family of themes built around the `mary.png` artwork. This repository contains two variants: **Blade Runner** and **The Crow (1994)**. Each variant has dark and light palette modes for terminals, editors, Omarchy, and Hermes Agent.
+**Neon Mary** is a family of themes built around the `mary.png` artwork. This repository contains three variants: **Blade Runner**, **The Crow (1994)**, and **Amélie (2001)**. Each variant has dark and light palette modes for terminals, editors, Omarchy, and Hermes Agent.
 
 The canonical artwork is derived from the Mary source. The original square source is preserved as `wallpapers/original-mary-1254.png`; the dark 3840×2160 composition is the Blade Runner variant's current artwork. Light variants use the same composition with a restrained readable grade rather than invented overlays.
 
@@ -34,6 +34,18 @@ The Crow variant uses gothic charcoal, ash, mauve, weathered blue, olive, and bl
 
 Example 3840×2160 Omarchy desktop presentation for the **Neon Mary: The Crow (1994)** variant in dark mode, showing its gothic charcoal, lavender, plum, sage, amber, and crimson palette with terminal workspace, theme inspector, and transparent bar treatment.
 
+### Amélie (2001) variant
+
+The Amélie variant trades neon for a warm Parisian interior: deep café brown, saturated ochre and butter yellow, poppy red, and the film's signature teal-green as the cool counterweight.
+
+| Dark palette | Light palette |
+| --- | --- |
+| ![Neon Mary Amélie dark wallpaper](wallpapers/amelie/dark/4k.png) | ![Neon Mary Amélie light wallpaper](wallpapers/amelie/light/4k.png) |
+
+![Neon Mary Amélie dark Omarchy example](screenshots/desktop-amelie-dark-example.png)
+
+Example 3840×2160 Omarchy desktop presentation for the **Neon Mary: Amélie (2001)** variant in dark mode, showing its ochre, butter, olive, teal, and poppy palette with terminal workspace, theme inspector, and transparent bar treatment.
+
 ## Variants
 
 ### Blade Runner
@@ -46,10 +58,15 @@ Example 3840×2160 Omarchy desktop presentation for the **Neon Mary: The Crow (1
 - `dark`: gothic charcoal, ash, mauve, weathered blue, olive, and blood red.
 - `light`: pale ash-gray with ink, mauve, olive, and blood-red accents.
 
+### Amélie (2001)
+
+- `dark`: deep café brown with ochre, butter yellow, olive, teal, and poppy red.
+- `light`: warm cream surface with the same ochre/poppy/teal accents darkened for readable contrast.
+
 ## Included targets
 
 - Native Omarchy packages with `colors.toml`, `icons.theme`, and wallpaper variants.
-- Neon Mary: The Crow (1994) Omarchy packages and Hermes skins in dark/light modes.
+- Neon Mary: The Crow (1994) and Amélie (2001) Omarchy packages and Hermes skins in dark/light modes.
 - Ghostty, iTerm2, Terminal.app, Kitty, Alacritty, WezTerm, Windows Terminal, fzf, tmux, Vim/Neovim, and VS Code resources.
 - Hermes Agent skins for CLI/TUI/desktop surfaces.
 - Wallpapers: 3840×2160, 2560×1440, 1920×1080, 2560×1600, 2160×1440, 2048×1536, 2048×2048, and 1440×2560 in both modes.
@@ -67,6 +84,9 @@ omarchy bar transparent true
 # The Crow (1994) variant — applies the dark version and transparent bar
 ./omarchy/apply-crow.sh dark
 
+# Amélie (2001) variant — applies the dark version and transparent bar
+./omarchy/apply-amelie.sh dark
+
 # Hermes Agent (active profile home; do not copy secrets)
 mkdir -p "${HERMES_HOME:-$HOME/.hermes}/skins"
 cp hermes/skins/neon-mary-dark.yaml "${HERMES_HOME:-$HOME/.hermes}/skins/"
@@ -80,9 +100,15 @@ Terminal files are portable exports; install them using each application's norma
 ```sh
 python3 generate.py
 python3 validate.py
+
+# Contrast + YAML audit across every Hermes skin in the repo
+python3 validate_contrast.py
+
+# Re-render the showcase screenshots (embeds each wallpaper as a data URI)
+python3 render_screenshots.py
 ```
 
-The Blade Runner generator uses the canonical current artwork from `~/Wallpapers/blade-runner-neon-mary-4k.png`; `generate_crow.py` derives the Crow (1994) variant from `~/Pictures/mary.png`. No source secrets or machine-local configuration are included.
+The Blade Runner generator uses the canonical current artwork from `~/Wallpapers/blade-runner-neon-mary-4k.png`; `generate_crow.py` derives the Crow (1994) variant and `generate_amelie.py` the Amélie (2001) variant from `~/Pictures/mary.png`. No source secrets or machine-local configuration are included.
 
 ## License
 
