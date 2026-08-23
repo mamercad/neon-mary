@@ -4,6 +4,22 @@ A portable **Neon Mary — Blade Runner** theme for terminals, editors, Omarchy,
 
 The canonical artwork is derived from Mark's Mary wallpaper. The original square source is preserved as `wallpapers/original-mary-1254.png`; the dark 3840×2160 composition is the current Neon Mary artwork. Light variants use the same composition with a restrained readable grade rather than invented overlays.
 
+## Screenshots gallery
+
+### Wallpaper variants
+
+| Dark palette | Light palette |
+| --- | --- |
+| ![Neon Mary dark wallpaper variants](screenshots/gallery-dark.png) | ![Neon Mary light wallpaper variants](screenshots/gallery-light.png) |
+
+The gallery shows the generated 16:9, 16:10, 4:3, 1:1, 9:16, and QHD wallpaper outputs. The live dark Omarchy desktop currently uses the transparent top-bar configuration; the repository includes the supported apply workflow in [`omarchy/apply.sh`](omarchy/apply.sh).
+
+### Live Omarchy desktop
+
+![Neon Mary dark Omarchy desktop](screenshots/desktop-dark.png)
+
+Captured from the active 3840×2160 Omarchy desktop with the Neon Mary dark palette, cyan/magenta accents, terminal workspace, and transparent bar configuration.
+
 ## Variants
 
 - `dark`: wet-asphalt black, cyan, magenta, violet, mint, and Blade Runner amber.
