@@ -1,0 +1,13 @@
+{
+  "name": "Neon Mary: Am\u00e9lie (2001) light",
+  "type": "light",
+  "colors": {
+    "editor.background": "#f8ead2",
+    "editor.foreground": "#2c1c18",
+    "terminal.ansiCyan": "#26716d",
+    "terminal.ansiMagenta": "#933a26",
+    "terminal.ansiRed": "#972c28",
+    "terminal.ansiGreen": "#596b25"
+  },
+  "tokenColors": []
+}

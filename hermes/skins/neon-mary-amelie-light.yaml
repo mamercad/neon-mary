@@ -1,0 +1,49 @@
+name: neon-mary-amelie-light
+description: "Neon Mary: Amélie (2001) — Parisian café, warm ochre, poppy red, and teal (light)."
+colors:
+  background: '#f8ead2'
+  status_bar_bg: '#f8ead2'
+  ui_accent: '#b83f26'
+  banner_accent: '#b83f26'
+  prompt: '#b83f26'
+  input_rule: '#972c28'
+  banner_title: '#398b83'
+  ui_primary: '#398b83'
+  session_label: '#398b83'
+  response_border: '#26716d'
+  banner_text: '#2c1c18'
+  ui_text: '#2c1c18'
+  ui_label: '#3c2921'
+  banner_dim: '#9b8369'
+  banner_border: '#26716d'
+  ui_border: '#26716d'
+  session_border: '#26716d'
+  ui_tool: '#596b25'
+  ui_thinking: '#933a26'
+  ui_ok: '#596b25'
+  ui_warn: '#9a6d13'
+  ui_error: '#972c28'
+  status_bar_text: '#3c2921'
+  status_bar_good: '#596b25'
+  status_bar_warn: '#9a6d13'
+  status_bar_bad: '#b83f26'
+  status_bar_critical: '#972c28'
+  syntax_string: '#596b25'
+  syntax_number: '#9a6d13'
+  syntax_keyword: '#398b83'
+  syntax_comment: '#9b8369'
+  completion_menu_bg: '#f8ead2'
+  completion_menu_current_bg: '#26716d'
+  completion_menu_meta_bg: '#f8ead2'
+branding:
+  agent_name: Hermes Agent
+  prompt_symbol: ❯
+  welcome: A little bit of happiness.
+  goodbye: Times are hard for dreamers.
+  help_header: "◤ Neon Mary: Amélie — Commands"
+spinner:
+  waiting_faces: ["(◉)", "(◎)", "(⊙)"]
+  thinking_faces: ["(⌁)", "(⊹)"]
+  thinking_verbs: [noticing, wandering, imagining]
+  wings: [["⟪◤", "◥⟫"], ["⟪△", "△⟫"]]
+tool_prefix: ┊
