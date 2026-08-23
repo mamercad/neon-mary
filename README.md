@@ -14,11 +14,11 @@ The canonical artwork is derived from Mark's Mary wallpaper. The original square
 
 The gallery shows the generated 16:9, 16:10, 4:3, 1:1, 9:16, and QHD wallpaper outputs. The live dark Omarchy desktop currently uses the transparent top-bar configuration; the repository includes the supported apply workflow in [`omarchy/apply.sh`](omarchy/apply.sh).
 
-### Live Omarchy desktop
+### Simulated Omarchy showcase
 
-![Neon Mary dark Omarchy desktop](screenshots/desktop-dark.png)
+![Simulated Neon Mary dark Omarchy desktop](screenshots/desktop-dark-simulated.png)
 
-Captured from the active 3840×2160 Omarchy desktop with the Neon Mary dark palette, cyan/magenta accents, terminal workspace, and transparent bar configuration.
+Designed showcase composition for the active 3840×2160 Omarchy configuration: Neon Mary dark palette, cyan/magenta accents, terminal workspace, theme inspector, and transparent bar treatment. This is a simulated presentation image, not a live desktop capture.
 
 ## Variants
 
