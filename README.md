@@ -14,11 +14,11 @@ The examples below show the family and its current variants. The desktop composi
 
 | Dark palette | Light palette |
 | --- | --- |
-| ![Neon Mary Blade Runner dark wallpaper variants](screenshots/gallery-dark.png) | ![Neon Mary Blade Runner light wallpaper variants](screenshots/gallery-light.png) |
+| ![Neon Mary Blade Runner dark wallpaper](wallpapers/dark/4k.png) | ![Neon Mary Blade Runner light wallpaper](wallpapers/light/4k.png) |
 
 The gallery shows the generated 16:9, 16:10, 4:3, 1:1, 9:16, and QHD wallpaper outputs. The live dark Omarchy desktop currently uses the transparent top-bar configuration; the repository includes the supported apply workflow in [`omarchy/apply.sh`](omarchy/apply.sh).
 
-![Neon Mary Blade Runner dark Omarchy example](screenshots/desktop-dark-simulated.png)
+![Neon Mary Blade Runner dark Omarchy example](screenshots/desktop-blade-runner-dark-example.png)
 
 Example 3840×2160 Omarchy desktop presentation for the **Neon Mary: Blade Runner** variant in dark mode, showing its cyan/magenta palette, terminal workspace, theme inspector, and transparent bar treatment.
 
@@ -28,7 +28,11 @@ The Crow variant uses gothic charcoal, ash, mauve, weathered blue, olive, and bl
 
 | Dark palette | Light palette |
 | --- | --- |
-| ![Neon Mary The Crow dark wallpaper variants](wallpapers/crow/dark/4k.png) | ![Neon Mary The Crow light wallpaper variants](wallpapers/crow/light/4k.png) |
+| ![Neon Mary The Crow dark wallpaper](wallpapers/crow/dark/4k.png) | ![Neon Mary The Crow light wallpaper](wallpapers/crow/light/4k.png) |
+
+![Neon Mary The Crow dark Omarchy example](screenshots/desktop-crow-dark-example.png)
+
+Example 3840×2160 Omarchy desktop presentation for the **Neon Mary: The Crow (1994)** variant in dark mode, showing its gothic charcoal, lavender, plum, sage, amber, and crimson palette with terminal workspace, theme inspector, and transparent bar treatment.
 
 ## Variants
 
