@@ -1,56 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
-<defs>
-  <linearGradient id="shade" x2="0" y2="1"><stop stop-color="#08080d" stop-opacity=".76"/><stop offset="1" stop-color="#05050a" stop-opacity=".9"/></linearGradient>
-  <filter id="glow"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-  <filter id="shadow"><feGaussianBlur in="SourceAlpha" stdDeviation="18"/><feOffset dy="14"/><feComponentTransfer><feFuncA type="linear" slope=".6"/></feComponentTransfer><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-</defs>
-<image href="../wallpapers/crow/dark/4k.png" width="1920" height="1080" preserveAspectRatio="xMidYMid slice"/>
-<rect width="1920" height="1080" fill="url(#shade)"/>
-<!-- transparent Omarchy-style bar -->
-<rect x="0" y="0" width="1920" height="46" fill="#08080d" fill-opacity=".42"/>
-<text x="28" y="29" fill="#b7a6c9" font-family="monospace" font-size="17" font-weight="bold">NEON MARY</text>
-<text x="180" y="29" fill="#78808c" font-family="monospace" font-size="15">OMARCHY // SYSTEM ONLINE</text>
-<text x="1650" y="29" fill="#d2ccd2" font-family="monospace" font-size="15">BOOMER  05:53</text>
-<!-- left terminal -->
-<g filter="url(#shadow)">
- <rect x="72" y="104" width="1080" height="780" rx="8" fill="#08080d" fill-opacity=".94" stroke="#586277" stroke-width="2"/>
- <rect x="72" y="104" width="1080" height="44" rx="8" fill="#15151d"/>
- <circle cx="98" cy="126" r="6" fill="#ff4d6d"/><circle cx="120" cy="126" r="6" fill="#b5a17b"/><circle cx="142" cy="126" r="6" fill="#75866f"/>
- <text x="178" y="132" fill="#d2ccd2" font-family="monospace" font-size="16">ghostty — neon-mary-crow-dark</text>
- <text x="104" y="190" fill="#75866f" font-family="monospace" font-size="18">mark@boomer</text><text x="228" y="190" fill="#9b79a7" font-family="monospace" font-size="18"> ~/Code/GH/mamercad/neon-mary</text>
- <text x="104" y="222" fill="#b7a6c9" font-family="monospace" font-size="18">$ omarchy theme status</text>
- <text x="104" y="258" fill="#e8e3e7" font-family="monospace" font-size="18">theme      neon-mary-crow-dark</text>
- <text x="104" y="290" fill="#e8e3e7" font-family="monospace" font-size="18">bar        transparent / top</text>
- <text x="104" y="322" fill="#e8e3e7" font-family="monospace" font-size="18">wallpaper  3840x2160 / nightfall / rain</text>
- <text x="104" y="354" fill="#75866f" font-family="monospace" font-size="18">shell      ok</text>
- <text x="104" y="406" fill="#b7a6c9" font-family="monospace" font-size="18">$ git log --oneline -3</text>
- <text x="104" y="442" fill="#d2ccd2" font-family="monospace" font-size="18">5b6cd57  Add README screenshots gallery</text>
- <text x="104" y="474" fill="#d2ccd2" font-family="monospace" font-size="18">4e2ae35  Apply transparent Omarchy bar</text>
- <text x="104" y="506" fill="#d2ccd2" font-family="monospace" font-size="18">eab36fd  Add Neon Mary: The Crow (1994) variant</text>
- <text x="104" y="558" fill="#b7a6c9" font-family="monospace" font-size="18">$ find terminals omarchy hermes -type f</text>
- <text x="104" y="594" fill="#78808c" font-family="monospace" font-size="18">terminals/{dark,light}/{ghostty,kitty,wezterm}.conf</text>
- <text x="104" y="626" fill="#78808c" font-family="monospace" font-size="18">omarchy/themes/neon-mary-crow-{dark,light}</text>
- <text x="104" y="658" fill="#78808c" font-family="monospace" font-size="18">hermes/skins/neon-mary-{dark,light}.yaml</text>
- <text x="104" y="742" fill="#9b79a7" font-family="monospace" font-size="18">NEON MARY // IT CAN'T RAIN ALL THE TIME.</text>
- <text x="104" y="820" fill="#b7a6c9" font-family="monospace" font-size="18">$ █</text>
-</g>
-<!-- right inspector -->
-<g filter="url(#shadow)">
- <rect x="1190" y="184" width="660" height="550" rx="8" fill="#15151d" fill-opacity=".95" stroke="#9b79a7" stroke-width="2"/>
- <rect x="1190" y="184" width="660" height="44" rx="8" fill="#1d1b24"/>
- <text x="1220" y="212" fill="#9b79a7" font-family="monospace" font-size="16">THEME INSPECTOR</text>
- <text x="1220" y="274" fill="#78808c" font-family="monospace" font-size="15">PALETTE / DARK</text>
- <rect x="1220" y="294" width="70" height="70" fill="#08080d"/><rect x="1302" y="294" width="70" height="70" fill="#b7a6c9"/><rect x="1384" y="294" width="70" height="70" fill="#9b79a7"/><rect x="1466" y="294" width="70" height="70" fill="#75866f"/><rect x="1548" y="294" width="70" height="70" fill="#b5a17b"/><rect x="1630" y="294" width="70" height="70" fill="#d43d55"/>
- <text x="1220" y="404" fill="#e8e3e7" font-family="monospace" font-size="16">background  #08080d</text>
- <text x="1220" y="436" fill="#e8e3e7" font-family="monospace" font-size="16">lavender    #b7a6c9</text>
- <text x="1220" y="468" fill="#e8e3e7" font-family="monospace" font-size="16">plum        #9b79a7</text>
- <text x="1220" y="500" fill="#e8e3e7" font-family="monospace" font-size="16">mint        #75866f</text>
- <text x="1220" y="532" fill="#e8e3e7" font-family="monospace" font-size="16">amber       #b5a17b</text>
- <text x="1220" y="564" fill="#e8e3e7" font-family="monospace" font-size="16">crimson     #d43d55</text>
- <text x="1220" y="608" fill="#b7a6c9" font-family="monospace" font-size="16">TARGETS</text>
- <text x="1220" y="640" fill="#d2ccd2" font-family="monospace" font-size="16">ghostty  kitty  alacritty  wezterm</text>
- <text x="1220" y="672" fill="#d2ccd2" font-family="monospace" font-size="16">omarchy  hermes  vscode  windows-terminal</text>
- <text x="1220" y="704" fill="#75866f" font-family="monospace" font-size="16">● READY TO DEPLOY</text>
-</g>
-<text x="74" y="1018" fill="#78808c" font-family="monospace" font-size="14">EXAMPLE SHOWCASE • NEON MARY / THE CROW (1994) DARK</text>
-</svg>
+<defs><linearGradient id="shade" x2="0" y2="1"><stop stop-color="#08080d" stop-opacity=".72"/><stop offset="1" stop-color="#040406" stop-opacity=".94"/></linearGradient><filter id="shadow"><feGaussianBlur in="SourceAlpha" stdDeviation="18"/><feOffset dy="14"/><feComponentTransfer><feFuncA type="linear" slope=".6"/></feComponentTransfer><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+<image href="../wallpapers/crow/dark/4k.png" width="1920" height="1080" preserveAspectRatio="xMidYMid slice"/><rect width="1920" height="1080" fill="url(#shade)"/>
+<rect x="0" y="0" width="1920" height="46" fill="#06060a" fill-opacity=".42"/><text x="28" y="29" fill="#b7a6c9" font-family="monospace" font-size="17" font-weight="bold">NEON MARY</text><text x="180" y="29" fill="#9b989f" font-family="monospace" font-size="15">OMARCHY // SYSTEM ONLINE</text><text x="1650" y="29" fill="#e8e3e7" font-family="monospace" font-size="15">BOOMER  05:53</text>
+<g filter="url(#shadow)"><rect x="72" y="104" width="1080" height="780" rx="8" fill="#050508" fill-opacity=".94" stroke="#b7a6c9" stroke-width="2"/><rect x="72" y="104" width="1080" height="44" rx="8" fill="#040406"/><circle cx="98" cy="126" r="6" fill="#d43d55"/><circle cx="120" cy="126" r="6" fill="#b5a17b"/><circle cx="142" cy="126" r="6" fill="#75866f"/><text x="178" y="132" fill="#e8e3e7" font-family="monospace" font-size="16">ghostty — neon-mary-crow-dark</text>
+<text x="104" y="190" fill="#75866f" font-family="monospace" font-size="18">mark@boomer</text><text x="228" y="190" fill="#9b79a7" font-family="monospace" font-size="18"> ~/Code/GH/mamercad/neon-mary</text><text x="104" y="222" fill="#b7a6c9" font-family="monospace" font-size="18">$ omarchy theme status</text><text x="104" y="258" fill="#e8e3e7" font-family="monospace" font-size="18">theme      neon-mary-crow-dark</text><text x="104" y="290" fill="#e8e3e7" font-family="monospace" font-size="18">bar        transparent / top</text><text x="104" y="322" fill="#e8e3e7" font-family="monospace" font-size="18">wallpaper  3840x2160 / nightfall / rain</text><text x="104" y="354" fill="#75866f" font-family="monospace" font-size="18">shell      ok</text><text x="104" y="406" fill="#b7a6c9" font-family="monospace" font-size="18">$ omarchy theme list --mode dark</text><text x="104" y="442" fill="#e8e3e7" font-family="monospace" font-size="18">neon-mary-crow-dark</text><text x="104" y="474" fill="#e8e3e7" font-family="monospace" font-size="18">neon-mary-crow-light</text><text x="104" y="506" fill="#79777e" font-family="monospace" font-size="18">mode       dark  (low key)</text><text x="104" y="558" fill="#b7a6c9" font-family="monospace" font-size="18">$ find terminals omarchy hermes -type f</text><text x="104" y="594" fill="#79777e" font-family="monospace" font-size="18">terminals/crow-dark/{ghostty,kitty,wezterm}.conf</text><text x="104" y="626" fill="#79777e" font-family="monospace" font-size="18">omarchy/themes/neon-mary-crow-dark</text><text x="104" y="658" fill="#79777e" font-family="monospace" font-size="18">hermes/skins/neon-mary-crow-dark.yaml</text><text x="104" y="742" fill="#9b79a7" font-family="monospace" font-size="18">NEON MARY // IT CAN'T RAIN ALL THE TIME.</text><text x="104" y="820" fill="#b7a6c9" font-family="monospace" font-size="18">$ █</text></g>
+<g filter="url(#shadow)"><rect x="1190" y="184" width="660" height="550" rx="8" fill="#050508" fill-opacity=".95" stroke="#9b79a7" stroke-width="2"/><rect x="1190" y="184" width="660" height="44" rx="8" fill="#040406"/><text x="1220" y="212" fill="#9b79a7" font-family="monospace" font-size="16">THEME INSPECTOR</text><text x="1220" y="274" fill="#79777e" font-family="monospace" font-size="15">PALETTE / DARK</text><rect x="1220" y="294" width="70" height="70" fill="#08080d" stroke="#49484b" stroke-width="1"/><rect x="1302" y="294" width="70" height="70" fill="#b7a6c9" stroke="#49484b" stroke-width="1"/><rect x="1384" y="294" width="70" height="70" fill="#9b79a7" stroke="#49484b" stroke-width="1"/><rect x="1466" y="294" width="70" height="70" fill="#75866f" stroke="#49484b" stroke-width="1"/><rect x="1548" y="294" width="70" height="70" fill="#b5a17b" stroke="#49484b" stroke-width="1"/><rect x="1630" y="294" width="70" height="70" fill="#d43d55" stroke="#49484b" stroke-width="1"/><text x="1220" y="404" fill="#e8e3e7" font-family="monospace" font-size="16">background  #08080d</text><text x="1220" y="436" fill="#e8e3e7" font-family="monospace" font-size="16">accent      #b7a6c9</text><text x="1220" y="468" fill="#e8e3e7" font-family="monospace" font-size="16">alt         #9b79a7</text><text x="1220" y="500" fill="#e8e3e7" font-family="monospace" font-size="16">green       #75866f</text><text x="1220" y="532" fill="#e8e3e7" font-family="monospace" font-size="16">amber       #b5a17b</text><text x="1220" y="564" fill="#e8e3e7" font-family="monospace" font-size="16">red         #d43d55</text><text x="1220" y="608" fill="#b7a6c9" font-family="monospace" font-size="16">TARGETS</text><text x="1220" y="640" fill="#e8e3e7" font-family="monospace" font-size="16">ghostty  kitty  alacritty  wezterm</text><text x="1220" y="672" fill="#e8e3e7" font-family="monospace" font-size="16">omarchy  hermes  vscode  windows-terminal</text><text x="1220" y="704" fill="#75866f" font-family="monospace" font-size="16">● READY TO DEPLOY</text></g><rect x="60" y="998" width="720" height="30" rx="5" fill="#06060a" fill-opacity=".42"/><text x="74" y="1018" fill="#e8e3e7" font-family="monospace" font-size="14">EXAMPLE SHOWCASE • NEON MARY / THE CROW (1994) DARK</text></svg>

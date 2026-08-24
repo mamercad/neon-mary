@@ -4,83 +4,55 @@
 
 The canonical artwork is derived from the Mary source. The original square source is preserved as `wallpapers/original-mary-1254.png`; each variant keeps the Mary composition while applying its own visual treatment. Light variants use the same composition with a restrained readable grade rather than invented overlays.
 
+> **Note**
+> The desktop compositions below are designed presentation images rather than
+> live system captures.
+
 ## Screenshots gallery
 
-### Example screenshots
+Each variant is shown as a full desktop in both modes: the wallpaper, the
+transparent top bar, a terminal workspace, and the theme inspector.
 
-The examples below show the family and its current variants. The desktop compositions are designed presentation images rather than live system captures.
+### Blade Runner
 
-### Blade Runner wallpaper variants
-
-| Dark palette | Light palette |
+| Dark | Light |
 | --- | --- |
-| ![Neon Mary Blade Runner dark wallpaper](wallpapers/dark/4k.png) | ![Neon Mary Blade Runner light wallpaper](wallpapers/light/4k.png) |
+| ![Neon Mary Blade Runner dark desktop](screenshots/desktop-blade-runner-dark-example.png) | ![Neon Mary Blade Runner light desktop](screenshots/desktop-blade-runner-light-example.png) |
 
-The gallery shows the generated 16:9, 16:10, 4:3, 1:1, 9:16, and QHD wallpaper outputs. The live dark Omarchy desktop currently uses the transparent top-bar configuration; the repository includes the supported apply workflow in [`omarchy/apply.sh`](omarchy/apply.sh).
+### The Crow (1994)
 
-![Neon Mary Blade Runner dark Omarchy example](screenshots/desktop-blade-runner-dark-example.png)
-
-Example 3840×2160 Omarchy desktop presentation for the **Neon Mary: Blade Runner** variant in dark mode, showing its cyan/magenta palette, terminal workspace, theme inspector, and transparent bar treatment.
-
-### The Crow (1994) variant
-
-The Crow variant uses gothic charcoal, ash, mauve, weathered blue, olive, and blood-red accents while preserving the Neon Mary artwork foundation.
-
-| Dark palette | Light palette |
+| Dark | Light |
 | --- | --- |
-| ![Neon Mary The Crow dark wallpaper](wallpapers/crow/dark/4k.png) | ![Neon Mary The Crow light wallpaper](wallpapers/crow/light/4k.png) |
+| ![Neon Mary The Crow dark desktop](screenshots/desktop-crow-dark-example.png) | ![Neon Mary The Crow light desktop](screenshots/desktop-crow-light-example.png) |
 
-![Neon Mary The Crow dark Omarchy example](screenshots/desktop-crow-dark-example.png)
+### Amélie (2001)
 
-Example 3840×2160 Omarchy desktop presentation for the **Neon Mary: The Crow (1994)** variant in dark mode, showing its gothic charcoal, lavender, plum, sage, amber, and crimson palette with terminal workspace, theme inspector, and transparent bar treatment.
-
-### Amélie (2001) variant
-
-The Amélie variant trades neon for a warm Parisian interior: deep café brown, saturated ochre and butter yellow, poppy red, and the film's signature teal-green as the cool counterweight.
-
-| Dark palette | Light palette |
+| Dark | Light |
 | --- | --- |
-| ![Neon Mary Amélie dark wallpaper](wallpapers/amelie/dark/4k.png) | ![Neon Mary Amélie light wallpaper](wallpapers/amelie/light/4k.png) |
+| ![Neon Mary Amélie dark desktop](screenshots/desktop-amelie-dark-example.png) | ![Neon Mary Amélie light desktop](screenshots/desktop-amelie-light-example.png) |
 
-![Neon Mary Amélie dark Omarchy example](screenshots/desktop-amelie-dark-example.png)
+### Tron (1982)
 
-Example 3840×2160 Omarchy desktop presentation for the **Neon Mary: Amélie (2001)** variant in dark mode, showing its ochre, butter, olive, teal, and poppy palette with terminal workspace, theme inspector, and transparent bar treatment.
-
-### Tron (1982) variant
-
-The Tron variant uses phosphor cyan, electric blue, grid black, amber, and green to evoke the original film's computer-world interface.
-
-| Dark palette | Light palette |
+| Dark | Light |
 | --- | --- |
-| ![Neon Mary Tron dark wallpaper](wallpapers/tron/dark/4k.png) | ![Neon Mary Tron light wallpaper](wallpapers/tron/light/4k.png) |
+| ![Neon Mary Tron dark desktop](screenshots/desktop-tron-dark-example.png) | ![Neon Mary Tron light desktop](screenshots/desktop-tron-light-example.png) |
 
-![Neon Mary Tron dark Omarchy example](screenshots/desktop-tron-dark-example.png)
+### Dark City (1998)
 
-Example 3840×2160 Omarchy desktop presentation for the **Neon Mary: Tron (1982)** variant in dark mode, showing its cyan, violet, green, amber, and red palette with terminal workspace, theme inspector, and transparent bar treatment.
-
-### Dark City (1998) variant
-
-The Dark City variant uses perpetual-night black, steel blue, clockwork violet, sodium amber, and muted crimson for a neo-noir palette.
-
-| Dark palette | Light palette |
+| Dark | Light |
 | --- | --- |
-| ![Neon Mary Dark City dark wallpaper](wallpapers/dark-city/dark/4k.png) | ![Neon Mary Dark City light wallpaper](wallpapers/dark-city/light/4k.png) |
+| ![Neon Mary Dark City dark desktop](screenshots/desktop-dark-city-dark-example.png) | ![Neon Mary Dark City light desktop](screenshots/desktop-dark-city-light-example.png) |
 
-![Neon Mary Dark City dark Omarchy example](screenshots/desktop-dark-city-dark-example.png)
+### The Fifth Element (1997)
 
-Example 3840×2160 Omarchy desktop presentation for the **Neon Mary: Dark City (1998)** variant in dark mode, showing its steel blue, violet, green, sodium amber, and crimson palette with terminal workspace, theme inspector, and transparent bar treatment.
-
-### The Fifth Element (1997) variant
-
-The Fifth Element variant uses bright electric cyan, ultraviolet, solar amber, vivid green, and coral red for a colorful futuristic palette.
-
-| Dark palette | Light palette |
+| Dark | Light |
 | --- | --- |
-| ![Neon Mary The Fifth Element dark wallpaper](wallpapers/fifth-element/dark/4k.png) | ![Neon Mary The Fifth Element light wallpaper](wallpapers/fifth-element/light/4k.png) |
+| ![Neon Mary The Fifth Element dark desktop](screenshots/desktop-fifth-element-dark-example.png) | ![Neon Mary The Fifth Element light desktop](screenshots/desktop-fifth-element-light-example.png) |
 
-![Neon Mary The Fifth Element dark Omarchy example](screenshots/desktop-fifth-element-dark-example.png)
-
-Example 3840×2160 Omarchy desktop presentation for the **Neon Mary: The Fifth Element (1997)** variant in dark mode, showing its cyan, violet, green, amber, and coral palette with terminal workspace, theme inspector, and transparent bar treatment.
+Wallpapers are generated at 3840×2160, 2560×1440, 1920×1080, 2560×1600,
+2160×1440, 2048×1536, 2048×2048, and 1440×2560 in both modes; the apply
+scripts install the 4K version. See [`omarchy/apply.sh`](omarchy/apply.sh)
+and the per-variant apply scripts.
 
 ## Variants
 
@@ -164,7 +136,9 @@ python3 validate.py
 # Contrast + YAML audit across every Hermes skin in the repo
 python3 validate_contrast.py
 
-# Re-render the showcase screenshots (embeds each wallpaper as a data URI)
+# Rebuild the dark/light showcase desktops from each variant's palette,
+# then rasterise them (embeds each wallpaper as a data URI)
+python3 generate_showcases.py
 python3 render_screenshots.py
 ```
 
