@@ -11,7 +11,7 @@ reversible. It deliberately ships nothing that requires patching the OS.
 | Desktop wallpaper | Yes | `.theme` file |
 | Light / dark mode (apps + system) | Yes | `.theme` + registry |
 | Accent colour — taskbar, Start, focus rings, title bars | Yes | registry |
-| Terminal colours | Yes | `../terminals/<variant>/<mode>/windows-terminal.json` |
+| Terminal colours | Yes | `apply-terminal.ps1` merges the scheme into `settings.json` and sets it active |
 | **Window frame chrome, Start flyout, Explorer styling** | **No** | needs a patched visual style |
 
 That last row is the honest limit. Restyling actual window frames requires a
@@ -85,7 +85,42 @@ match the source palette.
 
 ## Windows Terminal
 
-Separate from the system theme. Copy the scheme object from
-`../terminals/<variant>/<mode>/windows-terminal.json` into the `schemes`
-array in Windows Terminal's `settings.json`, then set it as the profile's
-`colorScheme`.
+`apply-theme.ps1` calls `apply-terminal.ps1` automatically, so the terminal is
+configured as part of installing a variant. Pass `-SkipTerminal` to opt out,
+or run it on its own:
+
+```powershell
+.\apply-terminal.ps1 -Variant tron -Mode dark
+
+# also overwrite per-profile colorScheme values that would shadow the default
+.\apply-terminal.ps1 -Variant tron -Mode dark -Scope all
+
+# install the scheme without activating it
+.\apply-terminal.ps1 -Variant tron -Mode dark -Scope none
+
+.\apply-terminal.ps1 -Revert
+```
+
+It finds `settings.json` across the Store, Preview and unpackaged installs,
+or takes `-SettingsPath`.
+
+Because this edits a config you own:
+
+- a timestamped `.bak` is written before the first change
+- the existing JSON is parsed, mutated and re-serialised, so unrelated
+  settings survive — it is never regenerated from a template
+- schemes are matched by name, so re-running updates in place instead of
+  appending duplicates
+- `-Revert` removes only `Neon Mary:*` schemes and leaves yours alone
+
+One caveat: `settings.json` is jsonc and may contain `//` comments. Those are
+stripped in order to parse, so a rewritten file loses them. The backup keeps
+the original.
+
+Scheme names are suffixed with the mode — `Neon Mary: Tron (1982) dark` and
+`… light` — because Windows Terminal keys schemes by name, so an unsuffixed
+pair would collide.
+
+`test-apply-terminal.ps1` covers the merge end to end: jsonc stripping
+(including a string literal containing `//`), preservation of unrelated
+settings, idempotent re-runs, both modes coexisting, and revert.

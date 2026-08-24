@@ -164,10 +164,10 @@ def wezterm(p):
             "},\n  brights = {" + ", ".join(repr(v) for v in c[8:]) + "},\n}\n")
 
 
-def windows(p):
+def windows(p, mode):
     c = p["colors"]
     n = ["black", "red", "green", "yellow", "blue", "purple", "cyan", "white"]
-    d = {"name": f"Neon Mary: {TITLE}", "background": p["background"],
+    d = {"name": f"Neon Mary: {TITLE} {mode}", "background": p["background"],
          "foreground": p["foreground"], "cursorColor": p["accent"]}
     d.update(dict(zip(n, c[:8])))
     d.update(dict(zip(["bright" + x.title() for x in n], c[8:])))
@@ -266,7 +266,7 @@ def main():
         files = {
             "ghostty.conf": ghostty(p), "kitty.conf": kitty(p),
             "alacritty.toml": alacritty(p), "wezterm.lua": wezterm(p),
-            "windows-terminal.json": windows(p),
+            "windows-terminal.json": windows(p, mode),
             "fzf.conf": (f"--color=bg:{p['background']},fg:{p['foreground']},"
                          f"hl:{p['accent']},border:{p['accent']},"
                          f"prompt:{p['accent']},pointer:{p['red']}\n"),

@@ -50,9 +50,9 @@ def wezterm(p):
     c = p["colors"]
     return "return {\n  foreground = '" + p["foreground"] + "',\n  background = '" + p["background"] + "',\n  cursor_bg = '" + p["accent"] + "',\n  cursor_fg = '" + p["background"] + "',\n  ansi = {" + ", ".join(repr(v) for v in c[:8]) + "},\n  brights = {" + ", ".join(repr(v) for v in c[8:]) + "},\n}\n"
 
-def windows_terminal(p):
+def windows_terminal(p, mode):
     c = p["colors"]
-    return json.dumps({"name": "Neon Mary: The Crow (1994)", "background": p["background"], "foreground": p["foreground"], "cursorColor": p["accent"], "black": c[0], "red": c[1], "green": c[2], "yellow": c[3], "blue": c[4], "purple": c[5], "cyan": c[6], "white": c[7], "brightBlack": c[8], "brightRed": c[9], "brightGreen": c[10], "brightYellow": c[11], "brightBlue": c[12], "brightPurple": c[13], "brightCyan": c[14], "brightWhite": c[15]}, indent=2) + "\n"
+    return json.dumps({"name": f"Neon Mary: The Crow (1994) {mode}", "background": p["background"], "foreground": p["foreground"], "cursorColor": p["accent"], "black": c[0], "red": c[1], "green": c[2], "yellow": c[3], "blue": c[4], "purple": c[5], "cyan": c[6], "white": c[7], "brightBlack": c[8], "brightRed": c[9], "brightGreen": c[10], "brightYellow": c[11], "brightBlue": c[12], "brightPurple": c[13], "brightCyan": c[14], "brightWhite": c[15]}, indent=2) + "\n"
 
 def hermes_skin(p, mode):
     c = p["colors"]
@@ -131,7 +131,7 @@ def main():
         omarchy = ROOT / "omarchy" / "themes" / f"neon-mary-crow-{mode}"
         (omarchy / "backgrounds").mkdir(parents=True, exist_ok=True)
         write(omarchy / "colors.toml", colors_toml(p)); write(omarchy / "icons.theme", "Yaru-blue\n")
-        for target, content in {"ghostty.conf": ghostty(p), "kitty.conf": kitty(p), "alacritty.toml": alacritty(p), "wezterm.lua": wezterm(p), "windows-terminal.json": windows_terminal(p)}.items():
+        for target, content in {"ghostty.conf": ghostty(p), "kitty.conf": kitty(p), "alacritty.toml": alacritty(p), "wezterm.lua": wezterm(p), "windows-terminal.json": windows_terminal(p, mode)}.items():
             write(ROOT / "terminals" / "crow" / mode / target, content)
         write(ROOT / "terminals" / "crow" / mode / "fzf.conf", f"--color=bg:{p['background']},fg:{p['foreground']},hl:{p['accent']},border:{p['accent']},prompt:{p['accent']},pointer:{p['red']}\n")
         write(ROOT / "terminals" / "crow" / mode / "iterm2.json", json.dumps({"Name": f"Neon Mary: The Crow (1994) {mode}", "Background Color": dict(zip(("Red Component", "Green Component", "Blue Component"), rgb(p["background"]))), "Foreground Color": dict(zip(("Red Component", "Green Component", "Blue Component"), rgb(p["foreground"])))}, indent=2) + "\n")

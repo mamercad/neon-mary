@@ -37,8 +37,8 @@ def wezterm(p):
 def alacritty(p):
     c=p['colors']; return "[colors.primary]\nbackground = '"+p['background']+"'\nforeground = '"+p['foreground']+"'\n\n[colors.cursor]\ntext = '"+p['background']+"'\ncursor = '"+p['accent']+"'\n\n[colors.normal]\n"+"\n".join(f"{n} = '{v}'" for n,v in zip(['black','red','green','yellow','blue','magenta','cyan','white'],c[:8]))+"\n\n[colors.bright]\n"+"\n".join(f"{n} = '{v}'" for n,v in zip(['black','red','green','yellow','blue','magenta','cyan','white'],c[8:]))+"\n"
 
-def windows(p):
-    c=p['colors']; return json.dumps({"name":"Neon Mary: Blade Runner","background":p['background'],"foreground":p['foreground'],"cursorColor":p['accent'],"black":c[0],"red":c[1],"green":c[2],"yellow":c[3],"blue":c[4],"purple":c[5],"cyan":c[6],"white":c[7],"brightBlack":c[8],"brightRed":c[9],"brightGreen":c[10],"brightYellow":c[11],"brightBlue":c[12],"brightPurple":c[13],"brightCyan":c[14],"brightWhite":c[15]}, indent=2)+"\n"
+def windows(p, mode):
+    c=p['colors']; return json.dumps({"name":f"Neon Mary: Blade Runner {mode}","background":p['background'],"foreground":p['foreground'],"cursorColor":p['accent'],"black":c[0],"red":c[1],"green":c[2],"yellow":c[3],"blue":c[4],"purple":c[5],"cyan":c[6],"white":c[7],"brightBlack":c[8],"brightRed":c[9],"brightGreen":c[10],"brightYellow":c[11],"brightBlue":c[12],"brightPurple":c[13],"brightCyan":c[14],"brightWhite":c[15]}, indent=2)+"\n"
 
 def fzf(p):
     return f"--color=bg:{p['background']},fg:{p['foreground']},hl:{p['accent']},fg+: {p['foreground']},bg+: {p['background']},hl+: {p['accent']},border:{p['accent']},prompt:{p['accent']},pointer:{p['red']},info:{p['accent']}\n"
@@ -62,7 +62,7 @@ def main():
         (ROOT/'terminals'/mode/'kitty.conf').write_text(kitty(p))
         (ROOT/'terminals'/mode/'wezterm.lua').write_text(wezterm(p))
         (ROOT/'terminals'/mode/'alacritty.toml').write_text(alacritty(p))
-        (ROOT/'terminals'/mode/'windows-terminal.json').write_text(windows(p))
+        (ROOT/'terminals'/mode/'windows-terminal.json').write_text(windows(p, mode))
         (ROOT/'terminals'/mode/'fzf.conf').write_text(fzf(p))
         (ROOT/'terminals'/mode/'iterm2.json').write_text(json.dumps({"Name":f"Neon Mary: Blade Runner {mode}","Background Color":{"Red Component":int(p['background'][1:3],16)/255,"Green Component":int(p['background'][3:5],16)/255,"Blue Component":int(p['background'][5:7],16)/255},"Foreground Color":{"Red Component":int(p['foreground'][1:3],16)/255,"Green Component":int(p['foreground'][3:5],16)/255,"Blue Component":int(p['foreground'][5:7],16)/255}},indent=2)+"\n")
         (ROOT/'terminals'/mode/'Terminal.app.terminal').write_text(json.dumps({"name":f"Neon Mary: Blade Runner {mode}","profile":"Neon Mary: Blade Runner","colors":p['colors']},indent=2)+"\n")

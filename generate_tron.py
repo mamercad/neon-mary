@@ -40,10 +40,10 @@ def wezterm(p):
     c = p["colors"]
     return "return {\n  foreground = '" + p["foreground"] + "',\n  background = '" + p["background"] + "',\n  cursor_bg = '" + p["accent"] + "',\n  cursor_fg = '" + p["background"] + "',\n  ansi = {" + ", ".join(repr(v) for v in c[:8]) + "},\n  brights = {" + ", ".join(repr(v) for v in c[8:]) + "},\n}\n"
 
-def windows(p):
+def windows(p, mode):
     c = p["colors"]
     names = ["black", "red", "green", "yellow", "blue", "purple", "cyan", "white"]
-    data = {"name": "Neon Mary: Tron (1982)", "background": p["background"], "foreground": p["foreground"], "cursorColor": p["accent"]}
+    data = {"name": f"Neon Mary: Tron (1982) {mode}", "background": p["background"], "foreground": p["foreground"], "cursorColor": p["accent"]}
     data.update(dict(zip(names, c[:8]))); data.update(dict(zip(["bright" + n.title() for n in names], c[8:])))
     return json.dumps(data, indent=2) + "\n"
 
@@ -121,7 +121,7 @@ def main():
         write(ROOT / "hermes" / "skins" / f"neon-mary-tron-{mode}.yaml", hermes(p, mode))
         om = ROOT / "omarchy" / "themes" / f"neon-mary-tron-{mode}"; (om / "backgrounds").mkdir(parents=True, exist_ok=True)
         write(om / "colors.toml", colors_toml(p)); write(om / "icons.theme", "Yaru-blue\n")
-        targets = {"ghostty.conf": ghostty(p), "kitty.conf": kitty(p), "alacritty.toml": alacritty(p), "wezterm.lua": wezterm(p), "windows-terminal.json": windows(p), "fzf.conf": f"--color=bg:{p['background']},fg:{p['foreground']},hl:{p['accent']},border:{p['accent']},prompt:{p['accent']},pointer:{p['red']}\n", "iterm2.json": json.dumps({"Name": f"Neon Mary: Tron (1982) {mode}", "Background Color": dict(zip(("Red Component", "Green Component", "Blue Component"), rgb(p["background"]))), "Foreground Color": dict(zip(("Red Component", "Green Component", "Blue Component"), rgb(p["foreground"])))}, indent=2) + "\n", "Terminal.app.terminal": json.dumps({"name": f"Neon Mary: Tron (1982) {mode}", "profile": "Neon Mary: Tron (1982)", "colors": p["colors"]}, indent=2) + "\n"}
+        targets = {"ghostty.conf": ghostty(p), "kitty.conf": kitty(p), "alacritty.toml": alacritty(p), "wezterm.lua": wezterm(p), "windows-terminal.json": windows(p, mode), "fzf.conf": f"--color=bg:{p['background']},fg:{p['foreground']},hl:{p['accent']},border:{p['accent']},prompt:{p['accent']},pointer:{p['red']}\n", "iterm2.json": json.dumps({"Name": f"Neon Mary: Tron (1982) {mode}", "Background Color": dict(zip(("Red Component", "Green Component", "Blue Component"), rgb(p["background"]))), "Foreground Color": dict(zip(("Red Component", "Green Component", "Blue Component"), rgb(p["foreground"])))}, indent=2) + "\n", "Terminal.app.terminal": json.dumps({"name": f"Neon Mary: Tron (1982) {mode}", "profile": "Neon Mary: Tron (1982)", "colors": p["colors"]}, indent=2) + "\n"}
         for name, content in targets.items(): write(ROOT / "terminals" / "tron" / mode / name, content)
         write(ROOT / "editors" / "tron" / mode / "vscode-color-theme.json", json.dumps({"name": f"Neon Mary: Tron (1982) {mode}", "type": mode, "colors": {"editor.background": p["background"], "editor.foreground": p["foreground"], "terminal.ansiCyan": p["colors"][6], "terminal.ansiMagenta": p["colors"][5], "terminal.ansiRed": p["red"], "terminal.ansiGreen": p["colors"][2]}, "tokenColors": []}, indent=2) + "\n")
         write(ROOT / "editors" / "tron" / mode / "vim.vim", f'" Neon Mary: Tron (1982) {mode} palette\nlet g:neon_mary_tron_background = "{p["background"]}"\nlet g:neon_mary_tron_foreground = "{p["foreground"]}"\n')

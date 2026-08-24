@@ -14,7 +14,7 @@
       * desktop wallpaper
       * light / dark mode (apps and system, independently addressable)
       * accent colour -- taskbar, Start highlights, focus rings, title bars
-      * Windows Terminal colours (see ..\terminals\<variant>\)
+      * Windows Terminal colours, installed and set active automatically
 
     What it CANNOT theme without patching the OS:
       * window frame chrome, the Start flyout, Explorer's own styling.
@@ -32,8 +32,16 @@
     designed light-first and defaults to light.
 
 .PARAMETER Revert
-    Restore the Windows default accent behaviour and remove installed
-    Neon Mary theme files.
+    Restore the Windows default accent behaviour, remove installed
+    Neon Mary theme files, and remove the Neon Mary Windows Terminal schemes.
+
+.PARAMETER SkipTerminal
+    Do not touch Windows Terminal's settings.json.
+
+.PARAMETER TerminalScope
+    Passed through to apply-terminal.ps1. 'defaults' (default) sets the scheme
+    in profiles.defaults; 'all' also overwrites per-profile colorScheme values
+    that would shadow it; 'none' installs without activating.
 
 .EXAMPLE
     .\apply-theme.ps1 -Variant grand-budapest -Mode light
@@ -49,6 +57,11 @@ param(
 
     [ValidateSet('dark', 'light')]
     [string]$Mode,
+
+    [switch]$SkipTerminal,
+
+    [ValidateSet('defaults', 'all', 'none')]
+    [string]$TerminalScope = 'defaults',
 
     [switch]$Revert
 )
@@ -94,6 +107,13 @@ if ($Revert) {
     }
     Restart-Explorer
     Write-Host 'Reverted. Pick a stock theme in Settings > Personalization > Themes.'
+
+    $wt = Join-Path $PSScriptRoot 'apply-terminal.ps1'
+    if (Test-Path $wt) {
+        Write-Host ''
+        Write-Host 'Reverting Windows Terminal...'
+        & $wt -Revert
+    }
     return
 }
 
@@ -138,6 +158,18 @@ Write-Host "  theme     -> $themeDst"
 Write-Host '  applying accent + mode...'
 reg.exe import $regSrc 2>&1 | Out-Null
 if ($LASTEXITCODE -ne 0) { throw "reg import failed for $regSrc" }
+
+# Windows Terminal is a separate config, so hand off to the dedicated script.
+# -SkipTerminal opts out; a missing Windows Terminal is a warning, not a failure.
+if (-not $SkipTerminal) {
+    $wt = Join-Path $PSScriptRoot 'apply-terminal.ps1'
+    if (Test-Path $wt) {
+        Write-Host '  configuring Windows Terminal...'
+        & $wt -Variant $Variant -Mode $Mode -Scope $TerminalScope
+    } else {
+        Write-Warning "apply-terminal.ps1 not found next to this script; skipping."
+    }
+}
 
 # Opening the .theme is what makes Windows actually adopt it.
 Start-Process $themeDst

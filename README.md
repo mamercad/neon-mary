@@ -114,7 +114,7 @@ eras rather than being a plain inversion.
 - Neon Mary: Dark City (1998) and The Fifth Element (1997) Omarchy packages and Hermes skins in dark/light modes.
 - Neon Mary: The Grand Budapest Hotel (2014) light-first Omarchy packages and Hermes skins in light/dark modes.
 - Ghostty, iTerm2, Terminal.app, Kitty, Alacritty, WezTerm, Windows Terminal, fzf, tmux, Vim/Neovim, and VS Code resources.
-- Windows 11 `.theme` files, accent-colour `.reg` files, and an `apply-theme.ps1` installer in `windows/` — wallpaper, light/dark mode, and accent colour, all per-user and reversible.
+- Windows 11 `.theme` files, accent-colour `.reg` files, and PowerShell installers in `windows/` — wallpaper, light/dark mode, accent colour, and the Windows Terminal scheme, all per-user and reversible.
 - Hermes Agent skins for CLI/TUI/desktop surfaces.
 - Wallpapers: 3840×2160, 2560×1440, 1920×1080, 2560×1600, 2160×1440, 2048×1536, 2048×2048, and 1440×2560 in both modes.
 - `generate.py` to reproduce wallpaper variants and generated resources from the palette/source inputs.
@@ -145,8 +145,10 @@ omarchy bar transparent true
 ./omarchy/apply-grand-budapest.sh light
 
 # Windows 11 (PowerShell, per-user, no OS patching)
-#   applies wallpaper + light/dark mode + accent colour
+#   wallpaper + light/dark mode + accent colour + Windows Terminal scheme
 .\windows\apply-theme.ps1 -Variant grand-budapest -Mode light
+.\windows\apply-theme.ps1 -Variant tron -SkipTerminal   # leave WT alone
+.\windows\apply-terminal.ps1 -Variant tron -Mode dark   # terminal only
 .\windows\apply-theme.ps1 -Revert
 
 # Hermes Agent (active profile home; do not copy secrets)
