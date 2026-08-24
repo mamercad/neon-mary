@@ -5,6 +5,8 @@ import json
 import shutil
 import subprocess
 
+from palette_utils import muted
+
 ROOT = Path(__file__).resolve().parent
 SOURCE = Path.home() / "Pictures" / "mary.png"
 RESOLUTIONS = {"4k": (3840, 2160), "wqhd": (2560, 1440), "qhd": (1920, 1080), "16-10": (2560, 1600), "3-2": (2160, 1440), "4-3": (2048, 1536), "1-1": (2048, 2048), "9-16": (1440, 2560)}
@@ -24,38 +26,6 @@ def write(path, text):
     path.write_text(text)
 
 
-def _lin(c):
-    c = c / 255.0
-    return c / 12.92 if c <= 0.03928 else ((c + 0.055) / 1.055) ** 2.4
-
-
-def _lum(hx):
-    hx = hx.lstrip('#')
-    r, g, b = (int(hx[i:i + 2], 16) for i in (0, 2, 4))
-    return 0.2126 * _lin(r) + 0.7152 * _lin(g) + 0.0722 * _lin(b)
-
-
-def _ratio(a, b):
-    la, lb = _lum(a), _lum(b)
-    return (max(la, lb) + 0.05) / (min(la, lb) + 0.05)
-
-
-def muted(dim, bg, fg, target=3.0):
-    """ANSI color 8 is too dark/light to read as comment text on most of these
-    palettes. Blend it toward the foreground until it clears `target` contrast
-    against the background, preserving the palette's own hue."""
-    if _ratio(dim, bg) >= target:
-        return dim
-    d = [int(dim.lstrip('#')[i:i + 2], 16) for i in (0, 2, 4)]
-    f = [int(fg.lstrip('#')[i:i + 2], 16) for i in (0, 2, 4)]
-    best = dim
-    for step in range(1, 101):
-        t = step / 100.0
-        cand = '#%02x%02x%02x' % tuple(int(round(d[i] + (f[i] - d[i]) * t)) for i in range(3))
-        best = cand
-        if _ratio(cand, bg) >= target:
-            break
-    return best
 
 def rgb(hex_color):
     return tuple(int(hex_color[i:i+2], 16) / 255 for i in (1, 3, 5))

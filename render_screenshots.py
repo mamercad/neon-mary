@@ -26,11 +26,15 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent
 SHOTS = ROOT / "screenshots"
 
-TARGETS = [
-    "desktop-blade-runner-dark-example",
-    "desktop-crow-dark-example",
-    "desktop-amelie-dark-example",
-]
+def discover() -> list[str]:
+    """Every showcase SVG in screenshots/, so new variants are picked up
+    automatically. A hardcoded list silently skips whatever was added last --
+    that is how the Tron, Dark City, and Fifth Element examples shipped with
+    their wallpapers missing."""
+    return sorted(
+        p.stem for p in SHOTS.glob("desktop-*-example.svg")
+    )
+
 
 HREF = re.compile(r'(<image[^>]*?\shref=")([^"]+)(")', re.I)
 
@@ -81,7 +85,7 @@ def render(stem: str) -> None:
 
 
 if __name__ == "__main__":
-    names = sys.argv[1:] or TARGETS
+    names = sys.argv[1:] or discover()
     print("rendering showcase screenshots")
     for stem in names:
         render(stem)

@@ -3,6 +3,8 @@
 from pathlib import Path
 import json, shutil, subprocess
 
+from palette_utils import muted
+
 ROOT = Path(__file__).resolve().parent
 SRC = Path.home() / "Wallpapers" / "blade-runner-neon-mary-4k.png"
 ORIGINAL = Path.home() / "Pictures" / "mary.png"
@@ -28,31 +30,6 @@ def kitty(p):
     names=['black','red','green','yellow','blue','magenta','cyan','white','bright_black','bright_red','bright_green','bright_yellow','bright_blue','bright_magenta','bright_cyan','bright_white']
     return "\n".join([f"foreground {p['foreground']}",f"background {p['background']}",f"cursor {p['accent']}",f"selection_foreground {p['background']}",f"selection_background {p['accent']}",*[(f"color{i} {v}") for i,v in enumerate(p['colors'])]])+"\n"
 
-def _lin(c):
-    c = c/255.0
-    return c/12.92 if c <= 0.03928 else ((c+0.055)/1.055)**2.4
-def _lum(hx):
-    hx = hx.lstrip('#'); r,g,b = (int(hx[i:i+2],16) for i in (0,2,4))
-    return 0.2126*_lin(r) + 0.7152*_lin(g) + 0.0722*_lin(b)
-def _ratio(a, b):
-    la, lb = _lum(a), _lum(b)
-    return (max(la,lb)+0.05)/(min(la,lb)+0.05)
-def muted(dim, bg, fg, target=3.0):
-    """ANSI color 8 is too dark/light to read as comment text on most of these
-    palettes. Blend it toward the foreground until it clears `target` contrast
-    against the background, preserving the palette's own hue."""
-    if _ratio(dim, bg) >= target:
-        return dim
-    d = [int(dim.lstrip('#')[i:i+2],16) for i in (0,2,4)]
-    f = [int(fg.lstrip('#')[i:i+2],16) for i in (0,2,4)]
-    best = dim
-    for step in range(1, 101):
-        t = step/100.0
-        cand = '#%02x%02x%02x' % tuple(int(round(d[i]+(f[i]-d[i])*t)) for i in range(3))
-        best = cand
-        if _ratio(cand, bg) >= target:
-            break
-    return best
 
 def wezterm(p):
     c=p['colors']; return "return {\n  foreground = '"+p['foreground']+"',\n  background = '"+p['background']+"',\n  cursor_bg = '"+p['accent']+"',\n  cursor_fg = '"+p['background']+"',\n  ansi = {"+", ".join(repr(x) for x in c[:8])+"},\n  brights = {"+", ".join(repr(x) for x in c[8:])+"},\n}\n"

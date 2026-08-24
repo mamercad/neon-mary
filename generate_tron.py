@@ -5,6 +5,8 @@ import json
 import shutil
 import subprocess
 
+from palette_utils import muted
+
 ROOT = Path(__file__).resolve().parent
 SOURCE = Path.home() / "Pictures" / "mary.png"
 RESOLUTIONS = {"4k": (3840, 2160), "wqhd": (2560, 1440), "qhd": (1920, 1080), "16-10": (2560, 1600), "3-2": (2160, 1440), "4-3": (2048, 1536), "1-1": (2048, 2048), "9-16": (1440, 2560)}
@@ -47,6 +49,7 @@ def windows(p):
 
 def hermes(p, mode):
     c = p["colors"]
+    dim = muted(c[8], p['background'], p['foreground'])
     return f'''name: neon-mary-tron-{mode}
 description: "Neon Mary: Tron (1982) — electric cyan, phosphor blue, amber, and grid black ({mode})."
 colors:
@@ -63,7 +66,7 @@ colors:
   banner_text: '{p["foreground"]}'
   ui_text: '{p["foreground"]}'
   ui_label: '{c[7]}'
-  banner_dim: '{c[8]}'
+  banner_dim: '{dim}'
   banner_border: '{c[6]}'
   ui_border: '{c[6]}'
   session_border: '{c[6]}'
@@ -80,7 +83,7 @@ colors:
   syntax_string: '{c[2]}'
   syntax_number: '{c[3]}'
   syntax_keyword: '{c[14]}'
-  syntax_comment: '{c[8]}'
+  syntax_comment: '{dim}'
   completion_menu_bg: '{p["background"]}'
   completion_menu_current_bg: '{c[6]}'
   completion_menu_meta_bg: '{p["background"]}'
