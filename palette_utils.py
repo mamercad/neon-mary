@@ -45,3 +45,30 @@ def muted(dim: str, bg: str, fg: str, target: float = 3.0) -> str:
         if ratio(best, bg) >= target:
             break
     return best
+
+
+# --- wallpaper grading -----------------------------------------------------
+#
+# The Mary source is very dark (mean relative luminance ~0.074). `-modulate`
+# applies a gain, so even 175% brightness only reached ~0.32 -- nowhere near
+# the 0.78-0.92 luminance of the light-mode panels, which left every light
+# wallpaper reading as mid-grey with the UI floating on top of it.
+#
+# A light treatment needs a tonal remap rather than a gain: lift the black
+# point with -level, then veil toward white. Measured at level 0%,40%,2.0 with
+# a 76% white veil the result lands at ~0.68 mean luminance while keeping
+# enough tonal spread (~23) for the portrait to stay legible as artwork.
+LIGHT_LEVEL = "0%,40%,2.0"
+LIGHT_VEIL = 76
+LIGHT_SAT = 55
+
+
+def light_grade_args(tint: str = "#ffffff") -> list:
+    """ImageMagick args producing a genuine high-key wash of a dark source."""
+    return [
+        "-level", LIGHT_LEVEL,
+        "-modulate", f"100,{LIGHT_SAT},100",
+        "(", "+clone", "-fill", tint, "-colorize", "100", ")",
+        "-compose", "blend", "-define", f"compose:args={LIGHT_VEIL}",
+        "-composite",
+    ]

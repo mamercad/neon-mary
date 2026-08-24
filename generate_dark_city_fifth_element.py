@@ -2,7 +2,7 @@
 """Generate the Neon Mary: Dark City (1998) and The Fifth Element (1997) variants."""
 from pathlib import Path
 import json, shutil, subprocess
-from palette_utils import muted
+from palette_utils import muted, light_grade_args
 ROOT=Path(__file__).resolve().parent
 SOURCE=Path.home()/"Pictures"/"mary.png"
 RES={"4k":(3840,2160),"wqhd":(2560,1440),"qhd":(1920,1080),"16-10":(2560,1600),"3-2":(2160,1440),"4-3":(2048,1536),"1-1":(2048,2048),"9-16":(1440,2560)}
@@ -24,8 +24,12 @@ def hermes(p,mode,title,tag):
  c=p['c']; dim=muted(c[8], p['bg'], p['fg']); return f'''name: neon-mary-{tag}-{mode}\ndescription: "Neon Mary: {title} — cinematic palette ({mode})."\ncolors:\n  background: '{p['bg']}'\n  status_bar_bg: '{p['bg']}'\n  ui_accent: '{p['accent']}'\n  banner_accent: '{p['accent']}'\n  prompt: '{p['accent']}'\n  input_rule: '{p['red']}'\n  banner_title: '{c[14]}'\n  ui_primary: '{c[14]}'\n  session_label: '{c[14]}'\n  response_border: '{c[6]}'\n  banner_text: '{p['fg']}'\n  ui_text: '{p['fg']}'\n  ui_label: '{c[7]}'\n  banner_dim: '{dim}'\n  banner_border: '{c[6]}'\n  ui_border: '{c[6]}'\n  session_border: '{c[6]}'\n  ui_tool: '{c[2]}'\n  ui_thinking: '{c[5]}'\n  ui_ok: '{c[2]}'\n  ui_warn: '{c[3]}'\n  ui_error: '{p['red']}'\n  status_bar_text: '{c[7]}'\n  status_bar_good: '{c[2]}'\n  status_bar_warn: '{c[3]}'\n  status_bar_bad: '{c[9]}'\n  status_bar_critical: '{p['red']}'\n  syntax_string: '{c[2]}'\n  syntax_number: '{c[3]}'\n  syntax_keyword: '{c[14]}'\n  syntax_comment: '{dim}'\n  completion_menu_bg: '{p['bg']}'\n  completion_menu_current_bg: '{c[6]}'\n  completion_menu_meta_bg: '{p['bg']}'\nbranding:\n  agent_name: Hermes Agent\n  prompt_symbol: ❯\n  welcome: {('The city is dreaming.' if tag=='dark-city' else 'Leeloo multipass.')}\n  goodbye: {('They built the city to see what makes us tick.' if tag=='dark-city' else 'Time not important. Only life important.')}\n  help_header: "◤ Neon Mary: {title} — Commands"\nspinner:\n  waiting_faces: ["(◉)", "(◎)", "(⊙)"]\n  thinking_faces: ["(⌁)", "(⊹)"]\n  thinking_verbs: [observing, tuning, traversing]\n  wings: [["⟪◤", "◥⟫"], ["⟪△", "△⟫"]]\ntool_prefix: ┊\n'''
 def wallpaper(out,w,h,mode,source):
  tag = out.parts[-3]
- base = source if (w,h)==(3840,2160) else ROOT/'wallpapers'/tag/mode/'4k.png'
- grade=['-modulate','90,72,100'] if mode=='dark' else ['-modulate','106,52,100']
+ is4k = (w,h)==(3840,2160)
+ base = source if is4k else ROOT/'wallpapers'/tag/mode/'4k.png'
+ # Grade only on the 4k pass; smaller sizes derive from the graded 4k.
+ grade = ([] if not is4k else
+          (['-modulate','90,72,100'] if mode=='dark'
+           else light_grade_args(VARIANTS[tag]['light']['bg'])))
  out.parent.mkdir(parents=True, exist_ok=True)
  subprocess.run(['magick',str(base),'-resize',f'{w}x{h}^','-gravity','center','-extent',f'{w}x{h}',*grade,str(out)],check=True)
 def main():

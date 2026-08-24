@@ -1,0 +1,22 @@
+{
+  "name": "Neon Mary: The Grand Budapest Hotel (2014)",
+  "background": "#22161a",
+  "foreground": "#f7e4e6",
+  "cursorColor": "#f1a7be",
+  "black": "#22161a",
+  "red": "#e04a3f",
+  "green": "#8fbf7a",
+  "yellow": "#e0b455",
+  "blue": "#6fa8cd",
+  "purple": "#b47fd0",
+  "cyan": "#63c3c9",
+  "white": "#f7e4e6",
+  "brightBlack": "#5a3f47",
+  "brightRed": "#f2705f",
+  "brightGreen": "#a8d693",
+  "brightYellow": "#f5cd7a",
+  "brightBlue": "#93c4e2",
+  "brightPurple": "#cb9ee0",
+  "brightCyan": "#88dade",
+  "brightWhite": "#fff5f6"
+}

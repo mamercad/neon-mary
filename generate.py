@@ -3,7 +3,7 @@
 from pathlib import Path
 import json, shutil, subprocess
 
-from palette_utils import muted
+from palette_utils import muted, light_grade_args
 
 ROOT = Path(__file__).resolve().parent
 SRC = Path.home() / "Wallpapers" / "blade-runner-neon-mary-4k.png"
@@ -73,7 +73,7 @@ def main():
         for name,(w,h) in RESOLUTIONS.items():
             out=ROOT/'wallpapers'/mode/f'{name}.png'; out.parent.mkdir(parents=True,exist_ok=True)
             if name=='4k' and mode=='dark': shutil.copy2(SRC,out)
-            elif name=='4k' and mode=='light': run('convert',str(SRC),'-brightness-contrast','12x4','-modulate','112,82,100',str(out))
+            elif name=='4k' and mode=='light': run('magick',str(SRC),*light_grade_args(PALETTES['light']['background']),str(out))
             else:
                 source=ROOT/'wallpapers'/mode/'4k.png'; run('convert',str(source),'-resize',f'{w}x{h}^','-gravity','center','-extent',f'{w}x{h}',str(out))
             shutil.copy2(out, ROOT/'omarchy'/'themes'/f'neon-mary-{mode}'/'backgrounds'/f'{name}.png')

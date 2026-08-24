@@ -1,0 +1,13 @@
+{
+  "name": "Neon Mary: The Grand Budapest Hotel (2014) dark",
+  "type": "dark",
+  "colors": {
+    "editor.background": "#22161a",
+    "editor.foreground": "#f7e4e6",
+    "terminal.ansiCyan": "#63c3c9",
+    "terminal.ansiMagenta": "#b47fd0",
+    "terminal.ansiRed": "#e04a3f",
+    "terminal.ansiGreen": "#8fbf7a"
+  },
+  "tokenColors": []
+}

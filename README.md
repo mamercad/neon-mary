@@ -1,6 +1,6 @@
 # Neon Mary Theme Family
 
-**Neon Mary** is a family of themes built around the `mary.png` artwork. This repository contains six variants: **Blade Runner**, **The Crow (1994)**, **Amélie (2001)**, **Tron (1982)**, **Dark City (1998)**, and **The Fifth Element (1997)**. Each variant has dark and light palette modes for terminals, editors, Omarchy, and Hermes Agent.
+**Neon Mary** is a family of themes built around the `mary.png` artwork. This repository contains seven variants: **Blade Runner**, **The Crow (1994)**, **Amélie (2001)**, **Tron (1982)**, **Dark City (1998)**, **The Fifth Element (1997)**, and **The Grand Budapest Hotel (2014)**. Each variant has dark and light palette modes for terminals, editors, Omarchy, and Hermes Agent.
 
 The canonical artwork is derived from the Mary source. The original square source is preserved as `wallpapers/original-mary-1254.png`; each variant keeps the Mary composition while applying its own visual treatment. Light variants use the same composition with a restrained readable grade rather than invented overlays.
 
@@ -49,6 +49,16 @@ transparent top bar, a terminal workspace, and the theme inspector.
 | --- | --- |
 | ![Neon Mary The Fifth Element dark desktop](screenshots/desktop-fifth-element-dark-example.png) | ![Neon Mary The Fifth Element light desktop](screenshots/desktop-fifth-element-light-example.png) |
 
+### The Grand Budapest Hotel (2014)
+
+The only light-first variant: the palette was measured from the film itself
+rather than inverted from a dark one, so the **light mode is the primary
+treatment**.
+
+| Light | Dark |
+| --- | --- |
+| ![Neon Mary Grand Budapest light desktop](screenshots/desktop-grand-budapest-light-example.png) | ![Neon Mary Grand Budapest dark desktop](screenshots/desktop-grand-budapest-dark-example.png) |
+
 Wallpapers are generated at 3840×2160, 2560×1440, 1920×1080, 2560×1600,
 2160×1440, 2048×1536, 2048×2048, and 1440×2560 in both modes; the apply
 scripts install the 4K version. See [`omarchy/apply.sh`](omarchy/apply.sh)
@@ -86,12 +96,23 @@ and the per-variant apply scripts.
 - `dark`: deep violet-black with electric cyan, ultraviolet, solar amber, green, and coral red.
 - `light`: warm cream with the same colorful accents darkened for readable contrast.
 
+### The Grand Budapest Hotel (2014)
+
+Designed light-first — the palette is measured from the film, which is
+genuinely bright (mean luminance 0.518, 43.7% of pixels above 0.60, 71.4%
+warm), rather than inverted from a dark one. The two modes lean on different
+eras rather than being a plain inversion.
+
+- `light` *(primary)*: 1932 confectionery pink with aubergine, lacquer red, Mendl's gold, and alpine blue.
+- `dark`: the 1968 lobby — burnt orange and oxblood with façade pink as the accent.
+
 ## Included targets
 
 - Native Omarchy packages with `colors.toml`, `icons.theme`, and wallpaper variants.
 - Neon Mary: The Crow (1994) and Amélie (2001) Omarchy packages and Hermes skins in dark/light modes.
 - Neon Mary: Tron (1982) Omarchy packages and Hermes skins in dark/light modes.
 - Neon Mary: Dark City (1998) and The Fifth Element (1997) Omarchy packages and Hermes skins in dark/light modes.
+- Neon Mary: The Grand Budapest Hotel (2014) light-first Omarchy packages and Hermes skins in light/dark modes.
 - Ghostty, iTerm2, Terminal.app, Kitty, Alacritty, WezTerm, Windows Terminal, fzf, tmux, Vim/Neovim, and VS Code resources.
 - Hermes Agent skins for CLI/TUI/desktop surfaces.
 - Wallpapers: 3840×2160, 2560×1440, 1920×1080, 2560×1600, 2160×1440, 2048×1536, 2048×2048, and 1440×2560 in both modes.
@@ -118,6 +139,9 @@ omarchy bar transparent true
 # Dark City / The Fifth Element — applies a dark variant and transparent bar
 ./omarchy/apply-cinematic.sh dark-city dark
 ./omarchy/apply-cinematic.sh fifth-element dark
+
+# The Grand Budapest Hotel — light-first, so `light` is this script's default
+./omarchy/apply-grand-budapest.sh light
 
 # Hermes Agent (active profile home; do not copy secrets)
 mkdir -p "${HERMES_HOME:-$HOME/.hermes}/skins"

@@ -5,7 +5,7 @@ import json
 import shutil
 import subprocess
 
-from palette_utils import muted
+from palette_utils import muted, light_grade_args
 
 ROOT = Path(__file__).resolve().parent
 SOURCE = Path.home() / "Pictures" / "mary.png"
@@ -102,8 +102,15 @@ tool_prefix: ┊
 '''
 
 def wallpaper(source, out, width, height, mode):
-    grade = ["-modulate", "88,82,100"] if mode == "dark" else ["-modulate", "106,48,100"]
-    base = source if (width, height) == (3840, 2160) else ROOT / "wallpapers" / "tron" / mode / "4k.png"
+    is4k = (width, height) == (3840, 2160)
+    base = source if is4k else ROOT / "wallpapers" / "tron" / mode / "4k.png"
+    # Grade only on the 4k pass; smaller sizes derive from the graded 4k.
+    if not is4k:
+        grade = []
+    elif mode == "dark":
+        grade = ["-modulate", "88,82,100"]
+    else:
+        grade = light_grade_args(PALETTES["light"]["background"])
     subprocess.run(["magick", str(base), "-resize", f"{width}x{height}^", "-gravity", "center", "-extent", f"{width}x{height}", *grade, str(out)], check=True)
 
 def main():

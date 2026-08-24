@@ -1,0 +1,8 @@
+return {
+  foreground = '#3a2228',
+  background = '#fdf0f2',
+  cursor_bg = '#b0356b',
+  cursor_fg = '#fdf0f2',
+  ansi = {'#fdf0f2', '#aa1711', '#4a7343', '#9a6a12', '#2f6f96', '#5c2a73', '#2b7f86', '#3a2228'},
+  brights = {'#8a6b76', '#c4342c', '#5f8f55', '#b8861f', '#3f86b0', '#7b3f96', '#38a0a8', '#2a171c'},
+}

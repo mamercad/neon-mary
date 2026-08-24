@@ -1,0 +1,49 @@
+name: neon-mary-grand-budapest-dark
+description: "Neon Mary: The Grand Budapest Hotel (2014) — confectionery pink, aubergine, and lacquer red (dark)."
+colors:
+  background: '#22161a'
+  status_bar_bg: '#22161a'
+  ui_accent: '#f1a7be'
+  banner_accent: '#f1a7be'
+  prompt: '#f1a7be'
+  input_rule: '#e04a3f'
+  banner_title: '#88dade'
+  ui_primary: '#88dade'
+  session_label: '#88dade'
+  response_border: '#63c3c9'
+  banner_text: '#f7e4e6'
+  ui_text: '#f7e4e6'
+  ui_label: '#f7e4e6'
+  banner_dim: '#796067'
+  banner_border: '#63c3c9'
+  ui_border: '#63c3c9'
+  session_border: '#63c3c9'
+  ui_tool: '#b47fd0'
+  ui_thinking: '#cb9ee0'
+  ui_ok: '#8fbf7a'
+  ui_warn: '#e0b455'
+  ui_error: '#e04a3f'
+  status_bar_text: '#f7e4e6'
+  status_bar_good: '#8fbf7a'
+  status_bar_warn: '#e0b455'
+  status_bar_bad: '#f2705f'
+  status_bar_critical: '#e04a3f'
+  syntax_string: '#8fbf7a'
+  syntax_number: '#e0b455'
+  syntax_keyword: '#b47fd0'
+  syntax_comment: '#796067'
+  completion_menu_bg: '#22161a'
+  completion_menu_current_bg: '#63c3c9'
+  completion_menu_meta_bg: '#22161a'
+branding:
+  agent_name: Hermes Agent
+  prompt_symbol: ❯
+  welcome: Keep your hands off my lobby boy.
+  goodbye: You see, there are still faint glimmers of civilization left.
+  help_header: "◤ Neon Mary: Grand Budapest — Commands"
+spinner:
+  waiting_faces: ["(◉)", "(◎)", "(⊙)"]
+  thinking_faces: ["(⌁)", "(⊹)"]
+  thinking_verbs: [concierging, arranging, absconding, perfuming]
+  wings: [["⟪◤", "◥⟫"], ["⟪△", "△⟫"]]
+tool_prefix: ┊

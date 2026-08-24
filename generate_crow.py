@@ -5,7 +5,7 @@ import json
 import shutil
 import subprocess
 
-from palette_utils import muted
+from palette_utils import muted, light_grade_args
 
 ROOT = Path(__file__).resolve().parent
 SOURCE = Path.home() / "Pictures" / "mary.png"
@@ -110,7 +110,10 @@ tool_prefix: ┊
 
 def wallpaper(source, out, width, height, mode):
     out.parent.mkdir(parents=True, exist_ok=True)
-    grade = ["-modulate", "78,68,100"] if mode == "dark" else ["-modulate", "104,28,100"]
+    if mode == "dark":
+        grade = ["-modulate", "78,68,100"]
+    else:
+        grade = light_grade_args(PALETTES["light"]["background"])
     if width == 3840 and height == 2160:
         command = ["magick", str(source), "-resize", "3840x2160^", "-gravity", "center", "-extent", "3840x2160", *grade, str(out)]
     else:

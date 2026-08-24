@@ -5,7 +5,7 @@ import json
 import shutil
 import subprocess
 
-from palette_utils import muted
+from palette_utils import muted, light_grade_args
 
 ROOT = Path(__file__).resolve().parent
 SOURCE = Path.home() / "Pictures" / "mary.png"
@@ -82,7 +82,14 @@ spinner:
 tool_prefix: ┊
 '''
 def wallpaper(source,out,w,h,mode):
-    out.parent.mkdir(parents=True,exist_ok=True); grade=['-modulate','94,74,100'] if mode=='dark' else ['-modulate','106,58,100']; base=ROOT/'wallpapers'/'amelie'/mode/'4k.png' if not (w==3840 and h==2160) else source
+    out.parent.mkdir(parents=True,exist_ok=True)
+    is4k = (w==3840 and h==2160)
+    base = source if is4k else ROOT/'wallpapers'/'amelie'/mode/'4k.png'
+    # Grade only on the 4k pass; the other sizes are resized from the already
+    # graded 4k, so re-applying would double-wash them.
+    grade = ([] if not is4k else
+             (['-modulate','94,74,100'] if mode=='dark'
+              else light_grade_args(PALETTES['light']['background'])))
     cmd=['magick',str(base),'-resize',f'{w}x{h}^','-gravity','center','-extent',f'{w}x{h}',*grade,str(out)]; subprocess.run(cmd,check=True)
 def main():
     if not SOURCE.exists(): raise SystemExit(f'Missing source: {SOURCE}')

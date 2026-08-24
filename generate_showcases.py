@@ -34,12 +34,16 @@ VARIANTS = {
                   "perpetual night / tuning"),
     "fifth-element": ("The Fifth Element (1997)", "fifth-element",
                       "MULTIPASS ACCEPTED.", "electric cyan / solar amber"),
+    "grand-budapest": ("The Grand Budapest Hotel (2014)", "grand-budapest",
+                       "KEEP YOUR HANDS OFF MY LOBBY BOY.",
+                       "confectionery pink / alpine"),
 }
 
 # palette file stem per variant (base Blade Runner has no prefix)
 STEM = {"blade-runner": "", "crow": "crow-", "amelie": "amelie-",
         "tron": "tron-", "dark-city": "dark-city-",
-        "fifth-element": "fifth-element-"}
+        "fifth-element": "fifth-element-",
+        "grand-budapest": "grand-budapest-"}
 
 
 def load_palette(tag, mode):
@@ -91,14 +95,14 @@ def build(tag, mode):
     panel_op = ".94" if not light else ".96"
 
     # Semantic roles, each forced readable against the panel it sits on.
-    green = readable(c[2], panel, fg)
-    amber = readable(c[3], panel, fg)
-    violet = readable(c[5], panel, fg)
-    cyan = readable(c[6], panel, fg)
-    acc = readable(accent, panel, fg)
-    err = readable(red, panel, fg)
+    green = readable(c[2], panel, fg, 4.5)
+    amber = readable(c[3], panel, fg, 4.5)
+    violet = readable(c[5], panel, fg, 4.5)
+    cyan = readable(c[6], panel, fg, 4.5)
+    acc = readable(accent, panel, fg, 5.0)
+    err = readable(red, panel, fg, 4.5)
     body = readable(fg, panel, fg, 7.0)
-    muted = readable(c[8], panel, fg, 4.5)
+    muted = readable(c[8], panel, fg, 7.0)
     # The top bar and footer sit directly on the wallpaper, not on a panel, so
     # they must be measured against the *shaded wallpaper*, not the panel fill.
     # In light mode the shade lands mid-grey, which is why palette colour 8
@@ -106,7 +110,7 @@ def build(tag, mode):
     barbase = mix(bg, "#000000", 0.25) if not light else mix(bg, "#ffffff", 0.20)
     bar_op = ".42" if not light else ".80"
     bartext = readable(fg, barbase, fg, 7.0)
-    barmuted = readable(c[8], barbase, fg, 7.0)
+    barmuted = readable(c[8], barbase, fg, 9.0)
 
     wall = f"../wallpapers/{wdir}/{mode}/4k.png" if wdir else f"../wallpapers/{mode}/4k.png"
     label = f"{tag}-{mode}" if tag != "blade-runner" else mode
