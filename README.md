@@ -55,9 +55,9 @@ The only light-first variant: the palette was measured from the film itself
 rather than inverted from a dark one, so the **light mode is the primary
 treatment**.
 
-| Light | Dark |
+| Dark | Light |
 | --- | --- |
-| ![Neon Mary Grand Budapest light desktop](screenshots/desktop-grand-budapest-light-example.png) | ![Neon Mary Grand Budapest dark desktop](screenshots/desktop-grand-budapest-dark-example.png) |
+| ![Neon Mary Grand Budapest dark desktop](screenshots/desktop-grand-budapest-dark-example.png) | ![Neon Mary Grand Budapest light desktop](screenshots/desktop-grand-budapest-light-example.png) |
 
 Wallpapers are generated at 3840×2160, 2560×1440, 1920×1080, 2560×1600,
 2160×1440, 2048×1536, 2048×2048, and 1440×2560 in both modes; the apply
