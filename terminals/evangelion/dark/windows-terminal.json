@@ -1,0 +1,22 @@
+{
+  "name": "Neon Mary: Neon Genesis Evangelion (1995) dark",
+  "background": "#120d18",
+  "foreground": "#f4f3e8",
+  "cursorColor": "#a976c3",
+  "black": "#120d18",
+  "red": "#d3290f",
+  "green": "#a0de59",
+  "yellow": "#f5c024",
+  "blue": "#466b5a",
+  "purple": "#5f2a62",
+  "cyan": "#a976c3",
+  "white": "#f4f3e8",
+  "brightBlack": "#34233b",
+  "brightRed": "#f04b2f",
+  "brightGreen": "#c1f47b",
+  "brightYellow": "#ffe36a",
+  "brightBlue": "#6e9b83",
+  "brightPurple": "#bb8dd4",
+  "brightCyan": "#cba9dc",
+  "brightWhite": "#fffdf2"
+}

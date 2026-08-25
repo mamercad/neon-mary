@@ -47,6 +47,22 @@ def muted(dim: str, bg: str, fg: str, target: float = 3.0) -> str:
     return best
 
 
+def pick(bg: str, fg: str, *candidates: str, target: float = 3.0) -> str:
+    """First candidate that clears `target` against bg, else a lifted fallback.
+
+    Most palettes can map a UI role straight onto an ANSI slot, but the slot
+    that works for one film can be far too dark in another -- Evangelion's
+    ANSI 5 is a deep Unit-01 aubergine at 1.82:1 on its own background, where
+    every other variant's ANSI 5 clears 3:1 comfortably. Passing the normal
+    slot first and its bright counterpart second keeps the intended hue and
+    only falls back to blending when neither is legible.
+    """
+    for c in candidates:
+        if c and ratio(c, bg) >= target:
+            return c
+    return muted(candidates[0], bg, fg, target)
+
+
 # --- wallpaper grading -----------------------------------------------------
 #
 # The Mary source is very dark (mean relative luminance ~0.074). `-modulate`

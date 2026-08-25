@@ -21,6 +21,7 @@ VARIANTS = {
     "dark-city": ("dark-city", "dark-city-"),
     "fifth-element": ("fifth-element", "fifth-element-"),
     "grand-budapest": ("grand-budapest", "grand-budapest-"),
+    "evangelion": ("evangelion", "evangelion-"),
 }
 
 

@@ -1,6 +1,6 @@
 # Neon Mary Theme Family
 
-**Neon Mary** is a family of themes built around the `mary.png` artwork. This repository contains seven variants: **Blade Runner**, **The Crow (1994)**, **Amélie (2001)**, **Tron (1982)**, **Dark City (1998)**, **The Fifth Element (1997)**, and **The Grand Budapest Hotel (2014)**. Each variant has dark and light palette modes for terminals, editors, Omarchy, and Hermes Agent.
+**Neon Mary** is a family of themes built around the `mary.png` artwork. This repository contains eight variants: **Blade Runner**, **The Crow (1994)**, **Amélie (2001)**, **Tron (1982)**, **Dark City (1998)**, **The Fifth Element (1997)**, **The Grand Budapest Hotel (2014)**, and **Neon Genesis Evangelion (1995)**. Each variant has dark and light palette modes for terminals, editors, Omarchy, and Hermes Agent.
 
 The canonical artwork is derived from the Mary source. The original square source is preserved as `wallpapers/original-mary-1254.png`; each variant keeps the Mary composition while applying its own visual treatment. Light variants use the same composition with a restrained readable grade rather than invented overlays.
 
@@ -59,6 +59,12 @@ treatment**.
 | --- | --- |
 | ![Neon Mary Grand Budapest dark desktop](screenshots/desktop-grand-budapest-dark-example.png) | ![Neon Mary Grand Budapest light desktop](screenshots/desktop-grand-budapest-light-example.png) |
 
+### Neon Genesis Evangelion (1995)
+
+| Dark | Light |
+| --- | --- |
+| ![Neon Mary Evangelion dark desktop](screenshots/desktop-evangelion-dark-example.png) | ![Neon Mary Evangelion light desktop](screenshots/desktop-evangelion-light-example.png) |
+
 Wallpapers are generated at 3840×2160, 2560×1440, 1920×1080, 2560×1600,
 2160×1440, 2048×1536, 2048×2048, and 1440×2560 in both modes; the apply
 scripts install the 4K version. See [`omarchy/apply.sh`](omarchy/apply.sh)
@@ -106,6 +112,11 @@ eras rather than being a plain inversion.
 - `light` *(primary)*: 1932 confectionery pink with aubergine, lacquer red, Mendl's gold, and alpine blue.
 - `dark`: the 1968 lobby — burnt orange and oxblood with façade pink as the accent.
 
+### Neon Genesis Evangelion (1995)
+
+- `dark`: NERV black with Unit-01 purple, toxic green, signal orange, and warning red.
+- `light`: bone-white with deep aubergine, olive, and the same warning red darkened for readable contrast.
+
 ## Included targets
 
 - Native Omarchy packages with `colors.toml`, `icons.theme`, and wallpaper variants.
@@ -113,6 +124,7 @@ eras rather than being a plain inversion.
 - Neon Mary: Tron (1982) Omarchy packages and Hermes skins in dark/light modes.
 - Neon Mary: Dark City (1998) and The Fifth Element (1997) Omarchy packages and Hermes skins in dark/light modes.
 - Neon Mary: The Grand Budapest Hotel (2014) light-first Omarchy packages and Hermes skins in light/dark modes.
+- Neon Mary: Neon Genesis Evangelion (1995) Omarchy packages and Hermes skins in dark/light modes.
 - Ghostty, iTerm2, Terminal.app, Kitty, Alacritty, WezTerm, Windows Terminal, fzf, tmux, Vim/Neovim, and VS Code resources.
 - Windows 11 `.theme` files, accent-colour `.reg` files, and PowerShell installers in `windows/` — wallpaper, light/dark mode, accent colour, and the Windows Terminal scheme, all per-user and reversible.
 - Hermes Agent skins for CLI/TUI/desktop surfaces.
@@ -143,6 +155,9 @@ omarchy bar transparent true
 
 # The Grand Budapest Hotel — light-first, so `light` is this script's default
 ./omarchy/apply-grand-budapest.sh light
+
+# Neon Genesis Evangelion
+./omarchy/apply-evangelion.sh dark
 
 # Windows 11 (PowerShell, per-user, no OS patching)
 #   wallpaper + light/dark mode + accent colour + Windows Terminal scheme
@@ -176,6 +191,11 @@ python3 render_screenshots.py
 # Windows 11 .theme + accent .reg files, and verify they decode correctly
 python3 generate_windows.py
 python3 validate_windows.py
+
+# Structural check across every variant: palettes, all 8 wallpaper sizes in
+# both locations, Omarchy packages, Hermes skins, terminal/editor exports,
+# and that each variant is registered in the shared tooling
+python3 validate.py
 ```
 
 The Blade Runner generator uses the canonical current artwork from `~/Wallpapers/blade-runner-neon-mary-4k.png`; the variant generators derive their respective treatments from `~/Pictures/mary.png`. No source secrets or machine-local configuration are included.

@@ -37,13 +37,17 @@ VARIANTS = {
     "grand-budapest": ("The Grand Budapest Hotel (2014)", "grand-budapest",
                        "KEEP YOUR HANDS OFF MY LOBBY BOY.",
                        "confectionery pink / alpine"),
+    "evangelion": ("Neon Genesis Evangelion (1995)", "evangelion",
+                   "GOD'S IN HIS HEAVEN. ALL'S RIGHT WITH THE WORLD.",
+                   "unit-01 purple / nerv black"),
 }
 
 # palette file stem per variant (base Blade Runner has no prefix)
 STEM = {"blade-runner": "", "crow": "crow-", "amelie": "amelie-",
         "tron": "tron-", "dark-city": "dark-city-",
         "fifth-element": "fifth-element-",
-        "grand-budapest": "grand-budapest-"}
+        "grand-budapest": "grand-budapest-",
+        "evangelion": "evangelion-"}
 
 
 def load_palette(tag, mode):

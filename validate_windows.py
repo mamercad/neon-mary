@@ -7,9 +7,11 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent
 WIN = ROOT / "windows"
 
-STEM = {"blade-runner": "", "crow": "crow-", "amelie": "amelie-",
-        "tron": "tron-", "dark-city": "dark-city-",
-        "fifth-element": "fifth-element-", "grand-budapest": "grand-budapest-"}
+# Derive the variant list from the generator rather than repeating it. A
+# duplicated list is exactly how Evangelion ended up generated but unchecked.
+from generate_windows import VARIANTS  # noqa: E402
+
+STEM = {tag: stem for tag, (_, _, stem) in VARIANTS.items()}
 
 fails = []
 checked = 0

@@ -56,6 +56,8 @@ VARIANTS = {
     "fifth-element": ("The Fifth Element (1997)", "fifth-element", "fifth-element-"),
     "grand-budapest": ("The Grand Budapest Hotel (2014)", "grand-budapest",
                        "grand-budapest-"),
+    "evangelion": ("Neon Genesis Evangelion (1995)", "evangelion",
+                   "evangelion-"),
 }
 
 

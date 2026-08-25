@@ -1,0 +1,49 @@
+name: neon-mary-evangelion-dark
+description: "Neon Mary: Neon Genesis Evangelion (1995) — Unit-01 purple, toxic green, signal orange, and NERV black (dark)."
+colors:
+  background: '#120d18'
+  status_bar_bg: '#120d18'
+  ui_accent: '#a976c3'
+  banner_accent: '#a976c3'
+  prompt: '#a976c3'
+  input_rule: '#d3290f'
+  banner_title: '#cba9dc'
+  ui_primary: '#cba9dc'
+  session_label: '#cba9dc'
+  response_border: '#a976c3'
+  banner_text: '#f4f3e8'
+  ui_text: '#f4f3e8'
+  ui_label: '#f4f3e8'
+  banner_dim: '#685b6a'
+  banner_border: '#a976c3'
+  ui_border: '#a976c3'
+  session_border: '#a976c3'
+  ui_tool: '#a0de59'
+  ui_thinking: '#bb8dd4'
+  ui_ok: '#a0de59'
+  ui_warn: '#f5c024'
+  ui_error: '#d3290f'
+  status_bar_text: '#f4f3e8'
+  status_bar_good: '#a0de59'
+  status_bar_warn: '#f5c024'
+  status_bar_bad: '#f04b2f'
+  status_bar_critical: '#d3290f'
+  syntax_string: '#a0de59'
+  syntax_number: '#f5c024'
+  syntax_keyword: '#cba9dc'
+  syntax_comment: '#685b6a'
+  completion_menu_bg: '#120d18'
+  completion_menu_current_bg: '#a976c3'
+  completion_menu_meta_bg: '#120d18'
+branding:
+  agent_name: Hermes Agent
+  prompt_symbol: ❯
+  welcome: God’s in his heaven. All’s right with the world.
+  goodbye: Congratulations!
+  help_header: "◤ Neon Mary: Evangelion — Commands"
+spinner:
+  waiting_faces: ["(◉)", "(◎)", "(⊙)"]
+  thinking_faces: ["(⌁)", "(⊹)"]
+  thinking_verbs: [synchronizing, deploying, analyzing]
+  wings: [["⟪◤", "◥⟫"], ["⟪△", "△⟫"]]
+tool_prefix: ┊

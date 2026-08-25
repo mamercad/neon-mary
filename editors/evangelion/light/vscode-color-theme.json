@@ -1,0 +1,13 @@
+{
+  "name": "Neon Mary: Neon Genesis Evangelion (1995) light",
+  "type": "light",
+  "colors": {
+    "editor.background": "#f2ecdf",
+    "editor.foreground": "#241a28",
+    "terminal.ansiCyan": "#4c7890",
+    "terminal.ansiMagenta": "#4a2154",
+    "terminal.ansiRed": "#a52212",
+    "terminal.ansiGreen": "#4f7728"
+  },
+  "tokenColors": []
+}
