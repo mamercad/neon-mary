@@ -82,6 +82,16 @@ Wallpapers are generated at 3840×2160, 2560×1440, 1920×1080, 2560×1600,
 scripts install the 4K version. See [`omarchy/apply.sh`](omarchy/apply.sh)
 and the per-variant apply scripts.
 
+## Pop-art wallpaper collection
+
+The [`wallpapers/pop-art/`](wallpapers/pop-art/) gallery contains a cohesive
+vectorized screen-print treatment of the Mary portrait across all eight
+established accent-color families: Blade Runner, The Crow, Amélie, Tron, Dark
+City, The Fifth Element, The Grand Budapest Hotel, and Neon Genesis
+Evangelion. Each collection includes the same eight wallpaper aspect families
+listed above. These are rasterized visual assets; the supplied source remains
+preserved as `wallpapers/original-mary-1254.png`.
+
 ## Variants
 
 ### Blade Runner
