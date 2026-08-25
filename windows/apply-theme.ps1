@@ -202,9 +202,25 @@ $themeAction = "themecpl.dll,OpenThemeAction `"$themeDst`""
 Start-Process -FilePath rundll32.exe -ArgumentList $themeAction -Wait
 
 # Explicit wallpaper fallback. This also makes the result deterministic when
-# the theme action is launched from a non-interactive shell.
+# the theme action is launched from a non-interactive shell. The rundll32
+# helper is not sufficient by itself here: call SystemParametersInfo with
+# SPI_SETDESKWALLPAPER and SPIF_UPDATEINIFILE|SPIF_SENDCHANGE.
 Set-ItemProperty -Path 'HKCU:\Control Panel\Desktop' -Name Wallpaper -Value $wallDst
-Start-Process -FilePath rundll32.exe -ArgumentList 'user32.dll,UpdatePerUserSystemParameters' -Wait
+if (-not ('NeonMary.Desktop' -as [type])) {
+    Add-Type @'
+using System;
+using System.Runtime.InteropServices;
+namespace NeonMary {
+    public static class Desktop {
+        [DllImport("user32.dll", SetLastError = true, CharSet = CharSet.Unicode)]
+        public static extern bool SystemParametersInfo(
+            uint action, uint param, string file, uint flags);
+    }
+}
+'@
+}
+$wallApplied = [NeonMary.Desktop]::SystemParametersInfo(20, 0, $wallDst, 3)
+if (-not $wallApplied) { throw "SystemParametersInfo(SPI_SETDESKWALLPAPER) failed" }
 
 Restart-Explorer
 
