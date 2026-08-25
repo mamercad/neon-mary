@@ -193,9 +193,17 @@ if (-not $SkipTerminal) {
     }
 }
 
-# Opening the .theme is what makes Windows actually adopt it.
-Start-Process $themeDst
-Start-Sleep -Seconds 3
+# Opening the .theme is what makes Windows actually adopt it. Use the theme
+# action directly rather than merely launching the file association (which can
+# open Personalization without applying when invoked from an SSH session).
+Write-Host '  applying Windows theme...'
+$themeAction = "themecpl.dll,OpenThemeAction `"$themeDst`""
+Start-Process -FilePath rundll32.exe -ArgumentList $themeAction -Wait
+
+# Explicit wallpaper fallback. This also makes the result deterministic when
+# the theme action is launched from a non-interactive shell.
+Set-ItemProperty -Path 'HKCU:\Control Panel\Desktop' -Name Wallpaper -Value $wallDst
+Start-Process -FilePath rundll32.exe -ArgumentList 'user32.dll,UpdatePerUserSystemParameters' -Wait
 
 Restart-Explorer
 
