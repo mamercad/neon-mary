@@ -91,7 +91,7 @@ spinner:
 tool_prefix: ┊
 '''
 def wallpaper(tag,p,mode,out,w,h):
-    is4k=(w,h)==(3840,2160); base=SOURCE if is4k else ROOT/'wallpapers'/tag/mode/'4k.png'; grade=[] if not is4k else (["-modulate","82,78,100"] if mode=="dark" else light_grade_args(p['background']))
+    is4k=(w,h)==(3840,2160); base=SOURCE if is4k else ROOT/'wallpapers'/tag/mode/'4k.png'; grade=[] if not is4k else (["-modulate","82,78,100","-fill",p['accent'],"-colorize","24"] if tag=="matrix" and mode=="dark" else ["-modulate","82,78,100"] if mode=="dark" else light_grade_args(p['background']))
     out.parent.mkdir(parents=True,exist_ok=True); subprocess.run(["magick",str(base),"-resize",f"{w}x{h}^","-gravity","center","-extent",f"{w}x{h}",*grade,str(out)],check=True)
 def main():
     if not SOURCE.exists(): raise SystemExit(f"Missing source: {SOURCE}")
