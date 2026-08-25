@@ -54,7 +54,8 @@
     Justification = 'Read inside Find-TerminalSettings via scope inheritance.')]
 param(
     [ValidateSet('blade-runner', 'crow', 'amelie', 'tron', 'dark-city',
-                 'fifth-element', 'grand-budapest', 'evangelion')]
+                 'fifth-element', 'grand-budapest', 'evangelion', 'matrix',
+                 'solaris')]
     [string]$Variant,
 
     [ValidateSet('dark', 'light')]
@@ -146,6 +147,30 @@ try {
     $json = ConvertFrom-Jsonc $raw | ConvertFrom-Json
 } catch {
     throw "Could not parse $settings as JSON: $($_.Exception.Message)"
+}
+
+if ($WhatIfPreference) {
+    if ($Revert) {
+        Write-Output "WHATIF: remove Neon Mary:* schemes from $settings"
+        Write-Output 'WHATIF: clear Neon Mary profiles.defaults/profile colorScheme references'
+        Write-Output "WHATIF: preserve existing settings and schemes; no backup written"
+        return
+    }
+    if (-not $Variant) { throw 'Specify -Variant (or -Revert).' }
+    if (-not $Mode) {
+        $Mode = if ($Variant -eq 'grand-budapest') { 'light' } else { 'dark' }
+    }
+    $schemeFile = if ($Variant -eq 'blade-runner') {
+        Join-Path $repoRoot "terminals\$Mode\windows-terminal.json"
+    } else {
+        Join-Path $repoRoot "terminals\$Variant\$Mode\windows-terminal.json"
+    }
+    if (-not (Test-Path $schemeFile)) { throw "Missing scheme file: $schemeFile" }
+    $scheme = Get-Content $schemeFile -Raw -Encoding UTF8 | ConvertFrom-Json
+    Write-Output "WHATIF: install scheme '$($scheme.name)' into $settings"
+    Write-Output "WHATIF: set profiles.defaults.colorScheme (scope: $Scope)"
+    Write-Output 'WHATIF: no files or registry values changed'
+    return
 }
 
 # Back up before the first mutation, always.

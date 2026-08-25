@@ -40,6 +40,8 @@ VARIANTS = {
     "fifth-element":  ("fifth-element", "fifth-element-", "fifth-element"),
     "grand-budapest": ("grand-budapest","grand-budapest-","grand-budapest"),
     "evangelion":     ("evangelion",    "evangelion-",    "evangelion"),
+    "matrix":         ("matrix",        "matrix-",        "matrix"),
+    "solaris":        ("solaris",       "solaris-",       "solaris"),
 }
 
 # Files that must mention every variant, so nothing ships half-wired.
