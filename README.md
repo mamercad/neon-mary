@@ -85,12 +85,12 @@ and the per-variant apply scripts.
 ## Pop-art wallpaper collection
 
 The [`wallpapers/pop-art/`](wallpapers/pop-art/) gallery contains a cohesive
-vectorized screen-print treatment of the Mary portrait across all eight
-established accent-color families: Blade Runner, The Crow, Amélie, Tron, Dark
-City, The Fifth Element, The Grand Budapest Hotel, and Neon Genesis
-Evangelion. Each collection includes the same eight wallpaper aspect families
-listed above. These are rasterized visual assets; the supplied source remains
-preserved as `wallpapers/original-mary-1254.png`.
+vectorized screen-print treatment of the Mary portrait across all ten
+established movie variants: Blade Runner, The Crow, Amélie, Tron, Dark City,
+The Fifth Element, The Grand Budapest Hotel, Neon Genesis Evangelion, The
+Matrix, and Solaris. Each collection includes the same eight wallpaper aspect
+families listed above. These are rasterized visual assets; the supplied source
+remains preserved as `wallpapers/original-mary-1254.png`.
 
 ## Variants
 
