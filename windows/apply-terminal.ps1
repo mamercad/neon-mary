@@ -24,7 +24,7 @@
 
 .PARAMETER Variant
     blade-runner | crow | amelie | tron | dark-city | fifth-element |
-    grand-budapest
+    grand-budapest | evangelion
 
 .PARAMETER Mode
     dark or light.
@@ -54,7 +54,7 @@
     Justification = 'Read inside Find-TerminalSettings via scope inheritance.')]
 param(
     [ValidateSet('blade-runner', 'crow', 'amelie', 'tron', 'dark-city',
-                 'fifth-element', 'grand-budapest')]
+                 'fifth-element', 'grand-budapest', 'evangelion')]
     [string]$Variant,
 
     [ValidateSet('dark', 'light')]

@@ -17,6 +17,7 @@ This checks, for every variant in both modes:
     quietly skip showcases, Windows artifacts, or the README
 """
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -44,6 +45,12 @@ VARIANTS = {
 # Files that must mention every variant, so nothing ships half-wired.
 REGISTRIES = ["generate_showcases.py", "generate_windows.py",
               "measure_wallpapers.py", "README.md"]
+
+# The PowerShell installers gate -Variant on a hardcoded ValidateSet, so a
+# variant missing there is rejected at the command line even though every
+# artifact exists on disk. That is exactly how Evangelion shipped complete
+# but uninstallable on Windows, so the list is asserted rather than assumed.
+PS_VALIDATESETS = ["windows/apply-theme.ps1", "windows/apply-terminal.ps1"]
 
 TERMINAL_FILES = ["ghostty.conf", "kitty.conf", "alacritty.toml",
                   "wezterm.lua", "windows-terminal.json"]
@@ -130,6 +137,18 @@ for tag, (wdir, stem, tdir) in VARIANTS.items():
         needle = tag if tag != "blade-runner" else "blade-runner"
         check(needle in txt,
               f"{tag}: not referenced in {reg} -- it would be skipped")
+
+    # --- accepted by the PowerShell installers' -Variant ValidateSet? ---
+    for ps in PS_VALIDATESETS:
+        txt = (ROOT / ps).read_text()
+        m = re.search(r"ValidateSet\(([^)]*)\)", txt, re.S)
+        if not m:
+            fails.append(f"{ps}: no ValidateSet found")
+            continue
+        allowed = re.findall(r"'([^']+)'", m.group(1))
+        check(tag in allowed,
+              f"{tag}: missing from {ps} -Variant ValidateSet -- the "
+              f"installer would reject it despite the artifacts existing")
 
 print(f"checked {len(VARIANTS)} variants x 2 modes")
 if fails:

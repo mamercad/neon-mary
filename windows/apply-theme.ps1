@@ -25,7 +25,7 @@
 
 .PARAMETER Variant
     blade-runner | crow | amelie | tron | dark-city | fifth-element |
-    grand-budapest
+    grand-budapest | evangelion
 
 .PARAMETER Mode
     dark or light. Defaults to dark, except grand-budapest which is
@@ -52,7 +52,7 @@
 [CmdletBinding()]
 param(
     [ValidateSet('blade-runner', 'crow', 'amelie', 'tron', 'dark-city',
-                 'fifth-element', 'grand-budapest')]
+                 'fifth-element', 'grand-budapest', 'evangelion')]
     [string]$Variant,
 
     [ValidateSet('dark', 'light')]
