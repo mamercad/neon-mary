@@ -92,6 +92,11 @@ Matrix, and Solaris. Each collection includes the same eight wallpaper aspect
 families listed above. These are rasterized visual assets; the supplied source
 remains preserved as `wallpapers/original-mary-1254.png`.
 
+The [`wallpapers/street-art/`](wallpapers/street-art/) gallery reinterprets the
+same ten variants as an expressionistic graffiti/street series with gestural
+brushwork, spray overspray, drips, wheatpaste, and concrete texture. It also
+includes all eight wallpaper aspect families per movie.
+
 ## Variants
 
 ### Blade Runner
