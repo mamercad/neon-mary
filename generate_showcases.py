@@ -40,6 +40,10 @@ VARIANTS = {
     "evangelion": ("Neon Genesis Evangelion (1995)", "evangelion",
                    "GOD'S IN HIS HEAVEN. ALL'S RIGHT WITH THE WORLD.",
                    "unit-01 purple / nerv black"),
+    "matrix": ("The Matrix (1999)", "matrix", "THERE IS NO SPOON.",
+               "phosphor green / constructed world"),
+    "solaris": ("Solaris (1972)", "solaris", "THE OCEAN REMEMBERS.",
+                "amber instrument light / distant ocean"),
 }
 
 # palette file stem per variant (base Blade Runner has no prefix)
@@ -47,7 +51,7 @@ STEM = {"blade-runner": "", "crow": "crow-", "amelie": "amelie-",
         "tron": "tron-", "dark-city": "dark-city-",
         "fifth-element": "fifth-element-",
         "grand-budapest": "grand-budapest-",
-        "evangelion": "evangelion-"}
+        "evangelion": "evangelion-", "matrix": "matrix-", "solaris": "solaris-"}
 
 
 def load_palette(tag, mode):

@@ -1,0 +1,49 @@
+name: neon-mary-matrix-light
+description: "Neon Mary: The Matrix (1999) — phosphor green and constructed reality (light)."
+colors:
+  background: '#edf7ef'
+  status_bar_bg: '#edf7ef'
+  ui_accent: '#168f4d'
+  banner_accent: '#168f4d'
+  prompt: '#168f4d'
+  input_rule: '#b52e3a'
+  banner_title: '#3a9d61'
+  ui_primary: '#3a9d61'
+  session_label: '#3a9d61'
+  response_border: '#168f4d'
+  banner_text: '#102318'
+  ui_text: '#102318'
+  ui_label: '#102318'
+  banner_dim: '#7a9380'
+  banner_border: '#168f4d'
+  ui_border: '#168f4d'
+  session_border: '#168f4d'
+  ui_tool: '#267b3f'
+  ui_thinking: '#684b9a'
+  ui_ok: '#267b3f'
+  ui_warn: '#806d00'
+  ui_error: '#b52e3a'
+  status_bar_text: '#102318'
+  status_bar_good: '#267b3f'
+  status_bar_warn: '#806d00'
+  status_bar_bad: '#cf4d58'
+  status_bar_critical: '#b52e3a'
+  syntax_string: '#267b3f'
+  syntax_number: '#806d00'
+  syntax_keyword: '#3a9d61'
+  syntax_comment: '#7a9380'
+  completion_menu_bg: '#edf7ef'
+  completion_menu_current_bg: '#168f4d'
+  completion_menu_meta_bg: '#edf7ef'
+branding:
+  agent_name: Hermes Agent
+  prompt_symbol: ❯
+  welcome: Wake up, Neo.
+  goodbye: There is no spoon.
+  help_header: "◤ Neon Mary: The Matrix (1999) — Commands"
+spinner:
+  waiting_faces: ["(◉)", "(◎)", "(⊙)"]
+  thinking_faces: ["(⌁)", "(⊹)"]
+  thinking_verbs: ["tracing", "decoding", "observing"]
+  wings: [["⟪◤", "◥⟫"], ["⟪△", "△⟫"]]
+tool_prefix: ┊

@@ -22,6 +22,8 @@ VARIANTS = {
     "fifth-element": ("fifth-element", "fifth-element-"),
     "grand-budapest": ("grand-budapest", "grand-budapest-"),
     "evangelion": ("evangelion", "evangelion-"),
+    "matrix": ("matrix", "matrix-"),
+    "solaris": ("solaris", "solaris-"),
 }
 
 

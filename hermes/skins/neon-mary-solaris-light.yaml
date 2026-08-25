@@ -1,0 +1,49 @@
+name: neon-mary-solaris-light
+description: "Neon Mary: Solaris (1972) — amber instruments and the remembered ocean (light)."
+colors:
+  background: '#f5eedf'
+  status_bar_bg: '#f5eedf'
+  ui_accent: '#9c6a18'
+  banner_accent: '#9c6a18'
+  prompt: '#9c6a18'
+  input_rule: '#a63e36'
+  banner_title: '#76500f'
+  ui_primary: '#76500f'
+  session_label: '#76500f'
+  response_border: '#9c6a18'
+  banner_text: '#2c2418'
+  ui_text: '#2c2418'
+  ui_label: '#2c2418'
+  banner_dim: '#948876'
+  banner_border: '#9c6a18'
+  ui_border: '#9c6a18'
+  session_border: '#9c6a18'
+  ui_tool: '#4e713b'
+  ui_thinking: '#76506d'
+  ui_ok: '#4e713b'
+  ui_warn: '#9c6a18'
+  ui_error: '#a63e36'
+  status_bar_text: '#2c2418'
+  status_bar_good: '#4e713b'
+  status_bar_warn: '#9c6a18'
+  status_bar_bad: '#c45b4f'
+  status_bar_critical: '#a63e36'
+  syntax_string: '#4e713b'
+  syntax_number: '#9c6a18'
+  syntax_keyword: '#76500f'
+  syntax_comment: '#948876'
+  completion_menu_bg: '#f5eedf'
+  completion_menu_current_bg: '#9c6a18'
+  completion_menu_meta_bg: '#f5eedf'
+branding:
+  agent_name: Hermes Agent
+  prompt_symbol: ❯
+  welcome: We are not on Earth.
+  goodbye: The ocean remembers.
+  help_header: "◤ Neon Mary: Solaris (1972) — Commands"
+spinner:
+  waiting_faces: ["(◉)", "(◎)", "(⊙)"]
+  thinking_faces: ["(⌁)", "(⊹)"]
+  thinking_verbs: ["tracing", "decoding", "observing"]
+  wings: [["⟪◤", "◥⟫"], ["⟪△", "△⟫"]]
+tool_prefix: ┊

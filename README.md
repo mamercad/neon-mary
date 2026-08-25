@@ -1,6 +1,6 @@
 # Neon Mary Theme Family
 
-**Neon Mary** is a family of themes built around the `mary.png` artwork. This repository contains eight variants: **Blade Runner**, **The Crow (1994)**, **Amélie (2001)**, **Tron (1982)**, **Dark City (1998)**, **The Fifth Element (1997)**, **The Grand Budapest Hotel (2014)**, and **Neon Genesis Evangelion (1995)**. Each variant has dark and light palette modes for terminals, editors, Omarchy, and Hermes Agent.
+**Neon Mary** is a family of themes built around the `mary.png` artwork. This repository contains ten variants: **Blade Runner**, **The Crow (1994)**, **Amélie (2001)**, **Tron (1982)**, **Dark City (1998)**, **The Fifth Element (1997)**, **The Grand Budapest Hotel (2014)**, **Neon Genesis Evangelion (1995)**, **The Matrix (1999)**, and **Solaris (1972)**. Each variant has dark and light palette modes for terminals, editors, Omarchy, and Hermes Agent.
 
 The canonical artwork is derived from the Mary source. The original square source is preserved as `wallpapers/original-mary-1254.png`; each variant keeps the Mary composition while applying its own visual treatment. Light variants use the same composition with a restrained readable grade rather than invented overlays.
 
@@ -65,6 +65,18 @@ treatment**.
 | --- | --- |
 | ![Neon Mary Evangelion dark desktop](screenshots/desktop-evangelion-dark-example.png) | ![Neon Mary Evangelion light desktop](screenshots/desktop-evangelion-light-example.png) |
 
+### The Matrix (1999)
+
+| Dark | Light |
+| --- | --- |
+| ![Neon Mary Matrix dark desktop](screenshots/desktop-matrix-dark-example.png) | ![Neon Mary Matrix light desktop](screenshots/desktop-matrix-light-example.png) |
+
+### Solaris (1972)
+
+| Dark | Light |
+| --- | --- |
+| ![Neon Mary Solaris dark desktop](screenshots/desktop-solaris-dark-example.png) | ![Neon Mary Solaris light desktop](screenshots/desktop-solaris-light-example.png) |
+
 Wallpapers are generated at 3840×2160, 2560×1440, 1920×1080, 2560×1600,
 2160×1440, 2048×1536, 2048×2048, and 1440×2560 in both modes; the apply
 scripts install the 4K version. See [`omarchy/apply.sh`](omarchy/apply.sh)
@@ -117,6 +129,16 @@ eras rather than being a plain inversion.
 - `dark`: NERV black with Unit-01 purple, toxic green, signal orange, and warning red.
 - `light`: bone-white with deep aubergine, olive, and the same warning red darkened for readable contrast.
 
+### The Matrix (1999)
+
+- `dark`: phosphor green, rain-black, constructed-world blue, and warning red.
+- `light`: pale green-white with readable terminal green, ink, and red accents.
+
+### Solaris (1972)
+
+- `dark`: amber instrument light over spacecraft brown, with distant ocean blue and muted rose.
+- `light`: warm archival paper with brass, blue, and rose accents.
+
 ## Included targets
 
 - Native Omarchy packages with `colors.toml`, `icons.theme`, and wallpaper variants.
@@ -125,6 +147,7 @@ eras rather than being a plain inversion.
 - Neon Mary: Dark City (1998) and The Fifth Element (1997) Omarchy packages and Hermes skins in dark/light modes.
 - Neon Mary: The Grand Budapest Hotel (2014) light-first Omarchy packages and Hermes skins in light/dark modes.
 - Neon Mary: Neon Genesis Evangelion (1995) Omarchy packages and Hermes skins in dark/light modes.
+- Neon Mary: The Matrix (1999) and Solaris (1972) Omarchy packages and Hermes skins in dark/light modes.
 - Ghostty, iTerm2, Terminal.app, Kitty, Alacritty, WezTerm, Windows Terminal, fzf, tmux, Vim/Neovim, and VS Code resources.
 - Windows 11 `.theme` files, accent-colour `.reg` files, and PowerShell installers in `windows/` — wallpaper, light/dark mode, accent colour, and the Windows Terminal scheme, all per-user and reversible.
 - Hermes Agent skins for CLI/TUI/desktop surfaces.
@@ -158,6 +181,12 @@ omarchy bar transparent true
 
 # Neon Genesis Evangelion
 ./omarchy/apply-evangelion.sh dark
+
+# The Matrix (1999)
+./omarchy/apply-matrix.sh dark
+
+# Solaris (1972)
+./omarchy/apply-solaris.sh dark
 
 # Windows 11 (PowerShell, per-user, no OS patching)
 #   wallpaper + light/dark mode + accent colour + Windows Terminal scheme

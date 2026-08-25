@@ -1,0 +1,22 @@
+{
+  "name": "Neon Mary: Solaris (1972) light",
+  "background": "#f5eedf",
+  "foreground": "#2c2418",
+  "cursorColor": "#9c6a18",
+  "black": "#f5eedf",
+  "red": "#a63e36",
+  "green": "#4e713b",
+  "yellow": "#9c6a18",
+  "blue": "#3c607a",
+  "purple": "#76506d",
+  "cyan": "#9c6a18",
+  "white": "#2c2418",
+  "brightBlack": "#c9bca6",
+  "brightRed": "#c45b4f",
+  "brightGreen": "#729559",
+  "brightYellow": "#bd8d28",
+  "brightBlue": "#6387a2",
+  "brightPurple": "#98728e",
+  "brightCyan": "#76500f",
+  "brightWhite": "#2c2418"
+}

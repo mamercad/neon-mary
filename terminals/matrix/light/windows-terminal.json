@@ -1,0 +1,22 @@
+{
+  "name": "Neon Mary: The Matrix (1999) light",
+  "background": "#edf7ef",
+  "foreground": "#102318",
+  "cursorColor": "#168f4d",
+  "black": "#edf7ef",
+  "red": "#b52e3a",
+  "green": "#267b3f",
+  "yellow": "#806d00",
+  "blue": "#21633e",
+  "purple": "#684b9a",
+  "cyan": "#168f4d",
+  "white": "#102318",
+  "brightBlack": "#a9c5ae",
+  "brightRed": "#cf4d58",
+  "brightGreen": "#4d995e",
+  "brightYellow": "#a08c00",
+  "brightBlue": "#458e61",
+  "brightPurple": "#8064ad",
+  "brightCyan": "#3a9d61",
+  "brightWhite": "#102318"
+}

@@ -1,0 +1,13 @@
+{
+  "name": "Neon Mary: Solaris (1972) light",
+  "type": "light",
+  "colors": {
+    "editor.background": "#f5eedf",
+    "editor.foreground": "#2c2418",
+    "terminal.ansiCyan": "#9c6a18",
+    "terminal.ansiMagenta": "#76506d",
+    "terminal.ansiRed": "#a63e36",
+    "terminal.ansiGreen": "#4e713b"
+  },
+  "tokenColors": []
+}

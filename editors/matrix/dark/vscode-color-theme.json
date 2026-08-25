@@ -1,0 +1,13 @@
+{
+  "name": "Neon Mary: The Matrix (1999) dark",
+  "type": "dark",
+  "colors": {
+    "editor.background": "#07120b",
+    "editor.foreground": "#d9ffe1",
+    "terminal.ansiCyan": "#39ff88",
+    "terminal.ansiMagenta": "#9a7cff",
+    "terminal.ansiRed": "#ff5c62",
+    "terminal.ansiGreen": "#39d353"
+  },
+  "tokenColors": []
+}

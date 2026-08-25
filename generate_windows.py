@@ -58,6 +58,8 @@ VARIANTS = {
                        "grand-budapest-"),
     "evangelion": ("Neon Genesis Evangelion (1995)", "evangelion",
                    "evangelion-"),
+    "matrix": ("The Matrix (1999)", "matrix", "matrix-"),
+    "solaris": ("Solaris (1972)", "solaris", "solaris-"),
 }
 
 

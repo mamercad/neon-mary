@@ -1,0 +1,13 @@
+{
+  "name": "Neon Mary: Solaris (1972) dark",
+  "type": "dark",
+  "colors": {
+    "editor.background": "#17130e",
+    "editor.foreground": "#fff2d2",
+    "terminal.ansiCyan": "#d7a84b",
+    "terminal.ansiMagenta": "#9b718f",
+    "terminal.ansiRed": "#d45a4f",
+    "terminal.ansiGreen": "#7c9a63"
+  },
+  "tokenColors": []
+}
