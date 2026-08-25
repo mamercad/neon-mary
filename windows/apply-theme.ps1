@@ -178,8 +178,9 @@ Copy-Item $themeSrc $themeDst -Force
 Write-Host "  theme     -> $themeDst"
 
 Write-Host '  applying accent + mode...'
-reg.exe import $regSrc 2>&1 | Out-Null
-if ($LASTEXITCODE -ne 0) { throw "reg import failed for $regSrc" }
+$reg = Start-Process -FilePath reg.exe -ArgumentList @('import', $regSrc) `
+    -Wait -PassThru -WindowStyle Hidden
+if ($reg.ExitCode -ne 0) { throw "reg import failed for $regSrc (exit $($reg.ExitCode))" }
 
 # Windows Terminal is a separate config, so hand off to the dedicated script.
 # -SkipTerminal opts out; a missing Windows Terminal is a warning, not a failure.
