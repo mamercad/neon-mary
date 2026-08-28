@@ -31,6 +31,13 @@
     dark or light. Defaults to dark, except grand-budapest which is
     designed light-first and defaults to light.
 
+.PARAMETER WallpaperStyle
+    classic (default), pop-art, or street-art. Selects which wallpaper
+    art treatment to install; the accent colour and light/dark mode are
+    unaffected. pop-art and street-art wallpapers are mode-independent
+    (wallpapers\<style>\<variant>\4k.png), unlike classic which has a
+    separate image per light/dark mode.
+
 .PARAMETER Revert
     Restore the Windows default accent behaviour, remove installed
     Neon Mary theme files, and remove the Neon Mary Windows Terminal schemes.
@@ -49,7 +56,7 @@
 .EXAMPLE
     .\apply-theme.ps1 -Revert
 #>
-[CmdletBinding()]
+[CmdletBinding(SupportsShouldProcess)]
 param(
     [ValidateSet('blade-runner', 'crow', 'amelie', 'tron', 'dark-city',
                  'fifth-element', 'grand-budapest', 'evangelion', 'matrix',
@@ -58,6 +65,9 @@ param(
 
     [ValidateSet('dark', 'light')]
     [string]$Mode,
+
+    [ValidateSet('classic', 'pop-art', 'street-art')]
+    [string]$WallpaperStyle = 'classic',
 
     [switch]$SkipTerminal,
 
@@ -135,7 +145,9 @@ if (-not $Mode) {
 
 $themeSrc = Join-Path $repoRoot "windows\$Variant-$Mode.theme"
 $regSrc   = Join-Path $repoRoot "windows\$Variant-$Mode.reg"
-$wallSrc  = if ($Variant -eq 'blade-runner') {
+$wallSrc  = if ($WallpaperStyle -ne 'classic') {
+    Join-Path $repoRoot "wallpapers\$WallpaperStyle\$Variant\4k.png"
+} elseif ($Variant -eq 'blade-runner') {
     Join-Path $repoRoot "wallpapers\$Mode\4k.png"
 } else {
     Join-Path $repoRoot "wallpapers\$Variant\$Mode\4k.png"
@@ -145,8 +157,10 @@ foreach ($f in @($themeSrc, $regSrc, $wallSrc)) {
     if (-not (Test-Path $f)) { throw "Missing required file: $f" }
 }
 
+$wallDst = Join-Path $installDir "$Variant-$Mode.jpg"
+
 if ($WhatIfPreference) {
-    Write-Output "WHATIF: copy wallpaper $wallSrc -> $wallDst"
+    Write-Output "WHATIF: copy wallpaper ($WallpaperStyle) $wallSrc -> $wallDst"
     Write-Output "WHATIF: install theme $themeSrc"
     Write-Output "WHATIF: import accent/mode registry $regSrc"
     if ($SkipTerminal) {
@@ -163,7 +177,6 @@ New-Item -ItemType Directory -Force -Path $installDir | Out-Null
 
 # The .theme references a .jpg; Windows accepts png too, but converting keeps
 # the reference honest and the file small enough to copy quickly.
-$wallDst = Join-Path $installDir "$Variant-$Mode.jpg"
 Add-Type -AssemblyName System.Drawing
 $img = [System.Drawing.Image]::FromFile($wallSrc)
 try {
@@ -225,7 +238,8 @@ if (-not $wallApplied) { throw "SystemParametersInfo(SPI_SETDESKWALLPAPER) faile
 Restart-Explorer
 
 Write-Host ''
-Write-Host "Applied Neon Mary - $Variant ($Mode)."
+$styleNote = if ($WallpaperStyle -ne 'classic') { ", $WallpaperStyle wallpaper" } else { '' }
+Write-Host "Applied Neon Mary - $Variant ($Mode$styleNote)."
 Write-Host 'The Settings > Personalization window may open; that is expected.'
 Write-Host 'Windows Terminal colours are separate:'
 Write-Host "  $repoRoot\terminals\$Variant\$Mode\windows-terminal.json"
