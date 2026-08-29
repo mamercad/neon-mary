@@ -1,0 +1,22 @@
+{
+  "name": "Neon Mary: Dune (2021) light",
+  "background": "#f3ead8",
+  "foreground": "#27231d",
+  "cursorColor": "#a65c25",
+  "black": "#f3ead8",
+  "red": "#9c3f2e",
+  "green": "#566b3e",
+  "yellow": "#a65c25",
+  "blue": "#285a69",
+  "purple": "#754c55",
+  "cyan": "#876839",
+  "white": "#27231d",
+  "brightBlack": "#b9ad99",
+  "brightRed": "#b95740",
+  "brightGreen": "#758b55",
+  "brightYellow": "#bd7c37",
+  "brightBlue": "#4d8190",
+  "brightPurple": "#996d73",
+  "brightCyan": "#b47a3c",
+  "brightWhite": "#27231d"
+}

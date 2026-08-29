@@ -1,0 +1,22 @@
+{
+  "name": "Neon Mary: Akira (1988) dark",
+  "background": "#080d14",
+  "foreground": "#f5eee2",
+  "cursorColor": "#ef3b24",
+  "black": "#080d14",
+  "red": "#ff5142",
+  "green": "#4dc4d8",
+  "yellow": "#f3b72b",
+  "blue": "#2369a0",
+  "purple": "#b62d68",
+  "cyan": "#16a9d1",
+  "white": "#f5eee2",
+  "brightBlack": "#182333",
+  "brightRed": "#ff806b",
+  "brightGreen": "#83e3e8",
+  "brightYellow": "#ffd96b",
+  "brightBlue": "#55a2ce",
+  "brightPurple": "#ed6b9a",
+  "brightCyan": "#ff9a73",
+  "brightWhite": "#fffaf0"
+}

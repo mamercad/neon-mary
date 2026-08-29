@@ -1,0 +1,49 @@
+name: neon-mary-akira-dark
+description: "Neon Mary: Akira (1988) — vermilion / neo-tokyo (dark)."
+colors:
+  background: '#080d14'
+  status_bar_bg: '#080d14'
+  ui_accent: '#ef3b24'
+  banner_accent: '#ef3b24'
+  prompt: '#ef3b24'
+  input_rule: '#ff5142'
+  banner_title: '#ff9a73'
+  ui_primary: '#ff9a73'
+  session_label: '#ff9a73'
+  response_border: '#16a9d1'
+  banner_text: '#f5eee2'
+  ui_text: '#f5eee2'
+  ui_label: '#f5eee2'
+  banner_dim: '#5a6068'
+  banner_border: '#16a9d1'
+  ui_border: '#16a9d1'
+  session_border: '#16a9d1'
+  ui_tool: '#4dc4d8'
+  ui_thinking: '#b62d68'
+  ui_ok: '#4dc4d8'
+  ui_warn: '#f3b72b'
+  ui_error: '#ff5142'
+  status_bar_text: '#f5eee2'
+  status_bar_good: '#4dc4d8'
+  status_bar_warn: '#f3b72b'
+  status_bar_bad: '#ff806b'
+  status_bar_critical: '#ff5142'
+  syntax_string: '#4dc4d8'
+  syntax_number: '#f3b72b'
+  syntax_keyword: '#ff9a73'
+  syntax_comment: '#5a6068'
+  completion_menu_bg: '#080d14'
+  completion_menu_current_bg: '#16a9d1'
+  completion_menu_meta_bg: '#080d14'
+branding:
+  agent_name: Hermes Agent
+  prompt_symbol: ❯
+  welcome: Neo-Tokyo is online.
+  goodbye: The city is still burning.
+  help_header: "◤ Neon Mary: Akira (1988) — Commands"
+spinner:
+  waiting_faces: ["(◉)", "(◎)", "(⊙)"]
+  thinking_faces: ["(⌁)", "(⊹)"]
+  thinking_verbs: ["mapping", "decoding", "observing"]
+  wings: [["⟪◤", "◥⟫"], ["⟪△", "△⟫"]]
+tool_prefix: ┊

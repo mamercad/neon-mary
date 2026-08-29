@@ -1,0 +1,13 @@
+{
+  "name": "Neon Mary: Akira (1988) light",
+  "type": "light",
+  "colors": {
+    "editor.background": "#eef3f1",
+    "editor.foreground": "#191c23",
+    "terminal.ansiCyan": "#08759a",
+    "terminal.ansiMagenta": "#8d2351",
+    "terminal.ansiRed": "#a92328",
+    "terminal.ansiGreen": "#167480"
+  },
+  "tokenColors": []
+}

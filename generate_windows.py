@@ -61,6 +61,8 @@ VARIANTS = {
     "matrix": ("The Matrix (1999)", "matrix", "matrix-"),
     "solaris": ("Solaris (1972)", "solaris", "solaris-"),
     "suspiria": ("Suspiria (1977)", "suspiria", "suspiria-"),
+    "akira": ("Akira (1988)", "akira", "akira-"),
+    "dune": ("Dune (2021)", "dune", "dune-"),
 }
 
 

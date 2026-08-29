@@ -19,6 +19,8 @@ marks.
 - `matrix` — phosphor green, terminal lime, emerald, and red warning accents
 - `solaris` — instrument amber, oxidized copper, umber, ocean teal, and ivory
 - `suspiria` — blood red, cobalt blue, acid yellow, hot magenta, and black
+- `akira` — Neo-Tokyo vermilion, electric blue, cyan, black, and warning orange
+- `dune` — desert sand, spice orange, oxidized bronze, deep teal, and bone white
 
 Each collection contains the same eight wallpaper formats as the other gallery
 series: `4k.png`, `wqhd.png`, `qhd.png`, `16-10.png`, `3-2.png`, `4-3.png`,

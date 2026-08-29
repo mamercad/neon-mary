@@ -25,6 +25,8 @@ VARIANTS = {
     "matrix": ("matrix", "matrix-"),
     "solaris": ("solaris", "solaris-"),
     "suspiria": ("suspiria", "suspiria-"),
+    "akira": ("akira", "akira-"),
+    "dune": ("dune", "dune-"),
 }
 
 

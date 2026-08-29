@@ -43,6 +43,8 @@ VARIANTS = {
     "matrix":         ("matrix",        "matrix-",        "matrix"),
     "solaris":        ("solaris",       "solaris-",    "solaris"),
     "suspiria":       ("suspiria",      "suspiria-",   "suspiria"),
+    "akira":          ("akira",         "akira-",      "akira"),
+    "dune":           ("dune",          "dune-",       "dune"),
 }
 
 # Files that must mention every variant, so nothing ships half-wired.

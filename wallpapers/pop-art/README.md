@@ -15,6 +15,8 @@ families and uses the repository's established accent-color families.
 - `grand-budapest` — confectionery pink, aubergine, lacquer red, gold, and blue
 - `evangelion` — Unit-01 purple, toxic green, signal orange, and warning red
 - `suspiria` — blood red, cobalt blue, acid yellow, hot magenta, and black
+- `akira` — Neo-Tokyo vermilion, electric blue, cyan, black, and warning orange
+- `dune` — desert sand, spice orange, oxidized bronze, deep teal, and bone white
 
 Each collection contains:
 

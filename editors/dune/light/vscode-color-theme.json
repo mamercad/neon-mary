@@ -1,0 +1,13 @@
+{
+  "name": "Neon Mary: Dune (2021) light",
+  "type": "light",
+  "colors": {
+    "editor.background": "#f3ead8",
+    "editor.foreground": "#27231d",
+    "terminal.ansiCyan": "#876839",
+    "terminal.ansiMagenta": "#754c55",
+    "terminal.ansiRed": "#9c3f2e",
+    "terminal.ansiGreen": "#566b3e"
+  },
+  "tokenColors": []
+}

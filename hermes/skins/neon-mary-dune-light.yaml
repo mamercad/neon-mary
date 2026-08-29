@@ -1,0 +1,49 @@
+name: neon-mary-dune-light
+description: "Neon Mary: Dune (2021) — spice orange / deep desert (light)."
+colors:
+  background: '#f3ead8'
+  status_bar_bg: '#f3ead8'
+  ui_accent: '#a65c25'
+  banner_accent: '#a65c25'
+  prompt: '#a65c25'
+  input_rule: '#9c3f2e'
+  banner_title: '#b47a3c'
+  ui_primary: '#b47a3c'
+  session_label: '#b47a3c'
+  response_border: '#876839'
+  banner_text: '#27231d'
+  ui_text: '#27231d'
+  ui_label: '#27231d'
+  banner_dim: '#8f8575'
+  banner_border: '#876839'
+  ui_border: '#876839'
+  session_border: '#876839'
+  ui_tool: '#566b3e'
+  ui_thinking: '#754c55'
+  ui_ok: '#566b3e'
+  ui_warn: '#a65c25'
+  ui_error: '#9c3f2e'
+  status_bar_text: '#27231d'
+  status_bar_good: '#566b3e'
+  status_bar_warn: '#a65c25'
+  status_bar_bad: '#b95740'
+  status_bar_critical: '#9c3f2e'
+  syntax_string: '#566b3e'
+  syntax_number: '#a65c25'
+  syntax_keyword: '#b47a3c'
+  syntax_comment: '#8f8575'
+  completion_menu_bg: '#f3ead8'
+  completion_menu_current_bg: '#876839'
+  completion_menu_meta_bg: '#f3ead8'
+branding:
+  agent_name: Hermes Agent
+  prompt_symbol: ❯
+  welcome: The desert remembers.
+  goodbye: Walk without rhythm.
+  help_header: "◤ Neon Mary: Dune (2021) — Commands"
+spinner:
+  waiting_faces: ["(◉)", "(◎)", "(⊙)"]
+  thinking_faces: ["(⌁)", "(⊹)"]
+  thinking_verbs: ["mapping", "decoding", "observing"]
+  wings: [["⟪◤", "◥⟫"], ["⟪△", "△⟫"]]
+tool_prefix: ┊

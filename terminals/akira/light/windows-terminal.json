@@ -1,0 +1,22 @@
+{
+  "name": "Neon Mary: Akira (1988) light",
+  "background": "#eef3f1",
+  "foreground": "#191c23",
+  "cursorColor": "#c52f28",
+  "black": "#eef3f1",
+  "red": "#a92328",
+  "green": "#167480",
+  "yellow": "#996600",
+  "blue": "#1e5480",
+  "purple": "#8d2351",
+  "cyan": "#08759a",
+  "white": "#191c23",
+  "brightBlack": "#a8b6bb",
+  "brightRed": "#cf4c48",
+  "brightGreen": "#3e969d",
+  "brightYellow": "#b98413",
+  "brightBlue": "#447da5",
+  "brightPurple": "#ad5275",
+  "brightCyan": "#c45a42",
+  "brightWhite": "#191c23"
+}
