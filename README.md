@@ -97,6 +97,34 @@ same ten variants as an expressionistic graffiti/street series with gestural
 brushwork, spray overspray, drips, wheatpaste, and concrete texture. It also
 includes all eight wallpaper aspect families per movie.
 
+### Pop-art thumbnails
+
+The 4K previews below show the complete pop-art set. The full-resolution
+wallpapers and alternate aspect families are in
+[`wallpapers/pop-art/`](wallpapers/pop-art/).
+
+| Variant | Preview | Variant | Preview |
+| --- | --- | --- | --- |
+| **Blade Runner** | <img src="wallpapers/pop-art/blade-runner/4k.png" alt="Blade Runner pop-art wallpaper" width="320"> | **The Crow** | <img src="wallpapers/pop-art/crow/4k.png" alt="The Crow pop-art wallpaper" width="320"> |
+| **Amélie** | <img src="wallpapers/pop-art/amelie/4k.png" alt="Amélie pop-art wallpaper" width="320"> | **Tron** | <img src="wallpapers/pop-art/tron/4k.png" alt="Tron pop-art wallpaper" width="320"> |
+| **Dark City** | <img src="wallpapers/pop-art/dark-city/4k.png" alt="Dark City pop-art wallpaper" width="320"> | **The Fifth Element** | <img src="wallpapers/pop-art/fifth-element/4k.png" alt="The Fifth Element pop-art wallpaper" width="320"> |
+| **The Grand Budapest Hotel** | <img src="wallpapers/pop-art/grand-budapest/4k.png" alt="Grand Budapest pop-art wallpaper" width="320"> | **Neon Genesis Evangelion** | <img src="wallpapers/pop-art/evangelion/4k.png" alt="Evangelion pop-art wallpaper" width="320"> |
+| **The Matrix** | <img src="wallpapers/pop-art/matrix/4k.png" alt="The Matrix pop-art wallpaper" width="320"> | **Solaris** | <img src="wallpapers/pop-art/solaris/4k.png" alt="Solaris pop-art wallpaper" width="320"> |
+
+### Street-art thumbnails
+
+The 4K previews below show the complete expressionistic street-art set. The
+full-resolution wallpapers and alternate aspect families are in
+[`wallpapers/street-art/`](wallpapers/street-art/).
+
+| Variant | Preview | Variant | Preview |
+| --- | --- | --- | --- |
+| **Blade Runner** | <img src="wallpapers/street-art/blade-runner/4k.png" alt="Blade Runner street-art wallpaper" width="320"> | **The Crow** | <img src="wallpapers/street-art/crow/4k.png" alt="The Crow street-art wallpaper" width="320"> |
+| **Amélie** | <img src="wallpapers/street-art/amelie/4k.png" alt="Amélie street-art wallpaper" width="320"> | **Tron** | <img src="wallpapers/street-art/tron/4k.png" alt="Tron street-art wallpaper" width="320"> |
+| **Dark City** | <img src="wallpapers/street-art/dark-city/4k.png" alt="Dark City street-art wallpaper" width="320"> | **The Fifth Element** | <img src="wallpapers/street-art/fifth-element/4k.png" alt="The Fifth Element street-art wallpaper" width="320"> |
+| **The Grand Budapest Hotel** | <img src="wallpapers/street-art/grand-budapest/4k.png" alt="Grand Budapest street-art wallpaper" width="320"> | **Neon Genesis Evangelion** | <img src="wallpapers/street-art/evangelion/4k.png" alt="Evangelion street-art wallpaper" width="320"> |
+| **The Matrix** | <img src="wallpapers/street-art/matrix/4k.png" alt="The Matrix street-art wallpaper" width="320"> | **Solaris** | <img src="wallpapers/street-art/solaris/4k.png" alt="Solaris street-art wallpaper" width="320"> |
+
 ## Variants
 
 ### Blade Runner
