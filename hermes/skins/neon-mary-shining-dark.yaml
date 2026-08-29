@@ -1,0 +1,49 @@
+name: neon-mary-shining-dark
+description: "Neon Mary: The Shining (1980) — Overlook red, icy blue, mustard gold, and winter shadow (dark)."
+colors:
+  background: '#100d0d'
+  status_bar_bg: '#100d0d'
+  ui_accent: '#c93532'
+  banner_accent: '#c93532'
+  prompt: '#c93532'
+  input_rule: '#e4473f'
+  banner_title: '#e4b36a'
+  ui_primary: '#e4b36a'
+  session_label: '#e4b36a'
+  response_border: '#b65b42'
+  banner_text: '#f3eee0'
+  ui_text: '#f3eee0'
+  ui_label: '#f3eee0'
+  banner_dim: '#695c57'
+  banner_border: '#b65b42'
+  ui_border: '#b65b42'
+  session_border: '#b65b42'
+  ui_tool: '#5f8692'
+  ui_thinking: '#c2767a'
+  ui_ok: '#5f8692'
+  ui_warn: '#d0a83c'
+  ui_error: '#e4473f'
+  status_bar_text: '#f3eee0'
+  status_bar_good: '#5f8692'
+  status_bar_warn: '#d0a83c'
+  status_bar_bad: '#f47763'
+  status_bar_critical: '#e4473f'
+  syntax_string: '#5f8692'
+  syntax_number: '#d0a83c'
+  syntax_keyword: '#e4b36a'
+  syntax_comment: '#695c57'
+  completion_menu_bg: '#100d0d'
+  completion_menu_current_bg: '#b65b42'
+  completion_menu_meta_bg: '#100d0d'
+branding:
+  agent_name: Hermes Agent
+  prompt_symbol: ❯
+  welcome: All work and no play.
+  goodbye: The hotel is closed.
+  help_header: "◤ Neon Mary: The Shining — Commands"
+spinner:
+  waiting_faces: ["(◉)", "(◎)", "(⊙)"]
+  thinking_faces: ["(⌁)", "(⊹)"]
+  thinking_verbs: ["wandering", "listening", "observing"]
+  wings: [["⟪◤", "◥⟫"], ["⟪△", "△⟫"]]
+tool_prefix: ┊

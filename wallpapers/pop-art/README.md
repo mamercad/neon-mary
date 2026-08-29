@@ -17,6 +17,7 @@ families and uses the repository's established accent-color families.
 - `suspiria` — blood red, cobalt blue, acid yellow, hot magenta, and black
 - `akira` — Neo-Tokyo vermilion, electric blue, cyan, black, and warning orange
 - `dune` — desert sand, spice orange, oxidized bronze, deep teal, and bone white
+- `shining` — Overlook carpet red, icy blue, mustard gold, cream, and deep brown
 
 Each collection contains:
 

@@ -1,0 +1,13 @@
+{
+  "name": "The Shining (1980) light",
+  "type": "light",
+  "colors": {
+    "editor.background": "#f3eee3",
+    "editor.foreground": "#241c1b",
+    "terminal.ansiCyan": "#8e4a39",
+    "terminal.ansiMagenta": "#713c42",
+    "terminal.ansiRed": "#972c2d",
+    "terminal.ansiGreen": "#3e6974"
+  },
+  "tokenColors": []
+}

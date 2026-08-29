@@ -1,0 +1,13 @@
+{
+  "name": "The Shining (1980) dark",
+  "type": "dark",
+  "colors": {
+    "editor.background": "#100d0d",
+    "editor.foreground": "#f3eee0",
+    "terminal.ansiCyan": "#b65b42",
+    "terminal.ansiMagenta": "#8f3f45",
+    "terminal.ansiRed": "#e4473f",
+    "terminal.ansiGreen": "#5f8692"
+  },
+  "tokenColors": []
+}

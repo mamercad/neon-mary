@@ -50,6 +50,8 @@ VARIANTS = {
               "vermilion / Neo-Tokyo"),
     "dune": ("Dune (2021)", "dune", "FEAR IS THE MIND-KILLER.",
              "spice orange / deep desert"),
+    "shining": ("The Shining (1980)", "shining", "ALL WORK AND NO PLAY.",
+                "Overlook red / winter shadow"),
 }
 
 # palette file stem per variant (base Blade Runner has no prefix)
@@ -58,7 +60,8 @@ STEM = {"blade-runner": "", "crow": "crow-", "amelie": "amelie-",
         "fifth-element": "fifth-element-",
         "grand-budapest": "grand-budapest-",
         "evangelion": "evangelion-", "matrix": "matrix-", "solaris": "solaris-",
-        "suspiria": "suspiria-", "akira": "akira-", "dune": "dune-"}
+        "suspiria": "suspiria-", "akira": "akira-", "dune": "dune-",
+        "shining": "shining-"}
 
 
 def load_palette(tag, mode):

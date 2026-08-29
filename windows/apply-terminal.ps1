@@ -55,7 +55,7 @@
 param(
     [ValidateSet('blade-runner', 'crow', 'amelie', 'tron', 'dark-city',
                  'fifth-element', 'grand-budapest', 'evangelion', 'matrix',
-                 'solaris', 'suspiria', 'akira', 'dune')]
+                 'solaris', 'suspiria', 'akira', 'dune', 'shining')]
     [string]$Variant,
 
     [ValidateSet('dark', 'light')]

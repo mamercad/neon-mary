@@ -45,6 +45,7 @@ VARIANTS = {
     "suspiria":       ("suspiria",      "suspiria-",   "suspiria"),
     "akira":          ("akira",         "akira-",      "akira"),
     "dune":           ("dune",          "dune-",       "dune"),
+    "shining":        ("shining",       "shining-",    "shining"),
 }
 
 # Files that must mention every variant, so nothing ships half-wired.

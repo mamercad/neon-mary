@@ -63,6 +63,7 @@ VARIANTS = {
     "suspiria": ("Suspiria (1977)", "suspiria", "suspiria-"),
     "akira": ("Akira (1988)", "akira", "akira-"),
     "dune": ("Dune (2021)", "dune", "dune-"),
+    "shining": ("The Shining (1980)", "shining", "shining-"),
 }
 
 

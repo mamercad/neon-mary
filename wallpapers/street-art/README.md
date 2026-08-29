@@ -21,6 +21,7 @@ marks.
 - `suspiria` — blood red, cobalt blue, acid yellow, hot magenta, and black
 - `akira` — Neo-Tokyo vermilion, electric blue, cyan, black, and warning orange
 - `dune` — desert sand, spice orange, oxidized bronze, deep teal, and bone white
+- `shining` — Overlook carpet red, icy blue, mustard gold, cream, and deep brown
 
 Each collection contains the same eight wallpaper formats as the other gallery
 series: `4k.png`, `wqhd.png`, `qhd.png`, `16-10.png`, `3-2.png`, `4-3.png`,

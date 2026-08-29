@@ -1,0 +1,22 @@
+{
+  "name": "Neon Mary: The Shining (1980) light",
+  "background": "#f3eee3",
+  "foreground": "#241c1b",
+  "cursorColor": "#a52e2f",
+  "black": "#f3eee3",
+  "red": "#972c2d",
+  "green": "#3e6974",
+  "yellow": "#8a620e",
+  "blue": "#31536a",
+  "purple": "#713c42",
+  "cyan": "#8e4a39",
+  "white": "#241c1b",
+  "brightBlack": "#b8aaa0",
+  "brightRed": "#bd4b4d",
+  "brightGreen": "#668994",
+  "brightYellow": "#af861d",
+  "brightBlue": "#52788a",
+  "brightPurple": "#985f65",
+  "brightCyan": "#b27a3d",
+  "brightWhite": "#241c1b"
+}

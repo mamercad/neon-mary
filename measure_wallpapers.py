@@ -27,6 +27,7 @@ VARIANTS = {
     "suspiria": ("suspiria", "suspiria-"),
     "akira": ("akira", "akira-"),
     "dune": ("dune", "dune-"),
+    "shining": ("shining", "shining-"),
 }
 
 
