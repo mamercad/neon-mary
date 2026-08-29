@@ -1,0 +1,13 @@
+{
+  "name": "Neon Mary: Suspiria (1977) dark",
+  "type": "dark",
+  "colors": {
+    "editor.background": "#10070b",
+    "editor.foreground": "#fff1d6",
+    "terminal.ansiCyan": "#3f78cf",
+    "terminal.ansiMagenta": "#d12a78",
+    "terminal.ansiRed": "#ff4d5a",
+    "terminal.ansiGreen": "#d6d84a"
+  },
+  "tokenColors": []
+}

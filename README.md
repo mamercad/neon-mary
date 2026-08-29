@@ -1,6 +1,6 @@
 # Neon Mary Theme Family
 
-**Neon Mary** is a family of themes built around the `mary.png` artwork. This repository contains ten variants: **Blade Runner**, **The Crow (1994)**, **Amélie (2001)**, **Tron (1982)**, **Dark City (1998)**, **The Fifth Element (1997)**, **The Grand Budapest Hotel (2014)**, **Neon Genesis Evangelion (1995)**, **The Matrix (1999)**, and **Solaris (1972)**. Each variant has dark and light palette modes for terminals, editors, Omarchy, and Hermes Agent.
+**Neon Mary** is a family of themes built around the `mary.png` artwork. This repository contains eleven variants: **Blade Runner**, **The Crow (1994)**, **Amélie (2001)**, **Tron (1982)**, **Dark City (1998)**, **The Fifth Element (1997)**, **The Grand Budapest Hotel (2014)**, **Neon Genesis Evangelion (1995)**, **The Matrix (1999)**, **Solaris (1972)**, and **Suspiria (1977)**. Each variant has dark and light palette modes for terminals, editors, Omarchy, and Hermes Agent.
 
 The canonical artwork is derived from the Mary source. The original square source is preserved as `wallpapers/original-mary-1254.png`; each variant keeps the Mary composition while applying its own visual treatment. Light variants use the same composition with a restrained readable grade rather than invented overlays.
 
@@ -77,6 +77,12 @@ treatment**.
 | --- | --- |
 | ![Neon Mary Solaris dark desktop](screenshots/desktop-solaris-dark-example.png) | ![Neon Mary Solaris light desktop](screenshots/desktop-solaris-light-example.png) |
 
+### Suspiria (1977)
+
+| Dark | Light |
+| --- | --- |
+| ![Neon Mary Suspiria dark desktop](screenshots/desktop-suspiria-dark-example.png) | ![Neon Mary Suspiria light desktop](screenshots/desktop-suspiria-light-example.png) |
+
 Wallpapers are generated at 3840×2160, 2560×1440, 1920×1080, 2560×1600,
 2160×1440, 2048×1536, 2048×2048, and 1440×2560 in both modes; the apply
 scripts install the 4K version. See [`omarchy/apply.sh`](omarchy/apply.sh)
@@ -85,15 +91,15 @@ and the per-variant apply scripts.
 ## Pop-art wallpaper collection
 
 The [`wallpapers/pop-art/`](wallpapers/pop-art/) gallery contains a cohesive
-vectorized screen-print treatment of the Mary portrait across all ten
+vectorized screen-print treatment of the Mary portrait across all eleven
 established movie variants: Blade Runner, The Crow, Amélie, Tron, Dark City,
 The Fifth Element, The Grand Budapest Hotel, Neon Genesis Evangelion, The
-Matrix, and Solaris. Each collection includes the same eight wallpaper aspect
+Matrix, Solaris, and Suspiria. Each collection includes the same eight wallpaper aspect
 families listed above. These are rasterized visual assets; the supplied source
 remains preserved as `wallpapers/original-mary-1254.png`.
 
 The [`wallpapers/street-art/`](wallpapers/street-art/) gallery reinterprets the
-same ten variants as an expressionistic graffiti/street series with gestural
+same eleven variants as an expressionistic graffiti/street series with gestural
 brushwork, spray overspray, drips, wheatpaste, and concrete texture. It also
 includes all eight wallpaper aspect families per movie.
 
@@ -110,6 +116,7 @@ wallpapers and alternate aspect families are in
 | **Dark City** | <img src="wallpapers/pop-art/dark-city/4k.png" alt="Dark City pop-art wallpaper" width="320"> | **The Fifth Element** | <img src="wallpapers/pop-art/fifth-element/4k.png" alt="The Fifth Element pop-art wallpaper" width="320"> |
 | **The Grand Budapest Hotel** | <img src="wallpapers/pop-art/grand-budapest/4k.png" alt="Grand Budapest pop-art wallpaper" width="320"> | **Neon Genesis Evangelion** | <img src="wallpapers/pop-art/evangelion/4k.png" alt="Evangelion pop-art wallpaper" width="320"> |
 | **The Matrix** | <img src="wallpapers/pop-art/matrix/4k.png" alt="The Matrix pop-art wallpaper" width="320"> | **Solaris** | <img src="wallpapers/pop-art/solaris/4k.png" alt="Solaris pop-art wallpaper" width="320"> |
+| **Suspiria** | <img src="wallpapers/pop-art/suspiria/4k.png" alt="Suspiria pop-art wallpaper" width="320"> |  |  |
 
 ### Street-art thumbnails
 
@@ -124,6 +131,7 @@ full-resolution wallpapers and alternate aspect families are in
 | **Dark City** | <img src="wallpapers/street-art/dark-city/4k.png" alt="Dark City street-art wallpaper" width="320"> | **The Fifth Element** | <img src="wallpapers/street-art/fifth-element/4k.png" alt="The Fifth Element street-art wallpaper" width="320"> |
 | **The Grand Budapest Hotel** | <img src="wallpapers/street-art/grand-budapest/4k.png" alt="Grand Budapest street-art wallpaper" width="320"> | **Neon Genesis Evangelion** | <img src="wallpapers/street-art/evangelion/4k.png" alt="Evangelion street-art wallpaper" width="320"> |
 | **The Matrix** | <img src="wallpapers/street-art/matrix/4k.png" alt="The Matrix street-art wallpaper" width="320"> | **Solaris** | <img src="wallpapers/street-art/solaris/4k.png" alt="Solaris street-art wallpaper" width="320"> |
+| **Suspiria** | <img src="wallpapers/street-art/suspiria/4k.png" alt="Suspiria street-art wallpaper" width="320"> |  |  |
 
 ## Variants
 
@@ -182,6 +190,11 @@ eras rather than being a plain inversion.
 - `dark`: amber instrument light over spacecraft brown, with distant ocean blue and muted rose.
 - `light`: warm archival paper with brass, blue, and rose accents.
 
+### Suspiria (1977)
+
+- `dark`: theatrical black with blood red, cobalt blue, acid yellow, and hot magenta.
+- `light`: warm ivory with the same saturated horror-film accents darkened for readable contrast.
+
 ## Included targets
 
 - Native Omarchy packages with `colors.toml`, `icons.theme`, and wallpaper variants.
@@ -190,7 +203,7 @@ eras rather than being a plain inversion.
 - Neon Mary: Dark City (1998) and The Fifth Element (1997) Omarchy packages and Hermes skins in dark/light modes.
 - Neon Mary: The Grand Budapest Hotel (2014) light-first Omarchy packages and Hermes skins in light/dark modes.
 - Neon Mary: Neon Genesis Evangelion (1995) Omarchy packages and Hermes skins in dark/light modes.
-- Neon Mary: The Matrix (1999) and Solaris (1972) Omarchy packages and Hermes skins in dark/light modes.
+- Neon Mary: The Matrix (1999), Solaris (1972), and Suspiria (1977) Omarchy packages and Hermes skins in dark/light modes.
 - Ghostty, iTerm2, Terminal.app, Kitty, Alacritty, WezTerm, Windows Terminal, fzf, tmux, Vim/Neovim, and VS Code resources.
 - Windows 11 `.theme` files, accent-colour `.reg` files, and PowerShell installers in `windows/` — wallpaper, light/dark mode, accent colour, and the Windows Terminal scheme, all per-user and reversible.
 - Hermes Agent skins for CLI/TUI/desktop surfaces.
@@ -230,6 +243,9 @@ omarchy bar transparent true
 
 # Solaris (1972)
 ./omarchy/apply-solaris.sh dark
+
+# Suspiria (1977)
+./omarchy/apply-suspiria.sh dark
 
 # Windows 11 (PowerShell, per-user, no OS patching)
 #   wallpaper + light/dark mode + accent colour + Windows Terminal scheme

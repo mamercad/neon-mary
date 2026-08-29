@@ -14,6 +14,7 @@ families and uses the repository's established accent-color families.
 - `fifth-element` — electric cyan, ultraviolet, solar amber, acid green, and coral
 - `grand-budapest` — confectionery pink, aubergine, lacquer red, gold, and blue
 - `evangelion` — Unit-01 purple, toxic green, signal orange, and warning red
+- `suspiria` — blood red, cobalt blue, acid yellow, hot magenta, and black
 
 Each collection contains:
 

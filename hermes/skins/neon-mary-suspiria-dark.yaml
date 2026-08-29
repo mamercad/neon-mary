@@ -1,0 +1,49 @@
+name: neon-mary-suspiria-dark
+description: "Neon Mary: Suspiria (1977) — blood red, cobalt blue, acid yellow, and theatrical black (dark)."
+colors:
+  background: '#10070b'
+  status_bar_bg: '#10070b'
+  ui_accent: '#e33b42'
+  banner_accent: '#e33b42'
+  prompt: '#e33b42'
+  input_rule: '#ff4d5a'
+  banner_title: '#ff9c76'
+  ui_primary: '#ff9c76'
+  session_label: '#ff9c76'
+  response_border: '#3f78cf'
+  banner_text: '#fff1d6'
+  ui_text: '#fff1d6'
+  ui_label: '#fff1d6'
+  banner_dim: '#755755'
+  banner_border: '#3f78cf'
+  ui_border: '#3f78cf'
+  session_border: '#3f78cf'
+  ui_tool: '#d6d84a'
+  ui_thinking: '#d12a78'
+  ui_ok: '#d6d84a'
+  ui_warn: '#f2c230'
+  ui_error: '#ff4d5a'
+  status_bar_text: '#fff1d6'
+  status_bar_good: '#d6d84a'
+  status_bar_warn: '#f2c230'
+  status_bar_bad: '#ff7a6e'
+  status_bar_critical: '#ff4d5a'
+  syntax_string: '#d6d84a'
+  syntax_number: '#f2c230'
+  syntax_keyword: '#ff9c76'
+  syntax_comment: '#755755'
+  completion_menu_bg: '#10070b'
+  completion_menu_current_bg: '#3f78cf'
+  completion_menu_meta_bg: '#10070b'
+branding:
+  agent_name: Hermes Agent
+  prompt_symbol: ❯
+  welcome: The dance begins.
+  goodbye: The red room is waiting.
+  help_header: "◤ Neon Mary: Suspiria — Commands"
+spinner:
+  waiting_faces: ["(◉)", "(◎)", "(⊙)"]
+  thinking_faces: ["(⌁)", "(⊹)"]
+  thinking_verbs: ["rehearsing", "summoning", "observing"]
+  wings: [["⟪◤", "◥⟫"], ["⟪△", "△⟫"]]
+tool_prefix: ┊

@@ -60,6 +60,7 @@ VARIANTS = {
                    "evangelion-"),
     "matrix": ("The Matrix (1999)", "matrix", "matrix-"),
     "solaris": ("Solaris (1972)", "solaris", "solaris-"),
+    "suspiria": ("Suspiria (1977)", "suspiria", "suspiria-"),
 }
 
 

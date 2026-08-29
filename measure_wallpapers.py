@@ -24,6 +24,7 @@ VARIANTS = {
     "evangelion": ("evangelion", "evangelion-"),
     "matrix": ("matrix", "matrix-"),
     "solaris": ("solaris", "solaris-"),
+    "suspiria": ("suspiria", "suspiria-"),
 }
 
 

@@ -1,0 +1,22 @@
+{
+  "name": "Neon Mary: Suspiria (1977) dark",
+  "background": "#10070b",
+  "foreground": "#fff1d6",
+  "cursorColor": "#e33b42",
+  "black": "#10070b",
+  "red": "#ff4d5a",
+  "green": "#d6d84a",
+  "yellow": "#f2c230",
+  "blue": "#406bb3",
+  "purple": "#d12a78",
+  "cyan": "#3f78cf",
+  "white": "#fff1d6",
+  "brightBlack": "#3c1820",
+  "brightRed": "#ff7a6e",
+  "brightGreen": "#edf06f",
+  "brightYellow": "#ffe36b",
+  "brightBlue": "#6c98d6",
+  "brightPurple": "#ee6b9e",
+  "brightCyan": "#ff9c76",
+  "brightWhite": "#fff8e8"
+}
